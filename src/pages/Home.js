@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar/Navbar";
 import { homePageIntroPara } from "../data/Constants";
-// import  HomePageAnimation from "../components/animations/HomePageAnimation";
+import HomePageAnimation from "../components/animations/HomePageAnimation";
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
               {homePageIntroPara}
             </div>
           </div>
-              {/* <HomePageAnimation/>           */}
+          <HomePageAnimation />
         </div>
       </div>
     </div>
