@@ -13,32 +13,61 @@
 } */
 
 @keyframes ResumeCardAnimation1 {
-    0% {transform:rotate(0deg); margin-top:-20px; opacity: 0;}
-    10% {transform:rotate(0deg); margin-top:-20px; opacity:1}
-    50% {transform:rotate(-5deg); margin-top:-20px; opacity:1}
-    90% {transform:rotate(-5deg); margin-top:-20px; opacity:1}
-    100% {transform:rotate(-5deg); margin-top:-20px; opacity:0}
+    0% {transform:rotate(0deg); margin-top:0px; opacity: 0;}
+    10% {transform:rotate(0deg); margin-top:0px; opacity:1}
+    15% {transform:rotate(0deg); margin-top:-50px; opacity:1}
+    50% {transform:rotate(-5deg); margin-top:-50px; opacity:1}
+    90% {transform:rotate(-5deg); margin-top:-50px; opacity:1}
+    93% {transform:rotate(-0deg); margin-top:-50px;  opacity:1}
+    100% {transform:rotate(-0deg); margin-top:0px;  opacity:0}
     
 }
 
 @keyframes ResumeCardAnimation2{
-    0% {transform:rotate(0deg); margin-left:-50px; opacity: 0;}
-    10% {transform:rotate(0deg); margin-left:-50px; opacity:1}
-    50% {transform:rotate(5deg); margin-left:-50px; opacity:1}
-    90% {transform:rotate(5deg); margin-left:-50px; opacity:1}
-    100% {transform:rotate(5deg); margin-left:-50px; opacity:0}
+    0% {transform:rotate(0deg);  opacity: 0;}
+    10% {transform:rotate(0deg);  opacity:1}
+    15% {transform:rotate(0deg);  opacity:1}
+    50% {transform:rotate(5deg);  opacity:1}
+    90% {transform:rotate(5deg);  opacity:1}
+    93% {transform:rotate(0deg);  opacity:1}
+    100% {transform:rotate(0deg);  opacity:0}
 }
-
 
 .ResumeImage1{
     animation-name:ResumeCardAnimation1;
     animation-iteration-count:infinite ;
     animation-fill-mode: forwards;
-    animation-duration: 8s;
+    animation-duration: 10s;
+    margin-top:0px;
+
 }
 .ResumeImage2{
     animation-name:ResumeCardAnimation2;
     animation-iteration-count:infinite ;
     animation-fill-mode: forwards;
-    animation-duration: 8s;
+    animation-duration: 10s;
+    margin-left:-80px
+}
+
+@keyframes HomePageLandingButtonAnimaiton {
+    from {margin-top:0}
+    to {margin-top:-7px; }
+}
+
+@keyframes HomePageLandingButtonAnimaitonReverse {
+    from {margin-top:-7px; }
+    to {margin-top:0}
+}
+
+.HomePageLandingButtonDiv:hover .HomePageLandingButton{
+    animation-name: HomePageLandingButtonAnimaiton;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+.HomePageLandingButtonDiv .HomePageLandingButton{
+    animation-name: HomePageLandingButtonAnimaitonReverse;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
 }
