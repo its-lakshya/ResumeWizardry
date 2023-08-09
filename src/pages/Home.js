@@ -2,6 +2,7 @@ import Navbar from "../components/navbar/Navbar";
 import { homePageIntroPara } from "../data/Constants";
 import HomePageAnimation from "../components/animations/HomePageAnimation";
 import HomePageLandingButton from "../components/buttons/HomePageLandingButtons";
+import HowItWorks from "../components/howItWorks/HowItWorks";
 
 const Home = () => {
   return (
@@ -25,16 +26,12 @@ const Home = () => {
           <HomePageAnimation />
         </div>
       </div>
+      {/* <div> */}
+        <HowItWorks/>
+      {/* </div> */}
+
     </div>
   );
 };
 
 export default Home;
-
-// #041B2D
-// #004E9A
-// #031B88
-// #240E8B
-// #428CD4
-// #6096FD
-// #003459
