@@ -3,19 +3,20 @@ import PickATemplate from "../../assets/PickATemplateImage.png";
 import MakeYourResume from "../../assets/MakeYourResumeImage.png";
 import CustomizeTheDesign from "../../assets/CustomizeTheDesignImage.png";
 import DownloadResume from "../../assets/DownloadResumeImage.png";
-import HomePageLandingButtons from "../buttons/HomePageLandingButtons"
+import HomePageLandingButtons from "../buttons/HomePageLandingButtons";
+import "../animations/HomePageAnimation.css"
 
 const HowItWorks = () => {
-  const scroll = useScroll();
-
+  const scroll = useScroll()
+    
   if (scroll >= 0)
     return (
       <div className="h-full w-full flex justify-center">
-        {scroll >= 200 && (
-          <div className=" h-3/4 text-4xl text-[#041B2D] font-medium mt-24 flex flex-col items-center justify-between">
+        {scroll > 100 && (
+          <div className="HowItWorks h-3/4 text-4xl text-[#041B2D] font-medium mt-24 opacity-0 flex flex-col items-center justify-between">
             Just four simple steps towards your wizardous resume
-            <div className="flex text-base tracking-normal gap-x-24 justify-center [&>*]:flex [&>*]:flex-col [&>*]:items-center font-normal  ">
-              <div>
+            <div className="flex text-base tracking-normal gap-x-24 justify-center [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:opacity-0 font-normal  ">
+              <div className='PickATemplate'>
                 <img
                   className="w-48 h-72"
                   alt="Pick a template"
@@ -23,7 +24,7 @@ const HowItWorks = () => {
                 />{" "}
                 Pick A Template
               </div>
-              <div>
+              <div className='MakeYourResume'>
                 <img
                   className="w-48 h-72"
                   alt="Make Your Resume"
@@ -31,7 +32,7 @@ const HowItWorks = () => {
                 />{" "}
                 Make Your Resume
               </div>
-              <div>
+              <div className='CustomizeTheDesign'>
                 <img
                   className="w-64 h-72"
                   alt="Customize The Design"
@@ -39,7 +40,7 @@ const HowItWorks = () => {
                 />{" "}
                 Customize The Design
               </div>
-              <div>
+              <div className='DownloadYourResume'>
                 <img
                   className="w-48 h-72"
                   alt="Download Your Resume"

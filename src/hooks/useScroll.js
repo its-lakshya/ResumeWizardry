@@ -6,7 +6,6 @@ const useScroll = () => {
      const handleScroll = () => {
         const position = window.scrollY
         setScrollPosition(position)
-        console.log(position)
      }
 
      useEffect(() => {
@@ -16,7 +15,7 @@ const useScroll = () => {
             window.addEventListener('scroll', handleScroll)
          }
 
-     })
+     },[])
 
      return scrollPosition
 }
