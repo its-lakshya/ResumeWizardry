@@ -3,15 +3,18 @@ import { homePageIntroPara } from "../data/Constants";
 import HomePageAnimation from "../components/animations/HomePageAnimation";
 import HomePageLandingButton from "../components/buttons/HomePageLandingButtons";
 import HowItWorks from "../components/howItWorks/HowItWorks";
-// import Template1 from "../templates/Template1";
-import QuickAndEasyWay from "../components/quickAndEasyWay/QuickAndEasyWay";
+import ResumeBackgroundSVG from "../components/resumeBackgroundSVG/ResumeBackgroundSVG";
+import YesWeAreWizards from "../components/yesWeAreWizards/YesWeAreWizards";
 
 const Home = () => {
   return (
-    <div className="h-screen scroll-smooth">
-      <div className="bg-[#003459] h-screen flex flex-col items-center align-middle overflow-hidden ">
-        <Navbar />
-          <div className="w-3/4 flex h-full items-center ">
+    <div className="bg-gray-100 scroll-smooth">
+      <div className="flex flex-col w-full h-screen items-center">
+        <div className="w-full h-20 font-bold flex justify-center bg-white bg-opacity-95 shadow-lg">
+          <Navbar />
+        </div>
+        <div className="bg-[#003459] w-full h-full flex items-center justify-center">
+          <div className="w-3/4 flex items-center">
             <div className="w-1/2  flex-col text-white">
               <div className=" font-bold text-6xl flex-col mb-6">
                 Create Your Perfect{" "}
@@ -24,15 +27,16 @@ const Home = () => {
                 {homePageIntroPara}
               </div>
               <div>
-                <HomePageLandingButton />
+                <HomePageLandingButton/>
               </div>
             </div>
             <HomePageAnimation />
           </div>
+        </div>
       </div>
       <HowItWorks />
-      {/* <Template1/> */}
-      <QuickAndEasyWay/>
+      <ResumeBackgroundSVG />
+      <YesWeAreWizards />
     </div>
   );
 };
