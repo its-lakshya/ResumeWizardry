@@ -3,10 +3,12 @@ import { homePageIntroPara } from "../data/Constants";
 import HomePageAnimation from "../components/animations/HomePageAnimation";
 import HomePageLandingButton from "../components/buttons/HomePageLandingButtons";
 import HowItWorks from "../components/howItWorks/HowItWorks";
+// import Template1 from "../templates/Template1";
+import QuickAndEasyWay from "../components/quickAndEasyWay/QuickAndEasyWay";
 
 const Home = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen scroll-smooth">
       <div className="bg-[#003459] h-screen flex flex-col items-center align-middle overflow-hidden ">
         <Navbar />
           <div className="w-3/4 flex h-full items-center ">
@@ -29,6 +31,8 @@ const Home = () => {
           </div>
       </div>
       <HowItWorks />
+      {/* <Template1/> */}
+      <QuickAndEasyWay/>
     </div>
   );
 };
