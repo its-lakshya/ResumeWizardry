@@ -44,6 +44,7 @@ const YesWeAreWizards = () => {
             <img alt="Imge" src={MagicalResumeSVG} />
           </div>
         </div>
+        <HomePageLandingButton bgColor='bg-[#004E9A]' textColor='text-white' hoverColor='hover:bg-[#428CD4]' hoverBorderColor={'border-[#428CD4]'}/>
       </div>
     </div>
   );

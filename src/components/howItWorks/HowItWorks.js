@@ -49,7 +49,7 @@ const HowItWorks = () => {
                 Download Your Resume
               </div>
             </div>
-            <HomePageLandingButton/>
+            <HomePageLandingButton bgColor='bg-[#004E9A]' textColor='text-white' hoverColor='hover:bg-[#428CD4]' hoverBorderColor={'border-[#428CD4]'}/>
 
           </div>
         )}

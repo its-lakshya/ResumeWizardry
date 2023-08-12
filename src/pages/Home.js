@@ -8,7 +8,7 @@ import YesWeAreWizards from "../components/yesWeAreWizards/YesWeAreWizards";
 
 const Home = () => {
   return (
-    <div className="bg-gray-100 scroll-smooth">
+    <div className="bg-gray-100 scroll-smooth scroll-m-96">
       <div className="flex flex-col w-full h-screen items-center">
         <div className="w-full h-20 font-bold flex justify-center bg-white bg-opacity-95 shadow-lg">
           <Navbar />
@@ -27,7 +27,7 @@ const Home = () => {
                 {homePageIntroPara}
               </div>
               <div>
-                <HomePageLandingButton/>
+                <HomePageLandingButton bgColor='bg-[#EA4492]' textColor='white' hoverColor='bg-[#FF9CDA]' hoverBorderColor='border-[#FF9CDA]' />
               </div>
             </div>
             <HomePageAnimation />
