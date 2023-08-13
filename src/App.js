@@ -1,12 +1,12 @@
 import "./App.css";
-import Navbar from "./components/navbar/Navbar";
+// import Navbar from "./components/navbar/Navbar";
+import BuildResume from "./pages/BuildResume";
 import Home from "./pages/Home";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
     <div className="">
-      <Navbar />
       <Outlet />
     </div>
   );
@@ -20,6 +20,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/build-resume",
+        element: <BuildResume />,
       },
       // {
       //   path: "/",
