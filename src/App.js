@@ -1,12 +1,36 @@
-import './App.css';
-import Home from './pages/Home';
+import "./App.css";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home";
+import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 
-function App() {
+const AppLayout = () => {
   return (
     <div className="">
-      <Home/>
+      <Navbar />
+      <Outlet />
     </div>
   );
+};
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      // {
+      //   path: "/",
+      //   element: <Home />,
+      // },
+    ],
+  },
+]);
+
+function App() {
+  return <RouterProvider router={appRouter} />;
 }
 
 export default App;

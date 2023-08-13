@@ -10,9 +10,9 @@ const Home = () => {
   return (
     <div className="bg-gray-100 scroll-smooth scroll-m-96">
       <div className="flex flex-col w-full h-screen items-center">
-        <div className="w-full h-20 font-bold flex justify-center bg-white bg-opacity-95 shadow-lg">
+        {/* <div className="w-full h-20 font-bold flex justify-center bg-white bg-opacity-95 shadow-lg">
           <Navbar />
-        </div>
+        </div> */}
         <div className="bg-[#003459] w-full h-full flex items-center justify-center">
           <div className="w-3/4 flex items-center">
             <div className="w-1/2  flex-col text-white">
