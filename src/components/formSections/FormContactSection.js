@@ -7,8 +7,8 @@ const FormContactSection = () => {
     "h-10 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[2.3px] focus:border-b-[#003459] ";
 
   return (
-    <div className="mx-10 my-0 h-[94vh]  flex items-center justify-between ">
-      <div className="h-4/5 flex flex-col justify-start gap-y-12">
+    <div className="mx-10 my-0 min-h-[83vh] w-1/2  flex items-center ">
+      <div className="min-h-4/5 w-[95%] flex flex-col justify-start items-start gap-y-12">
         <div className="font-semibold text-3xl text-black flex flex-col gap-y-3">
           What’s the best way for employers to contact you?
           <span className='text-lg font-normal'>

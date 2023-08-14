@@ -1,4 +1,3 @@
-import { IconName } from "react-icons/bs";
 import {
   PiNumberCircleOneFill,
   PiNumberCircleTwoFill,

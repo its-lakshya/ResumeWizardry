@@ -7,6 +7,7 @@ import FormPage from "./pages/FormPage";
 import Home from "./pages/Home";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import FormContactSection from "./components/formSections/FormContactSection";
+import FormEducationSection from "./components/formSections/FormEducationSection";
 
 const AppLayout = () => {
   return (
@@ -42,8 +43,12 @@ const appRouter = createBrowserRouter([
             element: <FormPage />,
             children: [
               {
-                path: "",
+                path: "contact",
                 element: <FormContactSection />,
+              },
+              {
+                path: "education",
+                element: <FormEducationSection />,
               },
             ],
           },

@@ -5,10 +5,16 @@ import FormPageFooter from "../components/formSections/FormPageFooter";
 
 const FormPage = () => {
   return (
-    <div className="flex flex-col h-screen justify-between">
+    <div className="flex flex-col h-screen justify-between overflow-hidden">
+      <div className='h-12'>
       <FormPageHeader/>
+      </div>
+      <div className='min-h-[84vh] overflow-y-scroll'>
       <Outlet />
-      <FormPageFooter/>      
+      </div>
+      <div className='h-20'>
+      <FormPageFooter/> 
+      </div>     
     </div>
   );
 };

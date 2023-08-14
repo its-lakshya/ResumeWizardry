@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const ChooseTemplate = () => {
     return(
         <div>
-            <Link to='/build-resume/form'>Towards form</Link>
+            <Link to='/build-resume/form/contact'>Towards form</Link>
         </div>
     )
 }
