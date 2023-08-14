@@ -1,10 +1,10 @@
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../components/Navbar";
 import { homePageIntroPara } from "../data/Constants";
 import HomePageAnimation from "../components/animations/HomePageAnimation";
 import HomePageLandingButton from "../components/buttons/HomePageLandingButtons";
-import HowItWorks from "../components/howItWorks/HowItWorks";
-import ResumeBackgroundSVG from "../components/resumeBackgroundSVG/ResumeBackgroundSVG";
-import YesWeAreWizards from "../components/yesWeAreWizards/YesWeAreWizards";
+import HowItWorks from "../components/HowItWorks";
+import ResumeBackgroundSVG from "../components/ResumeBackgroundSVG";
+import YesWeAreWizards from "../components/YesWeAreWizards";
 import { Link } from "react-router-dom";
 
 const Home = () => {

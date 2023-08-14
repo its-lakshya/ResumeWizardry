@@ -1,8 +1,12 @@
 import "./App.css";
 // import Navbar from "./components/navbar/Navbar";
 import BuildResume from "./pages/BuildResume";
+import BuildResumeStartPage from "./components/BuildResumeStartPage";
+import ChooseTemplate from "./pages/ChooseTemplate";
+import FormPage from "./pages/FormPage";
 import Home from "./pages/Home";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
+import FormContactSection from "./components/FormContactSection";
 
 const AppLayout = () => {
   return (
@@ -24,11 +28,27 @@ const appRouter = createBrowserRouter([
       {
         path: "/build-resume",
         element: <BuildResume />,
+        children: [
+          {
+            path: "",
+            element: <BuildResumeStartPage />,
+          },
+          {
+            path: "choose-template",
+            element: <ChooseTemplate />,
+          },
+          {
+            path: "form",
+            element: <FormPage />,
+            children: [
+              {
+                path: "",
+                element: <FormContactSection />,
+              },
+            ],
+          },
+        ],
       },
-      // {
-      //   path: "/",
-      //   element: <Home />,
-      // },
     ],
   },
 ]);

@@ -1,4 +1,4 @@
-import ResumeBackground from "../../assets/ResumeBackgrounSVG.svg";
+import ResumeBackground from "../assets/ResumeBackgrounSVG.svg";
 
 const ResumeBackgroundSVG = () => {
   return (

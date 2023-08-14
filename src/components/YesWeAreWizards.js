@@ -1,6 +1,6 @@
-import MagicalResumeSVG from "../../assets/MagicalResumeSVG.svg";
+import MagicalResumeSVG from "../assets/MagicalResumeSVG.svg";
 import { BsCheck2Circle } from "react-icons/bs";
-import HomePageLandingButton from "../buttons/HomePageLandingButtons";
+import HomePageLandingButton from "./buttons/HomePageLandingButtons";
 
 const YesWeAreWizards = () => {
   return (

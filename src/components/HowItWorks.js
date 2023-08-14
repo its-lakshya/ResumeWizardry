@@ -1,10 +1,10 @@
-import useScroll from "../../hooks/useScroll";
-import PickATemplate from "../../assets/PickATemplateImage.png";
-import MakeYourResume from "../../assets/MakeYourResumeImage.png";
-import CustomizeTheDesign from "../../assets/CustomizeTheDesignImage.png";
-import DownloadResume from "../../assets/DownloadResumeImage.png";
-import HomePageLandingButton from "../buttons/HomePageLandingButtons";
-import "../animations/HomePageAnimation.css";
+import useScroll from "../hooks/useScroll";
+import PickATemplate from "../assets/PickATemplateImage.png";
+import MakeYourResume from "../assets/MakeYourResumeImage.png";
+import CustomizeTheDesign from "../assets/CustomizeTheDesignImage.png";
+import DownloadResume from "../assets/DownloadResumeImage.png";
+import HomePageLandingButton from "./buttons/HomePageLandingButtons";
+import "./animations/HomePageAnimation.css";
 
 const HowItWorks = () => {
   const scroll = useScroll();
