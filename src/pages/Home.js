@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/homePageSections/Navbar";
 import { homePageIntroPara } from "../data/Constants";
 import HomePageAnimation from "../components/animations/HomePageAnimation";
-import HomePageLandingButton from "../components/buttons/HomePageLandingButtons";
-import HowItWorks from "../components/HowItWorks";
-import ResumeBackgroundSVG from "../components/ResumeBackgroundSVG";
-import YesWeAreWizards from "../components/YesWeAreWizards";
+import HomePageLandingButton from "../components/buttons/HomePageLandingButton";
+import HowItWorks from "../components/homePageSections/HowItWorks";
+import ResumeBackgroundSVG from "../components/homePageSections/ResumeBackgroundSVG";
+import YesWeAreWizards from "../components/homePageSections/YesWeAreWizards";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -27,8 +27,14 @@ const Home = () => {
               <div className="text-[1.24rem] font-normal mb-6">
                 {homePageIntroPara}
               </div>
-              <Link to='/build-resume' >
-                <HomePageLandingButton bgColor='bg-[#EA4492]' textColor='text-white' hoverColor='bg-[#FF9CDA]' hoverBorderColor='border-[#FF9CDA]' />
+              <Link to="/build-resume">
+                <HomePageLandingButton
+                  bgColor="bg-[#EA4492]"
+                  textColor="text-white"
+                  hoverColor="bg-[#FF9CDA]"
+                  hoverBorderColor="border-[#FF9CDA]"
+                  text="Build my resume now"
+                />
               </Link>
             </div>
             <HomePageAnimation />

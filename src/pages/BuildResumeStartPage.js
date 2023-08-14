@@ -5,7 +5,7 @@ import {
     PiNumberCircleThreeFill,
     PiNumberCircleFourFill,
   } from "react-icons/pi";
-  import HomePageLandingButton from "./buttons/HomePageLandingButtons";
+  import HomePageLandingButton from "../components/buttons/HomePageLandingButton";
   import { Link } from "react-router-dom";
 
 const BuildResumeStartPage  = () => {
@@ -48,6 +48,7 @@ const BuildResumeStartPage  = () => {
                 textColor="text-white"
                 hoverColor="bg-[#FF9CDA]"
                 hoverBorderColor="border-[#FF9CDA]"
+                text='build my resume now'
               />
             </Link>
           </div>

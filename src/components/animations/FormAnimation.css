@@ -1,0 +1,11 @@
+/* @keyframes inputUnderlineAnimation {
+    from{border-bottom-width:0px;border-bottom-color: #003459;}
+    to{border-bottom-width:2.3px;border-bottom-color: #003459;}
+}
+
+input:focus{
+    animation-name: inputUnderlineAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+} */

@@ -1,12 +1,12 @@
 import "./App.css";
 // import Navbar from "./components/navbar/Navbar";
 import BuildResume from "./pages/BuildResume";
-import BuildResumeStartPage from "./components/BuildResumeStartPage";
+import BuildResumeStartPage from "./pages/BuildResumeStartPage";
 import ChooseTemplate from "./pages/ChooseTemplate";
 import FormPage from "./pages/FormPage";
 import Home from "./pages/Home";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
-import FormContactSection from "./components/FormContactSection";
+import FormContactSection from "./components/formSections/FormContactSection";
 
 const AppLayout = () => {
   return (

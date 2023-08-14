@@ -1,10 +1,11 @@
-import useScroll from "../hooks/useScroll";
-import PickATemplate from "../assets/PickATemplateImage.png";
-import MakeYourResume from "../assets/MakeYourResumeImage.png";
-import CustomizeTheDesign from "../assets/CustomizeTheDesignImage.png";
-import DownloadResume from "../assets/DownloadResumeImage.png";
-import HomePageLandingButton from "./buttons/HomePageLandingButtons";
-import "./animations/HomePageAnimation.css";
+import useScroll from "../../hooks/useScroll";
+import PickATemplate from "../../assets/PickATemplateImage.png";
+import MakeYourResume from "../../assets/MakeYourResumeImage.png";
+import CustomizeTheDesign from "../../assets/CustomizeTheDesignImage.png";
+import DownloadResume from "../../assets/DownloadResumeImage.png";
+import HomePageLandingButton from "../buttons/HomePageLandingButton";
+import "../animations/HomePageAnimation.css";
+import { Link } from "react-router-dom";
 
 const HowItWorks = () => {
   const scroll = useScroll();
@@ -49,8 +50,15 @@ const HowItWorks = () => {
                 Download Your Resume
               </div>
             </div>
-            <HomePageLandingButton bgColor='bg-[#004E9A]' textColor='text-white' hoverColor='hover:bg-[#428CD4]' hoverBorderColor={'border-[#428CD4]'}/>
-
+            <Link to="/build-resume">
+              <HomePageLandingButton
+                bgColor="bg-[#004E9A]"
+                textColor="text-white"
+                hoverColor="hover:bg-[#428CD4]"
+                hoverBorderColor={"border-[#428CD4]"}
+                text="Build my resume now"
+              />
+            </Link>
           </div>
         )}
       </div>
