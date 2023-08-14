@@ -34,6 +34,8 @@ const Home = () => {
                   hoverColor="bg-[#FF9CDA]"
                   hoverBorderColor="border-[#FF9CDA]"
                   text="Build my resume now"
+                  height='h-[3.5rem]'
+                  width='w-72'
                 />
               </Link>
             </div>

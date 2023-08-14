@@ -48,17 +48,7 @@ const FormPage = () => {
       </div>
       <div></div>
       <Outlet />
-      {/* <div className="w-full bg-gray-200 h-[10%]">
-        <Link to="">
-          <HomePageLandingButton
-            bgColor="bg-[#004E9A]"
-            textColor="text-white"
-            hoverColor="bg-[#428CD4]"
-            hoverBorderColor="border-[#428CD4]"
-            text='next'
-          />
-        </Link>
-      </div> */}
+      
     </div>
   );
 };

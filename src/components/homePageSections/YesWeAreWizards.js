@@ -73,6 +73,8 @@ const YesWeAreWizards = () => {
             hoverColor="hover:bg-[#428CD4]"
             hoverBorderColor={"border-[#428CD4]"}
             text="Build my resume now"
+            height="h-[3.5rem]"
+            width="w-72"
           />
         </Link>
       </div>
