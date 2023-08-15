@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import FormContactSection from "./components/formSections/FormContactSection";
 import FormEducationSection from "./components/formSections/FormEducationSection";
+import FormExperienceSection from "./components/formSections/FormExperienceSection";
 
 const AppLayout = () => {
   return (
@@ -49,6 +50,10 @@ const appRouter = createBrowserRouter([
               {
                 path: "education",
                 element: <FormEducationSection />,
+              },
+              {
+                path: "work-experience",
+                element: <FormExperienceSection />,
               },
             ],
           },

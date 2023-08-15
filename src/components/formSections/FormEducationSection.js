@@ -5,7 +5,7 @@ const FormEducationSection = () => {
   // const [visiblityForm2, setVisiblityForm2] = useState("hidden");
   // const [visiblityForm3, setVisiblityForm3] = useState("hidden");
   // const [buttonVisibility, setButtonVisibility] = useState("visible");
-  const [Education, setEducation] = useState([<EducationForm/>])
+  const [education, setEducation] = useState([<EducationForm/>])
 
   const handleClick = () => {
     // setVisiblityForm2("visible");
@@ -33,13 +33,13 @@ const FormEducationSection = () => {
         <div className={` ${visiblityForm3} w-full`}>
           <EducationForm />
         </div> */}
-        {Education}
+        {education}
         <button
           onClick={handleClick}
           // className={` ${buttonVisibility} text-[#EA4492] -mt-5`}
           className={`text-[#EA4492] `}
         >
-          + Add more education
+          + Add another education
         </button>
       </div>
       <div></div>
