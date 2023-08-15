@@ -1,4 +1,5 @@
 const ExperienceForm = () => {
+
   const lableClassNames =
     "flex flex-col w-[47%] text-[0.63rem] uppercase font-bold gap-y-2";
   const inputClassNames =
@@ -42,6 +43,17 @@ const ExperienceForm = () => {
         <lable className={lableClassNames}>
           end date
           <input type="month" placeholder="end" className={inputClassNames} />
+        </lable>
+      </div>
+
+      <div>
+        <lable className={`flex flex-col w-full text-[0.63rem] uppercase font-bold gap-y-2`}>
+        Nice! Now let's describe what you did
+          <input className={inputClassNames} />
+          <input className={inputClassNames} />
+          <input className={inputClassNames} />
+          <input className={inputClassNames} />
+          <input className={inputClassNames} />
         </lable>
       </div>
     </form>
