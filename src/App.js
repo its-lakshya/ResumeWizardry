@@ -53,7 +53,7 @@ const appRouter = createBrowserRouter([
                 element: <FormEducationSection />,
               },
               {
-                path: "work-experience",
+                path: "experience",
                 element: <FormExperienceSection />,
               },
               {
