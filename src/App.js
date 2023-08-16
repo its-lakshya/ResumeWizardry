@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import FormContactSection from "./components/formSections/FormContactSection";
 import FormEducationSection from "./components/formSections/FormEducationSection";
 import FormExperienceSection from "./components/formSections/FormExperienceSection";
+import FormSkillSection from "./components/formSections/FormSkillSection";
 
 const AppLayout = () => {
   return (
@@ -54,6 +55,10 @@ const appRouter = createBrowserRouter([
               {
                 path: "work-experience",
                 element: <FormExperienceSection />,
+              },
+              {
+                path: "skills",
+                element: <FormSkillSection />,
               },
             ],
           },
