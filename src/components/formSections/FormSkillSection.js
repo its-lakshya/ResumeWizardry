@@ -2,7 +2,6 @@ import { useState } from "react";
 import SkillForm from "./SkillForm";
 
 const FormSkillSection = () => {
-
   const [skill, setSkill] = useState([<SkillForm />]);
   const handleClick = () => {
     setSkill((prev) => [...prev, <SkillForm />]);
@@ -14,7 +13,7 @@ const FormSkillSection = () => {
         <div className="font-bold text-4xl text-black flex flex-col gap-y-3">
           What skills would you like to highlight?{" "}
           <span className="text-lg font-normal">
-            Add relevant professional key skills and proficiencies.
+            Employers scan skills for relevant keywords. Add relevant professional key skills and proficiencies.
           </span>
         </div>
         {skill}
