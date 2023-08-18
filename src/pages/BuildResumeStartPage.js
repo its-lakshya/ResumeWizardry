@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const BuildResumeStartPage = () => {
   return (
     <div className="h-screen w-full flex justify-center items-center">
-      <div className="h-[72%] w-[28%]  flex flex-col justify-center items-center px-12 gap-y-7 shadow-lg shadow-gray-400">
+      <div className="h-[35rem] w-[26rem]  flex flex-col justify-center items-center px-12 gap-y-7 shadow-lg shadow-gray-400 ">
         <div className="text-[#003459] text-3xl font-bold">ResumeWizardry</div>
         <div className="text-5xl text-center font-bold">
           Just four magical steps

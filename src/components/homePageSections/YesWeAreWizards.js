@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 const YesWeAreWizards = () => {
   return (
-    <div className="bg-transparent flex justify-center items-center  min-h-screen">
-      <div className=" h-full w-4/5 flex flex-col items-center justify-center gap-y-20">
+    <div className="bg-transparent flex justify-center items-center min-h-screen">
+      <div className=" h-full w-4/5 flex flex-col items-center justify-center gap-y-10">
         <div className="text-4xl font-medium text-[#041B2D]">
           Yes we are wizards! explore our magical wizardry
         </div>
         <div className="flex w-full">
-          <div className=" w-1/2 h-2/3 flex flex-col gap-y-8 text-left">
+          <div className=" w-1/2 h-2/3 flex flex-col gap-y-8 text-left ">
             <div className="tracking-wide font-semibold text-xl text-[#041B2D]">
               <span className="flex items-center gap-x-4 ">
                 <span className="text-4xl text-[#004E9A]">

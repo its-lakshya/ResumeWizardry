@@ -9,7 +9,7 @@ const FormPage = () => {
       <div className='h-12'>
       <FormPageHeader/>
       </div>
-      <div className='min-h-[84vh] overflow-y-scroll'>
+      <div className='h-[84vh] overflow-y-scroll'>
       <Outlet />
       </div>
       <div className='h-20'>
