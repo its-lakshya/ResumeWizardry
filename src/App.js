@@ -11,6 +11,7 @@ import FormEducationSection from "./components/formSections/FormEducationSection
 import FormExperienceSection from "./components/formSections/FormExperienceSection";
 import FormSkillSection from "./components/formSections/FormSkillSection";
 import FormSummarySection from "./components/formSections/FormSummarySection";
+import FormAddSection from "./components/formSections/FromAddSection";
 
 const AppLayout = () => {
   return (
@@ -64,6 +65,10 @@ const appRouter = createBrowserRouter([
               {
                 path: "summary",
                 element: <FormSummarySection />,
+              },
+              {
+                path: "add-section",
+                element: <FormAddSection />,
               },
             ],
           },
