@@ -1,51 +1,51 @@
-import { lableClassNames, inputClassNames } from "./ConstantClassNames"
+import { labelClassNames, inputClassNames } from "./ConstantClassNames"
 
 const ContactForm = () => {
 
     return(
         <form className="flex flex-col h-4/5 w-full  gap-y-4 ">
           <div className="flex justify-between   ">
-            <lable className={lableClassNames}>
+            <label className={labelClassNames}>
               name
               <input placeholder="John" className={inputClassNames} />
-            </lable>
-            <lable className={lableClassNames}>
+            </label>
+            <label className={labelClassNames}>
               surname
               <input placeholder="Doe" className={inputClassNames} />
-            </lable>
+            </label>
           </div>
 
           <div className="flex justify-between">
-            <lable className={lableClassNames}>
+            <label className={labelClassNames}>
               city
               <input placeholder="New Delhi" className={inputClassNames} />
-            </lable>
-            <lable className={lableClassNames}>
+            </label>
+            <label className={labelClassNames}>
               country
               <input placeholder="India" className={inputClassNames} />
-            </lable>
+            </label>
           </div>
 
           <div className="flex justify-between ">
-            <lable className={lableClassNames}>
+            <label className={labelClassNames}>
               Phone
               <input placeholder="+91 9456230481" className={inputClassNames} />
-            </lable>
-            <lable className={lableClassNames}>
+            </label>
+            <label className={labelClassNames}>
               Email
               <input placeholder="doe@gmail.com" className={inputClassNames} />
-            </lable>
+            </label>
           </div>
 
           <div className="flex justify-between  ">
-            <lable className={lableClassNames}>
+            <label className={labelClassNames}>
               State
               <input placeholder="UttarPradesh" className={inputClassNames} />
-            </lable>
-            <lable className={lableClassNames}>
+            </label>
+            <label className={labelClassNames}>
               Pin Code
               <input placeholder="110034" className={inputClassNames} />
-            </lable>
+            </label>
           </div>
         </form>
     )

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import AddSectionForm from "./AddSectionForm";
 
 const FormAddSection = () => {

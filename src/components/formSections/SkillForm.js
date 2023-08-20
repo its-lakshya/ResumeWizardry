@@ -1,17 +1,17 @@
-import { lableClassNames, inputClassNames } from "./ConstantClassNames";
+import { labelClassNames, inputClassNames } from "./ConstantClassNames";
 
 const SkillForm = () => {
 
     return (
       <form className="flex flex-col w-full  gap-y-4 ">
         <div className="flex justify-between   ">
-          <lable className={lableClassNames}>
+          <label className={labelClassNames}>
             skill
             <input
               placeholder="Add your skill here."
               className={inputClassNames}
             />
-          </lable>
+          </label>
         </div>
       </form>
     );
