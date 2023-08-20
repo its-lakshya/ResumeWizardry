@@ -1,4 +1,4 @@
-import "./HomePageAnimation.css";
+import "../animations/HomePageAnimation.css";
 import Resume1 from "../../assets/Resume8.jpg";
 import Resume2 from "../../assets/Resume2.jpg";
 

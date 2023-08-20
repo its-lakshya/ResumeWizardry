@@ -1,6 +1,6 @@
 import Navbar from "../components/homePageSections/Navbar";
 import { homePageIntroPara } from "../data/Constants";
-import HomePageAnimation from "../components/animations/HomePageAnimation";
+import HomePageAnimation from "../components/homePageSections/HomePageAnimation";
 import HomePageLandingButton from "../components/buttons/HomePageLandingButton";
 import HowItWorks from "../components/homePageSections/HowItWorks";
 import ResumeBackgroundSVG from "../components/homePageSections/ResumeBackgroundSVG";

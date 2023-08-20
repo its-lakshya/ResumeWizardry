@@ -1,11 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import EducationForm from "./EducationForm";
+import { addStyleSection } from "../../store/FormPageHeaderSlice";
 
 const FormEducationSection = () => {
   // const [visiblityForm2, setVisiblityForm2] = useState("hidden");
   // const [visiblityForm3, setVisiblityForm3] = useState("hidden");
   // const [buttonVisibility, setButtonVisibility] = useState("visible");
   const [education, setEducation] = useState([<EducationForm/>])
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(addStyleSection('education'))
+    
+    return () => {
+      dispatch(addStyleSection())
+    }
+    
+  }, [])
 
   const handleClick = () => {
     // setVisiblityForm2("visible");

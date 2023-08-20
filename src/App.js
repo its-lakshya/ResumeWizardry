@@ -12,6 +12,8 @@ import FormExperienceSection from "./components/formSections/FormExperienceSecti
 import FormSkillSection from "./components/formSections/FormSkillSection";
 import FormSummarySection from "./components/formSections/FormSummarySection";
 import FormAddSection from "./components/formSections/FromAddSection";
+import { Provider } from "react-redux";
+import Store from "./store/Store";
 
 const AppLayout = () => {
   return (
@@ -79,7 +81,11 @@ const appRouter = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={appRouter} />;
+  return (
+    <Provider store={Store}>
+      <RouterProvider router={appRouter} />
+    </Provider>
+  );
 }
 
 export default App;

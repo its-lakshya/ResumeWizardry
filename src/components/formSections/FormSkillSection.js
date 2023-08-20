@@ -1,11 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SkillForm from "./SkillForm";
+import { useDispatch } from "react-redux";
+import { addStyleSection } from "../../store/FormPageHeaderSlice";
 
 const FormSkillSection = () => {
   const [skill, setSkill] = useState([<SkillForm />]);
   const handleClick = () => {
     setSkill((prev) => [...prev, <SkillForm />]);
   };
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(addStyleSection('skills'))
+    
+    return () => {
+      dispatch(addStyleSection())
+    }
+    
+  }, [])
 
   return (
     <div className="mx-10 py-10 min-h-[83vh] w-1/2 flex items-center">
