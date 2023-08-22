@@ -1,8 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const ContactFormSlice = createSlice({
-  name: "ContactDetails",
-  initialState:{
+const initialState = {
     name:'',
     surname:'',
     city:'',
@@ -11,7 +9,11 @@ const ContactFormSlice = createSlice({
     email:'',
     state:'',
     pincode:'',
-  },
+  }
+  
+const ContactFormSlice = createSlice({
+  name: "ContactDetails",
+  initialState,
 
   reducers:{
     storeName:(state, action) => {

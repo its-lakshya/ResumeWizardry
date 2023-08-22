@@ -9,11 +9,13 @@ import {
   storePinCode,
 } from "../../store/ContactFormSlice";
 import { labelClassNames, inputClassNames } from "./ConstantClassNames";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
 
+  // const contactDetails = useSelector((store) => store.contactDetails)
+  
   const handleChange = ({
     Name,
     Surname,
@@ -113,7 +115,7 @@ const ContactForm = () => {
         <label className={labelClassNames}>
           State
           <input
-            placeholder="UttarPradesh"
+            placeholder="Uttar Pradesh"
             className={inputClassNames}
             onChange={(State) => handleChange({ State })}
           />
