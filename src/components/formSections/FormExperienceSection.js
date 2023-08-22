@@ -1,24 +1,32 @@
 import { useState, useEffect } from "react";
-import ExperienceForm from './ExperienceForm'
+import ExperienceForm from "./ExperienceForm";
 import { useDispatch } from "react-redux";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
 
 const FormExperienceSection = () => {
-  const [experience, setExperience] = useState([<ExperienceForm/>]);
-  const handleClick = () => {
-      setExperience((prev) => [...prev, <ExperienceForm/>])
-    };
+  const [count, setCount] = useState(1);  
+  const [experience, setExperience] = useState([<ExperienceForm key={count} value={count} />]);
+  const [buttonVisibility, setButtonVisibility] = useState("");
 
-    const dispatch = useDispatch()
+  const handleClick = () => {
+    if (count < 3) {
+      setExperience((prev) => [...prev, <ExperienceForm key={count+1} value={count + 1} />]);
+      setCount(count + 1);
+      if (count === 2) {
+        setButtonVisibility("hidden");
+      }
+    }
+  };
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(addStyleSection('experience'))
-    
+    dispatch(addStyleSection("experience"));
+
     return () => {
-      dispatch(addStyleSection())
-    }
-    
-  }, [])
+      dispatch(addStyleSection());
+    };
+  }, []);
 
   return (
     <div className="mx-10 py-10 min-h-[83vh] w-1/2 flex items-center">
@@ -32,7 +40,7 @@ const FormExperienceSection = () => {
         {experience}
         <button
           onClick={handleClick}
-          className={`text-[#EA4492] `}
+          className={`text-[#EA4492] ${buttonVisibility} `}
         >
           + Add another experience
         </button>
