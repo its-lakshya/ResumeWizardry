@@ -4,10 +4,9 @@ import EducationForm from "./EducationForm";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
 
 const FormEducationSection = () => {
-  // const [visiblityForm2, setVisiblityForm2] = useState("hidden");
-  // const [visiblityForm3, setVisiblityForm3] = useState("hidden");
-  // const [buttonVisibility, setButtonVisibility] = useState("visible");
-  const [education, setEducation] = useState([<EducationForm/>])
+  const [count, setCount] = useState(1)
+  const [education, setEducation] = useState([<EducationForm key={count} value={count}/>])
+  const [buttonVisibility, setButtonVisibility] = useState('')
 
   const dispatch = useDispatch()
 
@@ -21,12 +20,14 @@ const FormEducationSection = () => {
   }, [])
 
   const handleClick = () => {
-    // setVisiblityForm2("visible");
-    // if (visiblityForm2 === "visible") {
-    //   setVisiblityForm3("visible");
-    //   setButtonVisibility("hidden");
-    // }
-    setEducation((prev) => [...prev, <EducationForm/>])
+    if(count<3){
+      setEducation((prev) => [...prev, <EducationForm key={count+1} value={count+1}/>])
+      setCount(count+1)
+      if(count===2){
+        setButtonVisibility('hidden')
+      }
+    }
+    
   };
 
   return (
@@ -39,18 +40,10 @@ const FormEducationSection = () => {
             student or did not graduate.
           </span>
         </div>
-        {/* <EducationForm />
-        <div className={` ${visiblityForm2} w-full `}>
-          <EducationForm />
-        </div>
-        <div className={` ${visiblityForm3} w-full`}>
-          <EducationForm />
-        </div> */}
         {education}
         <button
           onClick={handleClick}
-          // className={` ${buttonVisibility} text-[#EA4492] -mt-5`}
-          className={`text-[#EA4492] `}
+          className={`text-[#EA4492] ${buttonVisibility} `}
         >
           + Add another education
         </button>

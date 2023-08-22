@@ -9,27 +9,27 @@ import {
 } from "../../store/EducationFormSlice";
 import { useDispatch } from "react-redux";
 
-const EducationForm = () => {
+const EducationForm = ({value}) => {
   const dispatch = useDispatch();
 
   const handleChange = ({ Name, Location, Degree, Field, Start, End }) => {
     if(Name){
-      dispatch(storeInstituteName(Name.target.value))
+      dispatch(storeInstituteName({count:value, data:Name.target.value}))
     }
     if(Location){
-      dispatch(storeInstituteLocation(Location.target.value))
+      dispatch(storeInstituteLocation({count:value, data:Location.target.value}))
     }
     if(Degree){
-      dispatch(storeDegree(Degree.target.value))
+      dispatch(storeDegree({count:value, data:Degree.target.value}))
     }
     if(Field){
-      dispatch(storeFieldofStudy(Field.target.value))
+      dispatch(storeFieldofStudy({count:value, data:Field.target.value}))
     }
     if(Start){
-      dispatch(storeGraduactionStart(Start.target.value))
+      dispatch(storeGraduactionStart({count:value, data:Start.target.value}))
     }
     if(End){
-      dispatch(storeGraduationEnd(End.target.value))
+      dispatch(storeGraduationEnd({count:value, data:End.target.value}))
     }
 
   };
@@ -94,6 +94,8 @@ const EducationForm = () => {
           />
         </label>
       </div>
+
+      <hr className='border-t border-gray-500'></hr>
     </form>
   );
 };
