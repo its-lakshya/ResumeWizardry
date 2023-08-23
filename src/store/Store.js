@@ -4,6 +4,7 @@ import ContactFormSlice from "./ContactFormSlice";
 import EducationFormSlice from "./EducationFormSlice";
 import ExperienceFormSlice from "./ExperienceFormSlice";
 import SkillFormSlice from "./SkillFormSlice";
+import SummaryFormSlice from "./SummaryFormSlice";
 
 const Store =  configureStore({
     reducer : {
@@ -12,6 +13,7 @@ const Store =  configureStore({
         educationDetails:EducationFormSlice,
         experienceDetails:ExperienceFormSlice,
         skillDetails:SkillFormSlice,
+        summaryDetails:SummaryFormSlice
     }
 })
 

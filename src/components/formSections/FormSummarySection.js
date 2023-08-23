@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
+import { storeSummary } from "../../store/SummaryFormSlice";
 
 const FormSummarySection = () => {
 
@@ -14,6 +15,10 @@ const FormSummarySection = () => {
     }
     
   }, [])
+
+  const handleChange = ({Summary}) => {
+    dispatch(storeSummary(Summary.target.value))
+  }
 
   return (
     <div className="mx-10 py-10 min-h-[83vh] w-1/2 flex items-center">
@@ -31,6 +36,7 @@ const FormSummarySection = () => {
             <textarea
               placeholder="Write your summary here."
               className={`text-start h-56 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[4px] focus:border-b-[#003459]`}
+              onChange={(Summary)=> handleChange({Summary})}
             />
           </lable>
         </div>
