@@ -5,18 +5,15 @@ import { storeSectionSelection } from "../../store/AddSectionSlice";
 
 const AddSectionForm = ({text}) => {
   const [isCheckVisible, setIsCheckVisible] = useState("invisible");
-  const [selected, setSelected] = useState(false)
   const dispatch = useDispatch()
 
   const handleClick = () => {
     dispatch(storeSectionSelection(text))
     if (isCheckVisible === "invisible") {
       setIsCheckVisible("visible");
-      setSelected(true)
 
     } else {
       setIsCheckVisible("invisible");
-      setSelected(false)
     }
   };
 

@@ -53,6 +53,5 @@ const AddSectionSlice = createSlice({
   },
 });
 
-export const { storeSectionSelection } =
-  AddSectionSlice.actions;
+export const { storeSectionSelection } =  AddSectionSlice.actions;
 export default AddSectionSlice.reducer;

@@ -1,7 +1,24 @@
 import { Outlet } from "react-router-dom";
 import AddSectionForm from "./AddSectionForm";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { addStyleSection } from "../../store/FormPageHeaderSlice";
+import { setNextRoute } from "../../store/RoutesSlice";
 
 const FormAddSection = () => {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(addStyleSection('finalize'))
+    // dispatch(setNextRoute('/build-resume/form/education'))
+    
+    return () => {
+      dispatch(addStyleSection())
+    }
+    
+  }, [])
+
   return (
     <div className="mx-10 my-0 min-h-[83vh] w-1/2  flex items-center ">
       <div className="min-h-4/5 w-[95%] flex flex-col justify-start items-start gap-y-12">

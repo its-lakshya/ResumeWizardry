@@ -6,6 +6,7 @@ import ExperienceFormSlice from "./ExperienceFormSlice";
 import SkillFormSlice from "./SkillFormSlice";
 import SummaryFormSlice from "./SummaryFormSlice";
 import AddSectionSlice from "./AddSectionSlice";
+import RoutesSlice from "./RoutesSlice";
 
 const Store =  configureStore({
     reducer : {
@@ -15,7 +16,8 @@ const Store =  configureStore({
         experienceDetails:ExperienceFormSlice,
         skillDetails:SkillFormSlice,
         summaryDetails:SummaryFormSlice,
-        sectionSelectionDetails:AddSectionSlice
+        sectionSelectionDetails:AddSectionSlice,
+        routesDetails:RoutesSlice,
     }
 })
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SkillForm from "./SkillForm";
 import { useDispatch } from "react-redux";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
+import { setNextRoute } from "../../store/RoutesSlice";
 
 const FormSkillSection = () => {
   const [count, setCount] = useState(1)
@@ -14,6 +15,7 @@ const FormSkillSection = () => {
 
   useEffect(() => {
     dispatch(addStyleSection('skills'))
+    dispatch(setNextRoute('/build-resume/form/summary'))
     
     return () => {
       dispatch(addStyleSection())

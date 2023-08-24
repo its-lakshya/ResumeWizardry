@@ -10,7 +10,7 @@ import FormEducationSection from "./components/formSections/FormEducationSection
 import FormExperienceSection from "./components/formSections/FormExperienceSection";
 import FormSkillSection from "./components/formSections/FormSkillSection";
 import FormSummarySection from "./components/formSections/FormSummarySection";
-import FormAddSection from "./components/formSections/FromAddSection";
+import FormAddSection from "./components/formSections/FormAddSection";
 import { Provider } from "react-redux";
 import Store from "./store/Store";
 import AddForm from "./components/formSections/AddForm";
@@ -69,13 +69,19 @@ const appRouter = createBrowserRouter([
                 element: <FormSummarySection />,
               },
               {
-                path: "add-section",
-                element: <FormAddSection />,
+                path: "finalize",
+                // element: <FormAddSection />,
+                children:[
+                  {
+                    path:"",
+                    element:<FormAddSection/> 
+                  }
+                ]
               },
-              {
-                path:"add-links",
-                element:<AddForm/>
-              },
+              // {
+              //   path:"add-links",
+              //   element:<AddForm/>
+              // },
             ],
           },
         ],

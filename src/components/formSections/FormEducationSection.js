@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import EducationForm from "./EducationForm";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
+import { setNextRoute } from '../../store/RoutesSlice';
 
 const FormEducationSection = () => {
   const [count, setCount] = useState(1)
@@ -9,9 +10,11 @@ const FormEducationSection = () => {
   const [buttonVisibility, setButtonVisibility] = useState('')
 
   const dispatch = useDispatch()
+  
 
   useEffect(() => {
     dispatch(addStyleSection('education'))
+    dispatch(setNextRoute('/build-resume/form/experience'))
     
     return () => {
       dispatch(addStyleSection())

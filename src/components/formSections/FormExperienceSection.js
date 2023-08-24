@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ExperienceForm from "./ExperienceForm";
 import { useDispatch } from "react-redux";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
+import { setNextRoute } from '../../store/RoutesSlice';
 
 const FormExperienceSection = () => {
   const [count, setCount] = useState(1);  
@@ -22,6 +23,7 @@ const FormExperienceSection = () => {
 
   useEffect(() => {
     dispatch(addStyleSection("experience"));
+    dispatch(setNextRoute('/build-resume/form/skills'))
 
     return () => {
       dispatch(addStyleSection());

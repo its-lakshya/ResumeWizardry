@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import '../animations/FormAnimation.css'
 import ContactForm from './ContactForm';
 import { addStyleSection } from '../../store/FormPageHeaderSlice';
+import { setNextRoute } from '../../store/RoutesSlice';
 
 const FormContactSection = () => {
   
@@ -10,6 +11,7 @@ const FormContactSection = () => {
 
   useEffect(() => {
     dispatch(addStyleSection('contact'))
+    dispatch(setNextRoute('/build-resume/form/education'))
     
     return () => {
       dispatch(addStyleSection())

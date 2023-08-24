@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
 import { storeSummary } from "../../store/SummaryFormSlice";
+import {setNextRoute} from "../../store/RoutesSlice"
 
 const FormSummarySection = () => {
 
@@ -9,6 +10,7 @@ const FormSummarySection = () => {
 
   useEffect(() => {
     dispatch(addStyleSection('summary'))
+    dispatch(setNextRoute('/build-resume/form/finalize'))
     
     return () => {
       dispatch(addStyleSection())
@@ -31,14 +33,14 @@ const FormSummarySection = () => {
         </div>
         <form className="flex flex-col w-full  gap-y-4 ">
         <div className="flex justify-between   ">
-          <lable className={`flex flex-col w-full text-[0.63rem] uppercase font-bold gap-y-2`}>
+          <label className={`flex flex-col w-full text-[0.63rem] uppercase font-bold gap-y-2`}>
             Summary
             <textarea
               placeholder="Write your summary here."
               className={`text-start h-56 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[4px] focus:border-b-[#003459]`}
               onChange={(Summary)=> handleChange({Summary})}
             />
-          </lable>
+          </label>
         </div>
       </form>
       </div>
