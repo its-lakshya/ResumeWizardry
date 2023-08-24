@@ -11,11 +11,11 @@ const FormAddSection = () => {
 
   useEffect(() => {
     dispatch(addStyleSection('finalize'))
-    // dispatch(setNextRoute('/build-resume/form/education'))
+    dispatch(setNextRoute('/build-resume/form/finalize/add-links'))
     
-    return () => {
-      dispatch(addStyleSection())
-    }
+    // return () => {
+    //   dispatch(addStyleSection())
+    // }
     
   }, [])
 

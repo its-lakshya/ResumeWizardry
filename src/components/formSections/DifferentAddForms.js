@@ -1,13 +1,13 @@
 import { labelClassNames, inputClassNames } from "./ConstantClassNames";
 
-export const LinksSection = () => {
+export const LinksSection = ({text}) => {
     return(
       <form className="flex flex-col w-full  gap-y-4 ">
           <div className="flex justify-between   ">
             <label className={labelClassNames}>
-              Links/url
+              {text}
               <input
-                placeholder="Add your links here."
+                placeholder={`Add your ${text} here.`}
                 className={inputClassNames}
                 // onChange={(Skill)=> handleChange({Skill})}
               />
@@ -18,19 +18,21 @@ export const LinksSection = () => {
   }
 
 
-export const CertificationSection = () =>  {
+export const CombineSummary = ({text}) =>  {
     return (
-        <form className="flex flex-col w-full  gap-y-4 ">
-        <div className="flex justify-between   ">
-          <lable className={`flex flex-col w-full text-[0.63rem] uppercase font-bold gap-y-2`}>
-            Summary
-            <textarea
-              placeholder="Write your summary here."
-              className={`text-start h-56 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[4px] focus:border-b-[#003459]`}
-            //   onChange={(Summary)=> handleChange({Summary})}
-            />
-          </lable>
-        </div>
-      </form>
+      <form className="flex flex-col w-full  gap-y-4 ">
+      <div className="flex justify-between   ">
+        <label
+          className={`flex flex-col w-full text-[0.63rem] uppercase font-bold gap-y-2`}
+        >
+          {text}
+          <textarea
+            placeholder={`Add your ${text} here.`}
+            className={`text-start h-56 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[4px] focus:border-b-[#003459]`}
+            // onChange={(Summary) => handleChange({ Summary })}
+          />
+        </label>
+      </div>
+    </form>
     )
 }

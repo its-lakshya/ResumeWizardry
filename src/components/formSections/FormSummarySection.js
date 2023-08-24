@@ -44,7 +44,6 @@ const FormSummarySection = () => {
         </div>
       </form>
       </div>
-      <div></div>
     </div>
   );
 };

@@ -1,13 +1,20 @@
+import { useDispatch } from "react-redux";
+import { setNextRoute } from "../../store/RoutesSlice";
 import { LinksSection } from "./DifferentAddForms";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const AddForm = () => {
+const LinkForm = () => {
   const [count, setCount] = useState(1);
+  const [buttonVisibility, setButtonVisibility] = useState("");
+  const dispatch = useDispatch()
 
   const [links, setLinks] = useState([
-    <LinksSection key={count} value={count} />,
+    <LinksSection key={count} value={count} text={'links/url'} />,
   ]);
-  const [buttonVisibility, setButtonVisibility] = useState("");
+
+  useEffect(()=> {
+    dispatch(setNextRoute('/build-resume/form/finalize/add-crtf'))
+  })
 
   const handleClick = () => {
     if (count < 5) {
@@ -32,13 +39,13 @@ const AddForm = () => {
             help employers get to know you better.
           </span>
         </div>
-        <div className = {``}>
+        <div className = {`w-full flex flex-col items-start justify-center gap-y-12`}>
           {links}
           <button
             onClick={handleClick}
             className={`text-[#EA4492] ${buttonVisibility} `}
           >
-            + Add another skill
+            + Add another link
           </button>
         </div>
       </div>
@@ -47,4 +54,4 @@ const AddForm = () => {
   );
 };
 
-export default AddForm;
+export default LinkForm;
