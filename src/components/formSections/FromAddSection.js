@@ -1,10 +1,11 @@
+import { Outlet } from "react-router-dom";
 import AddSectionForm from "./AddSectionForm";
 
 const FormAddSection = () => {
   return (
     <div className="mx-10 my-0 min-h-[83vh] w-1/2  flex items-center ">
       <div className="min-h-4/5 w-[95%] flex flex-col justify-start items-start gap-y-12">
-        <div className="font-semibold text-3xl text-black flex flex-col gap-y-3">
+        <div className="font-bold text-3xl text-black flex flex-col gap-y-3">
           Do you have anything else to add?{" "}
           <span className="text-lg font-normal">
             These sections are optional.
@@ -28,7 +29,9 @@ const FormAddSection = () => {
           </div>
         </div>
       </div>
-      <div></div>
+      <div>
+        <Outlet/>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import "./App.css";
-// import Navbar from "./components/navbar/Navbar";
 import BuildResume from "./pages/BuildResume";
 import BuildResumeStartPage from "./pages/BuildResumeStartPage";
 import ChooseTemplate from "./pages/ChooseTemplate";
@@ -14,6 +13,7 @@ import FormSummarySection from "./components/formSections/FormSummarySection";
 import FormAddSection from "./components/formSections/FromAddSection";
 import { Provider } from "react-redux";
 import Store from "./store/Store";
+import AddForm from "./components/formSections/AddForm";
 
 const AppLayout = () => {
   return (
@@ -71,6 +71,10 @@ const appRouter = createBrowserRouter([
               {
                 path: "add-section",
                 element: <FormAddSection />,
+              },
+              {
+                path:"add-links",
+                element:<AddForm/>
               },
             ],
           },
