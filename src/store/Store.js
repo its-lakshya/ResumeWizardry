@@ -7,6 +7,7 @@ import SkillFormSlice from "./SkillFormSlice";
 import SummaryFormSlice from "./SummaryFormSlice";
 import AddSectionSlice from "./AddSectionSlice";
 import RoutesSlice from "./RoutesSlice";
+import LinksLangSlice from "./LinksLangSlice";
 
 const Store =  configureStore({
     reducer : {
@@ -18,6 +19,7 @@ const Store =  configureStore({
         summaryDetails:SummaryFormSlice,
         sectionSelectionDetails:AddSectionSlice,
         routesDetails:RoutesSlice,
+        linksLangDetails:LinksLangSlice,
     }
 })
 
