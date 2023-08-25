@@ -13,11 +13,11 @@ import FormSummarySection from "./components/formSections/FormSummarySection";
 import FormAddSection from "./components/formSections/FormAddSection";
 import { Provider } from "react-redux";
 import Store from "./store/Store";
-import AddForm from "./components/formSections/LinksForm";
 import LinkForm from "./components/formSections/LinksForm";
 import CertificationForm from "./components/formSections/CertificationForm";
 import LanguagesForm from "./components/formSections/LanguagesForm";
-import AdditionalInfo from "./components/formSections/AdditionalInfo";
+import AdditionalInfoForm from "./components/formSections/AdditionalInfoForm";
+import AccomplishmentForm from "./components/formSections/AccomplishmentForm";
 
 const AppLayout = () => {
   return (
@@ -93,8 +93,12 @@ const appRouter = createBrowserRouter([
                     element:<LanguagesForm/> 
                   },
                   {
+                    path:"add-accomp",
+                    element:<AccomplishmentForm/> 
+                  },
+                  {
                     path:"add-addInfo",
-                    element:<AdditionalInfo/> 
+                    element:<AdditionalInfoForm/> 
                   },
                 ]
               },

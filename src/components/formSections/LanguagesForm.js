@@ -13,7 +13,7 @@ const LanguagesForm = () => {
   ]);
 
   useEffect(() => {
-    dispatch(setNextRoute("/build-resume/form/finalize/add-addInfo"));
+    dispatch(setNextRoute("/build-resume/form/finalize/add-accomp"));
   });
 
   const handleClick = () => {

@@ -17,7 +17,7 @@ const CombinedSummarySlice = createSlice({
             state.certifications=action.payload
         },
         storeAccomplishments:(state, action)=> {
-            
+            state.accomplishments= action.payload
         },
         storeAdditionalInfo:(state, action)=> {
             state.additionalInfo= action.payload
