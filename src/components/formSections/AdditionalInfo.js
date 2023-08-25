@@ -1,4 +1,4 @@
-import { CombineSummary } from "./DifferentAddForms";
+import { CombinedSummary } from "./DifferentAddForms";
 
 const AdditionalInfo = () => {
   return (
@@ -10,7 +10,7 @@ const AdditionalInfo = () => {
             Add anything else you want employers to know.{" "}
           </span>
         </div>
-        <CombineSummary text={'additional information'}/>
+        <CombinedSummary text={'additional information'}/>
       </div>
     </div>
   );

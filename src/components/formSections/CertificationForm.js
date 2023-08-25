@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
-import { CombineSummary } from "./DifferentAddForms";
+import { CombinedSummary } from "./DifferentAddForms";
 
 const CertificationForm = () => {
 
@@ -22,7 +22,7 @@ const CertificationForm = () => {
             {/* Your summary shows employers you’re right for their job.{" "} */}
           </span>
         </div>
-        <CombineSummary text={'certification'}/>
+        <CombinedSummary text={'certifications'}/>
       </div>
       <div></div>
     </div>

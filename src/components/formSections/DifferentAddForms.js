@@ -1,6 +1,7 @@
 import { labelClassNames, inputClassNames } from "./ConstantClassNames";
 import { useDispatch } from "react-redux";
 import { storeLangs, storeLinks } from "../../store/LinksLangSlice";
+import { storeAccomplishments, storeAdditionalInfo, storeCertifications } from "../../store/CombinedSummarySlice";
 
 export const LinksSection = ({text, value}) => {
 
@@ -32,8 +33,21 @@ export const LinksSection = ({text, value}) => {
   }
 
 
-export const CombineSummary = ({text}) =>  {
+export const CombinedSummary = ({text}) =>  {
   
+  const dispatch = useDispatch()
+
+  const handleChange = ({data}) => {
+    if(text==='certifications'){
+      dispatch(storeCertifications(data.target.value))
+    }
+    if(text==='accomplishments'){
+      dispatch(storeAccomplishments(data.target.value))
+    }
+    if(text==='additional information'){
+      dispatch(storeAdditionalInfo(data.target.value))
+    }
+  }
 
     return (
       <form className="flex flex-col w-full  gap-y-4 ">
@@ -45,7 +59,7 @@ export const CombineSummary = ({text}) =>  {
           <textarea
             placeholder={`Add your ${text} here.`}
             className={`text-start h-56 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[4px] focus:border-b-[#003459]`}
-            
+            onChange={(data)=>handleChange({data})}
           />
         </label>
       </div>
