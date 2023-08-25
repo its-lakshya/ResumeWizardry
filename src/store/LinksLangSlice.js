@@ -19,19 +19,19 @@ const LinksLangSlice = createSlice({
 
     reducers:{
         storeLinks:(state, action)=> {
-            if(action.payload.type==='Link1'){
+            if(action.payload.type===1){
                 state.link1= action.payload.data
             }
-            if(action.payload.type==='Link2'){
+            if(action.payload.type===2){
                 state.link2= action.payload.data
             }
-            if(action.payload.type==='Link3'){
+            if(action.payload.type===3){
                 state.link3= action.payload.data
             }
-            if(action.payload.type==='Link4'){
+            if(action.payload.type===4){
                 state.link4= action.payload.data
             }
-            if(action.payload.type==='Link5'){
+            if(action.payload.type===5){
                 state.link5= action.payload.data
             }
         },

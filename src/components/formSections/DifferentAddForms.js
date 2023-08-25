@@ -1,13 +1,18 @@
 import { labelClassNames, inputClassNames } from "./ConstantClassNames";
 import { useDispatch } from "react-redux";
-import { storeLangs } from "../../store/LinksLangSlice";
+import { storeLangs, storeLinks } from "../../store/LinksLangSlice";
 
 export const LinksSection = ({text, value}) => {
 
   const dispatch = useDispatch()
 
   const handleChange = ({Lang}) => {
-    dispatch(storeLangs({type:value, data:Lang.target.value}))
+    if(text==='links/url'){
+      dispatch(storeLinks({type:value, data:Lang.target.value}))
+    }
+    else if (text==='language'){
+      dispatch(storeLangs({type:value, data:Lang.target.value}))
+    }
   }
 
     return(

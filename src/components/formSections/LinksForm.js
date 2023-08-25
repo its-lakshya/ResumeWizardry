@@ -20,7 +20,7 @@ const LinkForm = () => {
     if (count < 5) {
       setLinks((prev) => [
         ...prev,
-        <LinksSection key={count + 1} value={count + 1} />,
+        <LinksSection key={count + 1} value={count + 1} text={'links/url'} />,
       ]);
       setCount(count + 1);
       if (count === 4) {

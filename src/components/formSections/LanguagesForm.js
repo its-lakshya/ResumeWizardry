@@ -20,7 +20,7 @@ const LanguagesForm = () => {
     if (count < 5) {
       setLinks((prev) => [
         ...prev,
-        <LinksSection key={count + 1} value={count + 1} />,
+        <LinksSection key={count + 1} value={count + 1} text={'language'} />,
       ]);
       setCount(count + 1);
       if (count === 4) {
