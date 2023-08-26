@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    previousRoute:'',
-    currentRoute:'',
+    // previousRoute:'',
+    // currentRoute:'',
     nextRoute:'',
 }
 
@@ -11,12 +11,12 @@ const RoutesSlice = createSlice({
     initialState, 
 
     reducers:{
-        setProviousRoute:(state, action)=> {
+        // setProviousRoute:(state, action)=> {
 
-        },
-        setCurrentRoute:(state, action)=> {
+        // },
+        // setCurrentRoute:(state, action)=> {
 
-        },
+        // },
         setNextRoute:(state, action)=> {
             state.nextRoute = action.payload
         }

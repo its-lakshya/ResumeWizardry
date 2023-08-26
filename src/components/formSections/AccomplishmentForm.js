@@ -2,12 +2,17 @@ import { useEffect } from "react";
 import { CombinedSummary } from "./DifferentAddForms";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
+import useRouter from "./useRouter";
 
 const AccomplishmentForm = () => {
+  const data = ['', '', '', '', 'ad']
+  const route = useRouter(data)
+
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setNextRoute("/build-resume/form/finalize/add-addInfo"));
-  }, []);
+
+    dispatch(setNextRoute(route));
+  }, [route]);
 
   return (
     <div className="mx-10 py-10 min-h-[83vh] w-1/2 flex items-center">

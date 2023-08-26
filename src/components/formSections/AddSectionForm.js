@@ -9,9 +9,9 @@ const AddSectionForm = ({text}) => {
 
   const handleClick = () => {
     dispatch(storeSectionSelection(text))
+
     if (isCheckVisible === "invisible") {
       setIsCheckVisible("visible");
-
     } else {
       setIsCheckVisible("invisible");
     }

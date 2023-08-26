@@ -2,18 +2,22 @@ import { LinksSection } from "./DifferentAddForms";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
+import useRouter from "./useRouter";
 
 const LanguagesForm = () => {
+  const data = ['', '', '', 'ac', 'ad']
+  const route = useRouter(data)
+
   const [count, setCount] = useState(1);
   const [buttonVisibility, setButtonVisibility] = useState("");
   const dispatch = useDispatch();
 
   const [links, setLinks] = useState([
     <LinksSection key={count} value={count} text={'language'}/>,
-  ]);
+  ],[route]);
 
   useEffect(() => {
-    dispatch(setNextRoute("/build-resume/form/finalize/add-accomp"));
+    dispatch(setNextRoute(route));
   });
 
   const handleClick = () => {

@@ -2,16 +2,17 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
 import { CombinedSummary } from "./DifferentAddForms";
+import useRouter from "./useRouter";
 
 const CertificationForm = () => {
+  const data = ["", "", "l", "ac", "ad"];
+  const route = useRouter(data);
 
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-
-    useEffect(()=> {
-        dispatch(setNextRoute('/build-resume/form/finalize/add-lang'))
-    })
-
+  useEffect(() => {
+    dispatch(setNextRoute(route));
+  },[route]);
 
   return (
     <div className="mx-10 py-10 min-h-[83vh] w-1/2 flex items-center">
@@ -22,7 +23,7 @@ const CertificationForm = () => {
             {/* Your summary shows employers you’re right for their job.{" "} */}
           </span>
         </div>
-        <CombinedSummary text={'certifications'}/>
+        <CombinedSummary text={"certifications"} />
       </div>
       <div></div>
     </div>

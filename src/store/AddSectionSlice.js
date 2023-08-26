@@ -4,9 +4,11 @@ const initialState = {
   website: false,
   certifications: false,
   languages: false,
-  accomlishments: false,
+  accomplishments: false,
   additionalInformation: false,
 };
+
+
 
 const AddSectionSlice = createSlice({
   name: "sectionSelectionDetails",
@@ -14,7 +16,7 @@ const AddSectionSlice = createSlice({
 
   reducers: {
     storeSectionSelection: (state, action) => {
-      if (action.payload === "Websites, Portfolios, Profiles") {
+      if (action.payload === "Websites, Portfolios, Profiles") {  
         if (state.website === true) {
           state.website = false;
         } else {
@@ -36,10 +38,10 @@ const AddSectionSlice = createSlice({
         }
       }
       if (action.payload === "Accomplishments") {
-        if (state.accomlishments === true) {
-          state.accomlishments = false;
+        if (state.accomplishments === true) {
+          state.accomplishments = false;
         } else {
-          state.accomlishments = true;
+          state.accomplishments = true;
         }
       }
       if (action.payload === "Additional Information") {

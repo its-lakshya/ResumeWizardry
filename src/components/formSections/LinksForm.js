@@ -2,25 +2,28 @@ import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
 import { LinksSection } from "./DifferentAddForms";
 import { useState, useEffect } from "react";
+import useRouter from "./useRouter";
 
 const LinkForm = () => {
+  const data = ["", "c", "l", "ac", "ad"];
+  const route = useRouter(data);
   const [count, setCount] = useState(1);
   const [buttonVisibility, setButtonVisibility] = useState("");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const [links, setLinks] = useState([
-    <LinksSection key={count} value={count} text={'links/url'} />,
+    <LinksSection key={count} value={count} text={"links/url"} />,
   ]);
 
-  useEffect(()=> {
-    dispatch(setNextRoute('/build-resume/form/finalize/add-crtf'))
-  })
+  useEffect(() => {
+    dispatch(setNextRoute(route));
+  },[route]);
 
   const handleClick = () => {
     if (count < 5) {
       setLinks((prev) => [
         ...prev,
-        <LinksSection key={count + 1} value={count + 1} text={'links/url'} />,
+        <LinksSection key={count + 1} value={count + 1} text={"links/url"} />,
       ]);
       setCount(count + 1);
       if (count === 4) {
@@ -39,7 +42,9 @@ const LinkForm = () => {
             help employers get to know you better.
           </span>
         </div>
-        <div className = {`w-full flex flex-col items-start justify-center gap-y-12`}>
+        <div
+          className={`w-full flex flex-col items-start justify-center gap-y-12`}
+        >
           {links}
           <button
             onClick={handleClick}
