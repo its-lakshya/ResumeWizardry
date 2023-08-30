@@ -1,20 +1,33 @@
 import { BsCheckLg } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { storeSectionSelection } from "../../store/AddSectionSlice";
+import { useSelector } from "react-redux";
 
 const AddSectionForm = ({text}) => {
   const [isCheckVisible, setIsCheckVisible] = useState("invisible");
   const dispatch = useDispatch()
+  const store = useSelector((store)=> store.sectionSelectionDetails)
+  
+  // const websiteVisibility = useSelector((store)=> store.sectionSelectionDetails.websiteTick)
+  // const certificationsVisibility = useSelector((store)=> store.sectionSelectionDetails.certificationsTick)
+  // const languagesVisibility = useSelector((store)=> store.sectionSelectionDetails.languagesTicks)
+  // const accomplishmentsVisibility = useSelector((store)=> store.sectionSelectionDetails.accomplishmentsTick)
+  // const additionalInfomationVisibility = useSelector((store)=> store.sectionSelectionDetails.additionalInfomationTick)
+  
+  
 
   const handleClick = () => {
+    setIsCheckVisible(store)
     dispatch(storeSectionSelection(text))
 
-    if (isCheckVisible === "invisible") {
-      setIsCheckVisible("visible");
-    } else {
-      setIsCheckVisible("invisible");
-    }
+    // if (isCheckVisible === "invisible" || store === true ) {
+    //   console.log(store)
+    //   setIsCheckVisible("visible");
+    // } else {
+    //   setIsCheckVisible("invisible");
+    // }
+
   };
 
   return (

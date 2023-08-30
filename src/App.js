@@ -19,10 +19,11 @@ import LanguagesForm from "./components/formSections/LanguagesForm";
 import AdditionalInfoForm from "./components/formSections/AdditionalInfoForm";
 import AccomplishmentForm from "./components/formSections/AccomplishmentForm";
 import RouterDecider from './components/formSections/useRouter'
+import Template1 from "./templates/Template1";
 
 const AppLayout = () => {
   return (
-    <div className="">
+    <div className="bg-black">
       <Outlet />
     </div>
   );
@@ -38,6 +39,10 @@ const appRouter = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      {
+        path: "template",
+        element: <Template1 />,
+      },          
       {
         path: "/build-resume",
         element: <BuildResume />,

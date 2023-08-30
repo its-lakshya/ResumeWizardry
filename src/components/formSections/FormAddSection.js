@@ -16,7 +16,6 @@ const FormAddSection = () => {
     dispatch(addStyleSection("finalize"));
     dispatch(setNextRoute(route));
 
-    // dispatch(setNextRoute("/build-resume/form/finalize/decider"));
   }, [route]);
 
   return (
@@ -31,19 +30,19 @@ const FormAddSection = () => {
 
         <div className="flex flex-col gap-y-8">
           <div className="flex items-center gap-x-6 text-lg">
-            <AddSectionForm text="Websites, Portfolios, Profiles" />
+            <AddSectionForm text="website" />
           </div>
           <div className="flex items-center gap-x-6 text-lg">
-            <AddSectionForm text="Certifications" />
+            <AddSectionForm text="certifications" />
           </div>
           <div className="flex items-center gap-x-6 text-lg">
-            <AddSectionForm text={"Languages"} />
+            <AddSectionForm text={"languages"} />
           </div>
           <div className="flex items-center gap-x-6 text-lg">
-            <AddSectionForm text="Accomplishments" />
+            <AddSectionForm text="accomplishments" />
           </div>
           <div className="flex items-center gap-x-6 text-lg">
-            <AddSectionForm text="Additional Information" />
+            <AddSectionForm text="addtionalInformation" />
           </div>
         </div>
       </div>
