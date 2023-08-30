@@ -23,7 +23,7 @@ import Template1 from "./templates/Template1";
 
 const AppLayout = () => {
   return (
-    <div className="bg-black">
+    <div className="">
       <Outlet />
     </div>
   );
