@@ -18,7 +18,6 @@ import CertificationForm from "./components/formSections/CertificationForm";
 import LanguagesForm from "./components/formSections/LanguagesForm";
 import AdditionalInfoForm from "./components/formSections/AdditionalInfoForm";
 import AccomplishmentForm from "./components/formSections/AccomplishmentForm";
-import RouterDecider from './components/formSections/useRouter'
 import Template1 from "./templates/Template1";
 
 const AppLayout = () => {

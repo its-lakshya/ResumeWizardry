@@ -16,7 +16,7 @@ const Template1 = () => {
   };
 
   return (
-    <div className="m-auto scale-75 self-center h-[11.69in] w-[8.27in] border border-black flex flex-col bg-white">
+    <div className="scale-50 self-center h-[11.69in] w-[8.27in] shadow-2xl  flex flex-col bg-white">
       <div
         className={`[&>*]:mx-4 h-48 w-full flex items-center justify-center ${color}`}
       >
