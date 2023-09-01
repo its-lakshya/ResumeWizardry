@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const Template1 = () => {
   const contactDetails = useSelector((store) => store.contactDetails);
+  const [linksVisibility, setLinkVisibility] = useState('invisible');
+  const [certificationsVisibility, setCertificationsVisibility] = useState('invisible');
+  const [languagesVisibility, setLanguagesVisibility] = useState('invisible');
+  const [accomplishmentsVisibility, setAccomplishmentsVisibility] = useState('invisible');
+  const [addInfoVisibility, setAddInfoVisibility] = useState('invisible');
+
+  const store = useSelector((store)=> store.sectionSelectionDetails)
 
   const x = 1;
   const [color, setColor] = useState(x === 1 ? "bg-[#232f47]" : "bg-[#000000]");
@@ -14,6 +21,15 @@ const Template1 = () => {
     document.documentElement.style.setProperty("--color", color);
     document.documentElement.style.setProperty("--color", textColor);
   };
+
+  useEffect(()=> {
+
+    if(store.website===true){setLinkVisibility('visible')}
+    if(store.certifications===true){setCertificationsVisibility('visible')}
+    if(store.languages===true){setLanguagesVisibility('visible')}
+    if(store.accomplishments===true){setAccomplishmentsVisibility('visible')}
+    if(store.additionalInformation===true){setAddInfoVisibility('visible')}
+  },[store])
 
   return (
     <div className="scale-50 self-center h-[11.69in] w-[8.27in] shadow-2xl  flex flex-col bg-white">
@@ -30,7 +46,7 @@ const Template1 = () => {
         </div>
       </div>
       <div
-        className={`w-full h-full px-12 py-14 flex items-center justify-center ${textColor} text-[13.5px] font-semibold `}
+        className={`w-full h-full px-10 py-8 flex items-center justify-center ${textColor} text-[13.5px] font-semibold `}
       >
         <div className="w-full h-full flex justify-center itmes-center">
           <div className=" h-full w-80 flex flex-col justify-start items-center gap-y-12  overflow-hidden border-r border-gray-400 ">
@@ -63,9 +79,25 @@ const Template1 = () => {
               <div className="">Solidity</div>
               <div className="">React</div>
             </div>
+            <div className={`w-full flex flex-col gap-1 ${linksVisibility}`}>
+              <div className="font-extrabold uppercase  tracking-[0.12em] w-full text-base mb-2">
+                links
+              </div>
+              <div className="">Movies Trip</div>
+              <div className="">ResumeWizardry</div>
+              <div className="">Youtube</div>
+            </div>
+            <div className={`w-full flex flex-col gap-1 ${languagesVisibility}`}>
+              <div className="font-extrabold uppercase  tracking-[0.12em] w-full text-base mb-2">
+                languages
+              </div>
+              <div className="">English</div>
+              <div className="">Hindi</div>
+              <div className="">Haryanvi</div>
+            </div>
           </div>
 
-          <div className="h-full w-full px-6 flex flex-col gap-8 text-justify">
+          <div className="h-full w-full pl-6 flex flex-col gap-8 text-justify">
             <div className="w-full flex flex-col gap-3">
               <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base">
                 summary
@@ -77,11 +109,6 @@ const Template1 = () => {
                 reducing bugs by 20% and increasing overall team productivity.
                 Brings a combination of startup agility and enterprise-level
                 experience to the table.
-                <div className="h-4"> </div>
-                Developed a progressive web app as a capstone project, which
-                garnered positive feedback for its intuitive interface. Assisted
-                in the development of a high-traffic e-commerce site,
-                contributing to a 20% increase in sales. JavaScript
               </div>
             </div>
 
@@ -121,8 +148,7 @@ const Template1 = () => {
                       </div>
                   </div>
                   <div className="">
-                    - <div>Developed dynamic and interactive website that ensured high traffic, page view and user experience.
-                      </div>
+                    
                   </div>
                 </div>
               </div>
@@ -158,14 +184,58 @@ const Template1 = () => {
                       </div>
                   </div>
                   <div className="">
-                    - <div>Developed dynamic and interactive website that ensured high traffic, page view and user experience.
-                      </div>
+                    
                   </div>
                 </div>
               </div>
 
 
             </div>
+
+            <div className={`w-full flex flex-col gap-3 ${certificationsVisibility}`}>
+              <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base">
+                certifications 
+              </div>
+              <div>
+                Front End Developer with a focus on React.js. Developed a
+                complex, interactive dashboard for a SaaS company, improving
+                customer retention by 15%. Managed a consistent release cycle,
+                reducing bugs by 20% and increasing overall team productivity.
+                Brings a combination of startup agility and enterprise-level
+                experience to the table.
+              </div>
+            </div>
+
+
+            <div className={`w-full flex flex-col gap-3 ${accomplishmentsVisibility}`}>
+              <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base">
+                accomplishments 
+              </div>
+              <div>
+                Front End Developer with a focus on React.js. Developed a
+                complex, interactive dashboard for a SaaS company, improving
+                customer retention by 15%. Managed a consistent release cycle,
+                reducing bugs by 20% and increasing overall team productivity.
+                Brings a combination of startup agility and enterprise-level
+                experience to the table.
+              </div>
+            </div>
+
+
+            <div className={`w-full flex flex-col gap-3 ${addInfoVisibility}`}>
+              <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base">
+                addtional information 
+              </div>
+              <div>
+                Front End Developer with a focus on React.js. Developed a
+                complex, interactive dashboard for a SaaS company, improving
+                customer retention by 15%. Managed a consistent release cycle,
+                reducing bugs by 20% and increasing overall team productivity.
+                Brings a combination of startup agility and enterprise-level
+                experience to the table.
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

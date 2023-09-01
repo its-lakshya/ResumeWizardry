@@ -12,6 +12,7 @@ const CertificationForm = () => {
 
   useEffect(() => {
     dispatch(setNextRoute(route));
+
   },[route]);
 
   return (

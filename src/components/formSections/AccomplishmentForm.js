@@ -10,8 +10,8 @@ const AccomplishmentForm = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-
     dispatch(setNextRoute(route));
+
   }, [route]);
 
   return (

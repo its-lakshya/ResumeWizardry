@@ -28,7 +28,7 @@ const AddSectionSlice = createSlice({
       if (action.payload === "website") {  
         if (state.website === true) {
           state.website = false;
-          state.websiteTick='invisible'
+          state.websiteTick= 'invisible'
         } else {
           state.website = true;
           state.websiteTick='visible'
@@ -61,13 +61,14 @@ const AddSectionSlice = createSlice({
           state.accomplishmentsTick='visible'
         }
       }
-      if (action.payload === "additionalInfomation") {
+      if (action.payload === "addtionalInformation") {
         if (state.additionalInformation === true) {
           state.additionalInformation = false;
           state.additionalInformationTick='invisible'
         } else {
           state.additionalInformation = true;
           state.additionalInformationTick='visible'
+          console.log('added')
         }
       }
     },

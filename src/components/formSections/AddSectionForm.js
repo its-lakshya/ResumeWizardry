@@ -5,7 +5,7 @@ import { storeSectionSelection } from "../../store/AddSectionSlice";
 import { useSelector } from "react-redux";
 
 const AddSectionForm = ({text}) => {
-  const [isCheckVisible, setIsCheckVisible] = useState("invisible");
+  const [isCheckVisible, setIsCheckVisible] = useState('invisible');
   const dispatch = useDispatch()
   const store = useSelector((store)=> store.sectionSelectionDetails)
   
@@ -18,8 +18,14 @@ const AddSectionForm = ({text}) => {
   
 
   const handleClick = () => {
-    setIsCheckVisible(store)
     dispatch(storeSectionSelection(text))
+    if(isCheckVisible==='visible'){
+      setIsCheckVisible('invisible')
+    }
+    else {
+      setIsCheckVisible('visible')
+    }
+    console.log(store)
 
     // if (isCheckVisible === "invisible" || store === true ) {
     //   console.log(store)
