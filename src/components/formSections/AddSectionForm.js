@@ -25,7 +25,6 @@ const AddSectionForm = ({text}) => {
     else {
       setIsCheckVisible('visible')
     }
-    console.log(store)
 
     // if (isCheckVisible === "invisible" || store === true ) {
     //   console.log(store)
