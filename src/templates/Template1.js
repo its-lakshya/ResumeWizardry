@@ -3,6 +3,9 @@ import { useSelector } from "react-redux";
 import { BsDot } from "react-icons/bs";
 
 const Template1 = () => {
+  const headingCss = 'font-extrabold uppercase  tracking-[0.07em] w-full text-sm mb-[2px]'
+  const headingContentCss = 'w-full flex flex-col gap-1'
+
   const [linksVisibility, setLinkVisibility] = useState('hidden');
   const [certificationsVisibility, setCertificationsVisibility] = useState('hidden');
   const [languagesVisibility, setLanguagesVisibility] = useState('hidden');
@@ -43,41 +46,45 @@ const Template1 = () => {
     if(store.additionalInformation===false){setAddInfoVisibility('hidden')}
   },[store])
 
-
+//scale-50 self-start h-[11.69in] w-[8.27in]
+//self-center h-[297mm] w-[210mm] flex flex-col
+//w-full flex items-center justify-center
+//w-full Name
 
   return (
-    <div className="scale-50 self-center h-[11.69in] w-[8.27in] shadow-2xl  flex flex-col bg-white">
+    <div id='resume' >
+    <div className="self-center h-[222.5mm] w-[160mm] bg-white flex flex-col justify-center items-center "  >
       <div
-        className={`[&>*]:mx-4 h-48 w-full flex items-center justify-center ${color}`}
+        className={`[&>*]:mx-4 h-28 w-full flex items-center justify-center  ${color} `}
       >
-        <div className="Name h-32 w-full  flex flex-col items-center justify-center uppercase text-[#c5b58b] gap-4">
-          <span className=" font-medium text-5xl font-serif tracking-[0.27em]">
+        <div className="h-28 flex flex-col items-center justify-center uppercase text-[#c5b58b] gap-4" >
+          <div className="font-medium text-3xl font-serif tracking-[0.27em] flex justify-center items-center">
             {
               contactDetails.name ? (
-                <span>{contactDetails.name} {contactDetails.surname}</span>
+                <div>{contactDetails.name} {contactDetails.surname}</div>
               ) : (
-                <span>lakshya kumar</span>
+                <div>lakshya kumar</div>
               )
             }
-          </span>
-          <span className="tracking-[0.15em] font-sans text-base">
+          </div>
+          <div className="tracking-[0.15em] font-sans text-xs">
             {
               contactDetails.title?(
-                <span>{contactDetails.title}</span>
+                <div>{contactDetails.title}</div>
                 ) : (
-                <span>Your professional title here</span>
+                <div>Your professional title here</div>
               )
             }
-          </span>
+          </div>
         </div>
       </div>
       <div
-        className={`w-full h-full px-10 py-8 flex items-center justify-center ${textColor} text-[13.5px] font-semibold `}
+        className={`w-full h-full px-6 py-6 flex items-center justify-center ${textColor} text-xs font-semibold `}
       >
         <div className="w-full h-full flex justify-center itmes-center">
-          <div className=" h-full w-80 flex flex-col justify-start items-center gap-y-8  overflow-hidden  ">
-            <div className="w-full flex flex-col gap-1">
-              <div className="font-extrabold uppercase  tracking-[0.12em] w-full text-base mb-2">
+          <div className=" h-full w-64 flex flex-col justify-start items-center gap-y-4  overflow-hidden  ">
+            <div className={`${headingContentCss}`}>
+              <div className={`${headingCss}`}>
                 contact
               </div>
               <div className="">{contactDetails.phone?(<span>{contactDetails.phone}</span>) : (null)}</div>
@@ -85,8 +92,8 @@ const Template1 = () => {
               <div className="">{contactDetails.city || contactDetails.pincode ?(<span>{contactDetails.city}, {contactDetails.pincode}</span>) : (null)}</div>
               <div className="">{contactDetails.state ||contactDetails.country ?(<span>{contactDetails.state}, {contactDetails.country}</span>) : (null)}</div>
             </div>
-            <div className="w-full flex flex-col gap-1">
-              <div className="font-extrabold uppercase  tracking-[0.12em] w-full text-base mb-2">
+            <div className={`${headingContentCss}`}>
+              <div className={`${headingCss}`}>
                 Education
               </div>
               <div className="w-full flex flex-col gap-1 mb-2">
@@ -116,8 +123,8 @@ const Template1 = () => {
                 ):(null)
               }
             </div>
-            <div className="w-full flex flex-col gap-1">
-              <div className="font-extrabold uppercase  tracking-[0.12em] w-full text-base mb-2">
+            <div className={`${headingContentCss}`}>
+              <div className={`${headingCss}`}>
                 skills
               </div>
               {skillDetails.skill1 ? (<span>{skillDetails.skill1}</span>) : (null)} 
@@ -132,8 +139,8 @@ const Template1 = () => {
               {skillDetails.skill10 ? (<span>{skillDetails.skill10}</span>) : (null)} 
             </div>
 
-            <div className={`w-full flex flex-col gap-1 ${linksVisibility}`}>
-              <div className="font-extrabold uppercase  tracking-[0.12em] w-full text-base mb-2">
+            <div className={`${headingContentCss} ${linksVisibility}`}>
+              <div className={`${headingCss}`}>
                 links
               </div>
               {linkLangDetails.link1 ? (<span>{linkLangDetails.link1}</span>) : (null)}
@@ -143,8 +150,8 @@ const Template1 = () => {
               {linkLangDetails.link5 ? (<span>{linkLangDetails.link5}</span>) : (null)}
             </div>
 
-            <div className={`w-full flex flex-col gap-1 ${languagesVisibility}`}>
-              <div className="font-extrabold uppercase  tracking-[0.12em] w-full text-base mb-2">
+            <div className={`${headingContentCss} ${languagesVisibility}`}>
+              <div className={`${headingCss}`}>
                 languages
               </div>
               {linkLangDetails.lang1 ? (<span>{linkLangDetails.lang1}</span>) : (null)}
@@ -155,9 +162,9 @@ const Template1 = () => {
             </div>
           </div>
           
-          <div className="h-full w-full pl-6 flex flex-col gap-8 text-justify border-l border-gray-400">
-            <div className="w-full flex flex-col gap-3">
-              <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base">
+          <div className="h-full w-full pl-4 pr-2 flex flex-col gap-4 text-justify border-l border-gray-400">
+            <div className={`${headingContentCss}`}>
+              <div className={`${headingCss}`}>
                 summary
               </div>
               <div>
@@ -165,8 +172,8 @@ const Template1 = () => {
               </div>
             </div>
 
-            <div className="w-full flex flex-col gap-3">
-              <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base ">
+            <div className={`${headingContentCss}`}>
+              <div className={`${headingCss}`}>
                 professional experience
               </div>
 
@@ -177,9 +184,9 @@ const Template1 = () => {
                   <div className="flex capitalize gap-x-2">
                     <span>{experienceDetails.organization1 ? (experienceDetails.organization1):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.city1 ? (experienceDetails.city1):(null)}</span>
+                    <span>{experienceDetails.city1 || experienceDetails.country1 ? (<>{experienceDetails.city1}, {experienceDetails.country1}</>):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.start1 ? (<>{experienceDetails.start1} to {experienceDetails.end1}</>):(null)}</span>
+                    <span>{experienceDetails.start1 || experienceDetails.end1 ? (<>{experienceDetails.start1} to {experienceDetails.end1}</>):(null)}</span>
                   </div>
                 </div>
 
@@ -200,9 +207,9 @@ const Template1 = () => {
                   <div className="flex capitalize gap-x-2">
                     <span>{experienceDetails.organization2 ? (experienceDetails.organization2):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.city2 ? (experienceDetails.city2):(null)}</span>
+                    <span>{experienceDetails.city2 || experienceDetails.country2? (<>{experienceDetails.city2}, {experienceDetails.country2}</>):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.start2 ? (<>{experienceDetails.start2} to {experienceDetails.end2}</>):(null)}</span>
+                    <span>{experienceDetails.start2 || experienceDetails.end2 ? (<>{experienceDetails.start2} to {experienceDetails.end2}</>):(null)}</span>
                   </div>
                 </div>
 
@@ -223,9 +230,9 @@ const Template1 = () => {
                   <div className="flex capitalize gap-x-2">
                     <span>{experienceDetails.organization3 ? (experienceDetails.organization3):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.city3 ? (experienceDetails.city3):(null)}</span>
+                    <span>{experienceDetails.city3 || experienceDetails.country3 ? (<>{experienceDetails.city3}, {experienceDetails.country3}</>):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.start3 ? (<>{experienceDetails.start2} to {experienceDetails.end3}</>):(null)}</span>
+                    <span>{experienceDetails.start3 || experienceDetails.end3? (<>{experienceDetails.start2} to {experienceDetails.end3}</>):(null)}</span>
                   </div>
                 </div>
 
@@ -240,8 +247,8 @@ const Template1 = () => {
               </div>
             </div>
 
-            <div className={`w-full flex flex-col gap-3 ${certificationsVisibility}`}>
-              <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base">
+            <div className={`${headingContentCss} ${certificationsVisibility}`}>
+              <div className={`${headingCss}`}>
                 certifications 
               </div>
               <div>
@@ -250,8 +257,8 @@ const Template1 = () => {
             </div>
 
 
-            <div className={`w-full flex flex-col gap-3 ${accomplishmentsVisibility}`}>
-              <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base">
+            <div className={`${headingContentCss} ${accomplishmentsVisibility}`}>
+              <div className={`${headingCss}`}>
                 accomplishments 
               </div>
               <div>
@@ -260,8 +267,8 @@ const Template1 = () => {
             </div>
 
 
-            <div className={`w-full flex flex-col gap-3 ${addInfoVisibility}`}>
-              <div className="font-extrabold uppercase tracking-[0.12em] w-full text-base">
+            <div className={`${headingContentCss} ${addInfoVisibility}`}>
+              <div className={`${headingCss}`}>
                 addtional information 
               </div>
               <div>
@@ -272,6 +279,7 @@ const Template1 = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
