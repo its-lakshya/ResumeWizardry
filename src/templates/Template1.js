@@ -36,13 +36,13 @@ const Template1 = () => {
   useEffect(()=> {
     if(store.website===true){setLinkVisibility('visible')}
     if(store.website===false){setLinkVisibility('hidden')}
-    if(store.certifications===true){setCertificationsVisibility('visible')}
+    if(store.certifications===true || combinedSummaryDetails.certifications){setCertificationsVisibility('visible')}
     if(store.certifications===false){setCertificationsVisibility('hidden')}
     if(store.languages===true){setLanguagesVisibility('visible')}
     if(store.languages===false){setLanguagesVisibility('hidden')}
-    if(store.accomplishments===true){setAccomplishmentsVisibility('visible')}
+    if(store.accomplishments===true || combinedSummaryDetails.accomplishments){setAccomplishmentsVisibility('visible')}
     if(store.accomplishments===false){setAccomplishmentsVisibility('hidden')}
-    if(store.additionalInformation===true){setAddInfoVisibility('visible')}
+    if(store.additionalInformation===true || combinedSummaryDetails.additionalInfo){setAddInfoVisibility('visible')}
     if(store.additionalInformation===false){setAddInfoVisibility('hidden')}
   },[store])
 
