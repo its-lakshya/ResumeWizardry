@@ -37,7 +37,7 @@ const FormPage = () => {
         </div>
       </div>
       <div className="h-20">
-            <button onClick={()=> createPdf()}>download </button>
+            {/* <button onClick={()=> createPdf()}> download </button> */}
         <FormPageFooter />
       </div>
     </div>

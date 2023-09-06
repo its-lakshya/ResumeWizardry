@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import Template1 from "../assets/Resume8.jpg";
+import FormPageHeader from "../components/formSections/FormPageHeader";
 
 const ChooseTemplate = () => {
   return (
-    <div className="flex item-center justify-center">
-      <div className="flex flex-col item-center justify-start w-3/4 h-full min-h-screen pt-12 gap-y-6 ">
-        <div className="flex flex-col items-center justify-start h-fit gap-y-1">
+    <div className='flex flex-col '>
+      <FormPageHeader/>
+    <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col item-center justify-start w-3/4 h-full min-h-screen pt-12 gap-y-10">
+        <div className="flex flex-col items-center justify-start h-fit gap-y-4">
           <div className="font-bold text-4xl text-[#003459] tracking-wide">
-            Choose from our best templates
+            Choose from our magicaly handcrafted templates
           </div>
             {/* <Link to='/build-resume/form/contact'>Towards form</Link> */}
           <div className='text-lg'>You can always change your template later.</div>
@@ -29,6 +32,7 @@ const ChooseTemplate = () => {
           </div>
         {/* </div> */}
       </div>
+    </div>
     </div>
   );
 };
