@@ -5,7 +5,7 @@ import { CombinedSummary } from "./DifferentAddForms";
 import useRouter from "./useRouter";
 
 const CertificationForm = () => {
-  const data = ["", "", "l", "ac", "ad"];
+  const data = ["", "", "l", "ac", "ad", "d"];
   const route = useRouter(data);
 
   const dispatch = useDispatch();

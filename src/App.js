@@ -19,6 +19,7 @@ import LanguagesForm from "./components/formSections/LanguagesForm";
 import AdditionalInfoForm from "./components/formSections/AdditionalInfoForm";
 import AccomplishmentForm from "./components/formSections/AccomplishmentForm";
 import Template1 from "./templates/Template1";
+import DownloadPage from "./pages/DownloadPage";
 
 const AppLayout = () => {
   return (
@@ -110,6 +111,10 @@ const appRouter = createBrowserRouter([
               },
             ],
           },
+          {
+            path:'download',
+            element:<DownloadPage/>
+          }
         ],
       },
     ],

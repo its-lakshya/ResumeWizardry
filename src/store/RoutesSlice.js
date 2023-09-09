@@ -18,7 +18,12 @@ const RoutesSlice = createSlice({
 
         // },
         setNextRoute:(state, action)=> {
-            state.nextRoute = action.payload
+            if(action.payload!==undefined){
+                state.nextRoute = action.payload
+            }
+            else{
+                state.nextRoute = '/build-resume/download';
+            }
         }
     }
 })

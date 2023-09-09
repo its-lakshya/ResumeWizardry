@@ -7,16 +7,16 @@ import { setNextRoute } from "../../store/RoutesSlice";
 import useRouter from "./useRouter";
 
 const FormAddSection = () => {
-  const data = ['w', 'c', 'l', 'ac', 'ad']
+  const data = ['w', 'c', 'l', 'ac', 'ad', 'd']
   const dispatch = useDispatch();
-  const route = useRouter(data); 
-
+  const route = useRouter(data);
+  
   useEffect(() => {   
-
+    dispatch(setNextRoute('/build-resume/form/download')) 
     dispatch(addStyleSection("finalize"));
     dispatch(setNextRoute(route));
 
-  }, [route]);
+  },[route]);
 
   return (
     <div className="my-0 min-h-[83vh] flex  items-center ">

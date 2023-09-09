@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
 
 const AdditionalInfoForm = () => {
-  const data = ['', '', '', '', '']
+  const data = ['', '', '', '', '', 'd']
   const route = useRouter(data)
 
   const dispatch = useDispatch();

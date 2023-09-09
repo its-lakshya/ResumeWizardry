@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import useRouter from "./useRouter";
 
 const LinkForm = () => {
-  const data = ["", "c", "l", "ac", "ad"];
+  const data = ["", "c", "l", "ac", "ad","d"];
   const route = useRouter(data);
   const [count, setCount] = useState(1);
   const [buttonVisibility, setButtonVisibility] = useState("");

@@ -7,21 +7,6 @@ import { jsPDF } from "jspdf";
 
 const FormPage = () => {
 
-  const createPdf = async () => {
-    // const pdf = new jsPDF("portrait", "pt", "a4", true); 
-    // const data = await html2canvas(document.querySelector("#resume")); 
-    // const img = data.toDataURL("image/png");
-    // const imgProperties = pdf.getImageProperties(img);
-    // const pdfWidth = pdf.internal.pageSize.getWidth();
-    // const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
-    // pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
-    // pdf.save("shipping_label.pdf");
-
-    const report = new jsPDF('p','pt','a4');
-    report.html(document.querySelector('#resume')).then(() => {
-        report.save('resume.pdf');
-    })
-  }
 
   return (
     <div className="flex flex-col h-screen justify-between overflow-hidden ">

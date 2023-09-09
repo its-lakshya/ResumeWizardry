@@ -180,7 +180,7 @@ const Template1 = () => {
               <div className="flex flex-col gap-2">
                 {experienceDetails.title1 ? (<>
                   <div>
-                  <div className="uppercase">{experienceDetails.title1 ? (experienceDetails.title1):(null)}</div>
+                  <div className="uppercase font-bold">{experienceDetails.title1 ? (experienceDetails.title1):(null)}</div>
                   <div className="flex capitalize gap-x-2">
                     <span>{experienceDetails.organization1 ? (experienceDetails.organization1):(null)}</span>
                     <span>|</span>
