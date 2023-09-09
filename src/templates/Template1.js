@@ -97,28 +97,28 @@ const Template1 = () => {
                 Education
               </div>
               <div className="w-full flex flex-col gap-1 mb-2">
-              <div className="">{educationDetails.degree1 || educationDetails.fieldofStudy1?(<span>{educationDetails.degree1} / {educationDetails.fieldofStudy1}</span>) : null}</div>
-              <div className="">{educationDetails.instituteName1?(<span>{educationDetails.instituteName1}</span>) : null}</div>
-              <div className="">{educationDetails.instituteLocation1?(<span>{educationDetails.instituteLocation1}</span>) : null} </div>
-              <div className="">{educationDetails.graduationStart1 || educationDetails.graduationEnd1?(<span>{educationDetails.graduationStart1} to {educationDetails.graduationEnd1}</span>) : (null)} </div>
+              <div className="">{educationDetails.degree[0] || educationDetails.fieldofStudy[0]?(<span>{educationDetails.degree[0]} / {educationDetails.fieldofStudy[0]}</span>) : null}</div>
+              <div className="">{educationDetails.instituteName[0]?(<span>{educationDetails.instituteName[0]}</span>) : null}</div>
+              <div className="">{educationDetails.instituteLocation[0]?(<span>{educationDetails.instituteLocation[0]}</span>) : null} </div>
+              <div className="">{educationDetails.graduationStart[0] || educationDetails.graduationEnd[0]?(<span>{educationDetails.graduationStart[0]} to {educationDetails.graduationEnd[0]}</span>) : (null)} </div>
               </div> 
               {
-                educationDetails.instituteName2 ? (
+                educationDetails.instituteName[1] ? (
                   <div className="w-full flex flex-col gap-1 mb-2">
-                  <div className="">{educationDetails.degree2 || educationDetails.fieldofStudy2 ?(<span>{educationDetails.degree2} / {educationDetails.fieldofStudy2}</span>) : (null)}</div>
-                  <div className="">{educationDetails.instituteName2?(<span>{educationDetails.instituteName2}</span>) : (null)}</div>
-                  <div className="">{educationDetails.instituteLocation2?(<span>{educationDetails.instituteLocation2}</span>) : (null)} </div>
-                  <div className="">{educationDetails.graduationStart2 || educationDetails.graduationEnd2 ?(<span>{educationDetails.graduationStart2} to {educationDetails.graduationEnd1}</span>) : (null)} </div>
+                  <div className="">{educationDetails.degree[1] || educationDetails.fieldofStudy[1] ?(<span>{educationDetails.degree[1]} / {educationDetails.fieldofStudy[1]}</span>) : (null)}</div>
+                  <div className="">{educationDetails.instituteName[1]?(<span>{educationDetails.instituteName[1]}</span>) : (null)}</div>
+                  <div className="">{educationDetails.instituteLocation[1]?(<span>{educationDetails.instituteLocation[1]}</span>) : (null)} </div>
+                  <div className="">{educationDetails.graduationStart[1] || educationDetails.graduationEnd[1] ?(<span>{educationDetails.graduationStart[1]} to {educationDetails.graduationEnd[1]}</span>) : (null)} </div>
                   </div>
                 ) :(null)
               }
               {
-                educationDetails.instituteName3 ? (
+                educationDetails.instituteName[2] ? (
               <div className="w-full flex flex-col gap-1 mb-2">
-              <div className="">{educationDetails.degree3 || educationDetails.fieldofStudy3 ?(<span>{educationDetails.degree3} / {educationDetails.fieldofStudy3}</span>) : null}</div>
-              <div className="">{educationDetails.instituteName3?(<span>{educationDetails.instituteName3}</span>) : null}</div>
-              <div className="">{educationDetails.instituteLocation3?(<span>{educationDetails.instituteLocation3}</span>) : null} </div>
-              <div className="">{educationDetails.graduationStart3 || educationDetails.graduationEnd3?(<span>{educationDetails.graduationStart3} to {educationDetails.graduationEnd1}</span>) : null} </div>
+              <div className="">{educationDetails.degree[2] || educationDetails.fieldofStudy[2] ?(<span>{educationDetails.degree[2]} / {educationDetails.fieldofStudy[2]}</span>) : null}</div>
+              <div className="">{educationDetails.instituteName[2]?(<span>{educationDetails.instituteName[2]}</span>) : null}</div>
+              <div className="">{educationDetails.instituteLocation[2]?(<span>{educationDetails.instituteLocation[2]}</span>) : null} </div>
+              <div className="">{educationDetails.graduationStart[2] || educationDetails.graduationEnd[2]?(<span>{educationDetails.graduationStart[2]} to {educationDetails.graduationEnd[2]}</span>) : null} </div>
               </div>
                 ):(null)
               }

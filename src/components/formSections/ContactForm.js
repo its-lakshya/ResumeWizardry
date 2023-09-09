@@ -14,7 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 const ContactForm = () => {
   const dispatch = useDispatch();
 
-  // const contactDetails = useSelector((store) => store.contactDetails)
+  const contactDetails = useSelector((store) => store.contactDetails)
   
   const handleChange = ({
     Name,
@@ -61,7 +61,8 @@ const ContactForm = () => {
             placeholder="John"
             className={inputClassNames}
             onChange={(Name) => handleChange({ Name })}
-          />
+            value={contactDetails.name}
+            />
         </label>
         <label className={labelClassNames}>
           surname
@@ -69,7 +70,8 @@ const ContactForm = () => {
             placeholder="Doe"
             className={inputClassNames}
             onChange={(Surname) => handleChange({ Surname })}
-          />
+            value={contactDetails.surname}
+            />
         </label>
       </div>
 
@@ -80,7 +82,8 @@ const ContactForm = () => {
             placeholder="New Delhi"
             className={inputClassNames}
             onChange={(City) => handleChange({ City })}
-          />
+            value={contactDetails.city}
+            />
         </label>
         <label className={labelClassNames}>
           country
@@ -88,7 +91,8 @@ const ContactForm = () => {
             placeholder="India"
             className={inputClassNames}
             onChange={(Country) => handleChange({ Country })}
-          />
+            value={contactDetails.country}
+            />
         </label>
       </div>
 
@@ -99,7 +103,8 @@ const ContactForm = () => {
             placeholder="+91 9456230481"
             className={inputClassNames}
             onChange={(Phone) => handleChange({ Phone })}
-          />
+            value={contactDetails.phone}
+            />
         </label>
         <label className={labelClassNames}>
           Email
@@ -107,7 +112,8 @@ const ContactForm = () => {
             placeholder="doe@gmail.com"
             className={inputClassNames}
             onChange={(Email) => handleChange({ Email })}
-          />
+            value={contactDetails.email}
+            />
         </label>
       </div>
 
@@ -118,7 +124,8 @@ const ContactForm = () => {
             placeholder="Uttar Pradesh"
             className={inputClassNames}
             onChange={(State) => handleChange({ State })}
-          />
+            value={contactDetails.state}
+            />
         </label>
         <label className={labelClassNames}>
           Pin Code
@@ -126,6 +133,7 @@ const ContactForm = () => {
             placeholder="110034"
             className={inputClassNames}
             onChange={(Pincode) => handleChange({ Pincode })}
+            value={contactDetails.pincode}
           />
         </label>
       </div>

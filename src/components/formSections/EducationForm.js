@@ -7,10 +7,13 @@ import {
   storeGraduactionStart,
   storeGraduationEnd,
 } from "../../store/EducationFormSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const EducationForm = ({value}) => {
   const dispatch = useDispatch();
+
+  const EducationDetails =  useSelector((store) => store.educationDetails)
+
 
   const handleChange = ({ Name, Location, Degree, Field, Start, End }) => {
     if(Name){
@@ -43,7 +46,8 @@ const EducationForm = ({value}) => {
             placeholder="Oxford University"
             className={inputClassNames}
             onChange={(Name) => handleChange({ Name })}
-          />
+            value={EducationDetails.instituteName[value]}
+            />
         </label>
         <label className={labelClassNames}>
           institute location
@@ -51,7 +55,8 @@ const EducationForm = ({value}) => {
             placeholder="London"
             className={inputClassNames}
             onChange={(Location) => handleChange({ Location })}
-          />
+            value={EducationDetails.instituteLocation[value]}
+            />
         </label>
       </div>
 
@@ -62,7 +67,8 @@ const EducationForm = ({value}) => {
             placeholder="B-Tech"
             className={inputClassNames}
             onChange={(Degree) => handleChange({ Degree })}
-          />
+            value={EducationDetails.degree[value]}
+            />
         </label>
         <label className={labelClassNames}>
           field of study
@@ -70,7 +76,8 @@ const EducationForm = ({value}) => {
             placeholder="Computer Science"
             className={inputClassNames}
             onChange={(Field) => handleChange({ Field })}
-          />
+            value={EducationDetails.fieldofStudy[value]}
+            />
         </label>
       </div>
 
@@ -82,6 +89,7 @@ const EducationForm = ({value}) => {
             placeholder="start"
             className={inputClassNames}
             onChange={(Start) => handleChange({ Start })}
+            value={EducationDetails.graduationStart[value]}
           />
         </label>
         <label className={labelClassNames}>
@@ -91,6 +99,7 @@ const EducationForm = ({value}) => {
             placeholder="end"
             className={inputClassNames}
             onChange={(End) => handleChange({ End })}
+            value={EducationDetails.graduationEnd[value]}
           />
         </label>
       </div>

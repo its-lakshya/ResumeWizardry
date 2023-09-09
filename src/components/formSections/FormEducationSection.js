@@ -5,7 +5,7 @@ import { addStyleSection } from "../../store/FormPageHeaderSlice";
 import { setNextRoute } from '../../store/RoutesSlice';
 
 const FormEducationSection = () => {
-  const [count, setCount] = useState(1)
+  const [count, setCount] = useState(0)
   const [education, setEducation] = useState([<EducationForm key={count} value={count}/>])
   const [buttonVisibility, setButtonVisibility] = useState('')
 
@@ -23,10 +23,10 @@ const FormEducationSection = () => {
   }, [])
 
   const handleClick = () => {
-    if(count<3){
+    if(count<2){
       setEducation((prev) => [...prev, <EducationForm key={count+1} value={count+1}/>])
       setCount(count+1)
-      if(count===2){
+      if(count===1){
         setButtonVisibility('hidden')
       }
     }
