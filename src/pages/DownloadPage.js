@@ -1,12 +1,25 @@
 import HomePageLandingButton from "../components/buttons/HomePageLandingButton";
 import Template1 from "../templates/Template1";
-import html2canvas from "html2canvas";
+// import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
 const DownloadPage = () => {
+  const createPdf = async () => {
+    // const pdf = new jsPDF("portrait", "pt", "a4", true);
+    // const data = await html2canvas(document.querySelector("#resume")); 
+    // const img = data.toDataURL("image/png");
+    // const imgProperties = pdf.getImageProperties(img);
+    // const pdfWidth = pdf.internal.pageSize.getWidth();
+    // const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
+    // pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
+    // pdf.save("shipping_label.pdf");
 
-    
-
+    const report = new jsPDF("p", "pt", "a4");
+    report.html(document.querySelector("#resume")).then(() => {
+      report.save("resume.pdf");
+    });
+    console.log("apple");
+  };
 
   return (
     <div className="flex flex-col">
@@ -26,7 +39,7 @@ const DownloadPage = () => {
         <div className="flex gap-x-20 w-full ">
           <Template1 />
           <div className="flex flex-col w-1/2 gap-y-10">
-            <div className="cursor-pointer" >
+            <div className="cursor-pointer" onClick={() => createPdf()}>
               <HomePageLandingButton
                 bgColor="bg-[#EA4492]"
                 textColor="text-white"
@@ -35,7 +48,6 @@ const DownloadPage = () => {
                 text="Download ↓"
                 height="h-[3.5rem]"
                 width="w-full"
-                
               />
             </div>
             <div>
