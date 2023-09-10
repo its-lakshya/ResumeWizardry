@@ -5,15 +5,15 @@ import { addStyleSection } from "../../store/FormPageHeaderSlice";
 import { setNextRoute } from '../../store/RoutesSlice';
 
 const FormExperienceSection = () => {
-  const [count, setCount] = useState(1);  
+  const [count, setCount] = useState(0);  
   const [experience, setExperience] = useState([<ExperienceForm key={count} value={count} />]);
   const [buttonVisibility, setButtonVisibility] = useState("");
 
   const handleClick = () => {
-    if (count < 3) {
+    if (count < 2) {
       setExperience((prev) => [...prev, <ExperienceForm key={count+1} value={count + 1} />]);
       setCount(count + 1);
-      if (count === 2) {
+      if (count === 1) {
         setButtonVisibility("hidden");
       }
     }

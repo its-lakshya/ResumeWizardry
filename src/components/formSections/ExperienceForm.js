@@ -8,10 +8,11 @@ import {
   storeEnd,
   storeDescription,
 } from "../../store/ExperienceFormSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const ExperienceForm = ({value}) => {
 
+  const ExperienceDetails =  useSelector((store) => store.experienceDetails)
   const dispatch = useDispatch()
 
   const handleChange = ({
@@ -21,11 +22,11 @@ const ExperienceForm = ({value}) => {
     Country,
     Start,
     End,
+    description0,
     description1,
     description2,
     description3,
     description4,
-    description5,
   }) => {
     if(Title){
       dispatch(storeTitle({count:value , data:Title.target.value}))
@@ -45,20 +46,20 @@ const ExperienceForm = ({value}) => {
     if(End){
       dispatch(storeEnd({count:value , data:End.target.value}))
     }
+    if(description0){
+      dispatch(storeDescription({count:value, number:0 , data:description0.target.value}))
+    }
     if(description1){
-      dispatch(storeDescription({count:value, number:'a' , data:description1.target.value}))
+      dispatch(storeDescription({count:value, number:1 , data:description1.target.value}))
     }
     if(description2){
-      dispatch(storeDescription({count:value, number:'b' , data:description2.target.value}))
+      dispatch(storeDescription({count:value, number:2 , data:description2.target.value}))
     }
     if(description3){
-      dispatch(storeDescription({count:value, number:'c' , data:description3.target.value}))
+      dispatch(storeDescription({count:value, number:3 , data:description3.target.value}))
     }
     if(description4){
-      dispatch(storeDescription({count:value, number:'d' , data:description4.target.value}))
-    }
-    if(description5){
-      dispatch(storeDescription({count:value, number:'e' , data:description5.target.value}))
+      dispatch(storeDescription({count:value, number:4 , data:description4.target.value}))
     }
   };
 
@@ -71,7 +72,8 @@ const ExperienceForm = ({value}) => {
             placeholder="Similar to the tile that best describes you."
             className={inputClassNames}
             onChange={(Title) => handleChange({ Title })}
-          />
+            value={ExperienceDetails.title[value]}
+            />
         </label>
         <label className={labelClassNames}>
           who did you this for?
@@ -79,7 +81,8 @@ const ExperienceForm = ({value}) => {
             placeholder="Person, organization, company name."
             className={inputClassNames}
             onChange={(Organization) => handleChange({ Organization })}
-          />
+            value={ExperienceDetails.organization[value]}
+            />
         </label>
       </div>
 
@@ -90,7 +93,8 @@ const ExperienceForm = ({value}) => {
             placeholder="New Delhi"
             className={inputClassNames}
             onChange={(City) => handleChange({ City })}
-          />
+            value={ExperienceDetails.city[value]}
+            />
         </label>
         <label className={labelClassNames}>
           country
@@ -98,7 +102,8 @@ const ExperienceForm = ({value}) => {
             placeholder="India"
             className={inputClassNames}
             onChange={(Country) => handleChange({ Country })}
-          />
+            value={ExperienceDetails.country[value]}
+            />
         </label>
       </div>
 
@@ -110,7 +115,8 @@ const ExperienceForm = ({value}) => {
             placeholder="start"
             className={inputClassNames}
             onChange={(Start) => handleChange({ Start })}
-          />
+            value={ExperienceDetails.start[value]}
+            />
         </label>
         <label className={labelClassNames}>
           end date
@@ -119,7 +125,8 @@ const ExperienceForm = ({value}) => {
             placeholder="end"
             className={inputClassNames}
             onChange={(End) => handleChange({ End })}
-          />
+            value={ExperienceDetails.end[value]}
+            />
         </label>
       </div>
 
@@ -131,22 +138,27 @@ const ExperienceForm = ({value}) => {
           <input
             className={inputClassNames}
             onChange={(description1) => handleChange({ description1 })}
-          />
+            value={ExperienceDetails.description[value][0]}
+            />
           <input
             className={inputClassNames}
             onChange={(description2) => handleChange({ description2 })}
-          />
+            value={ExperienceDetails.description[value][1]}
+            />
           <input
             className={inputClassNames}
             onChange={(description3) => handleChange({ description3 })}
-          />
+            value={ExperienceDetails.description[value][2]}
+            />
           <input
             className={inputClassNames}
             onChange={(description4) => handleChange({ description4 })}
-          />
+            value={ExperienceDetails.description[value][3]}
+            />
           <input
             className={inputClassNames}
             onChange={(description5) => handleChange({ description5 })}
+            value={ExperienceDetails.description[value][4]}
           />
         </label>
       </div>

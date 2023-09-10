@@ -127,16 +127,16 @@ const Template1 = () => {
               <div className={`${headingCss}`}>
                 skills
               </div>
-              {skillDetails.skill1 ? (<span>{skillDetails.skill1}</span>) : (null)} 
-              {skillDetails.skill2 ? (<span>{skillDetails.skill2}</span>) : (null)} 
-              {skillDetails.skill3 ? (<span>{skillDetails.skill3}</span>) : (null)} 
-              {skillDetails.skill4 ? (<span>{skillDetails.skill4}</span>) : (null)} 
-              {skillDetails.skill5 ? (<span>{skillDetails.skill5}</span>) : (null)} 
-              {skillDetails.skill6 ? (<span>{skillDetails.skill6}</span>) : (null)} 
-              {skillDetails.skill7 ? (<span>{skillDetails.skill7}</span>) : (null)} 
-              {skillDetails.skill8 ? (<span>{skillDetails.skill8}</span>) : (null)} 
-              {skillDetails.skill9 ? (<span>{skillDetails.skill9}</span>) : (null)} 
-              {skillDetails.skill10 ? (<span>{skillDetails.skill10}</span>) : (null)} 
+              {skillDetails.skill[0] ? (<span>{skillDetails.skill[0]}</span>) : (null)} 
+              {skillDetails.skill[1] ? (<span>{skillDetails.skill[1]}</span>) : (null)} 
+              {skillDetails.skill[2] ? (<span>{skillDetails.skill[2]}</span>) : (null)} 
+              {skillDetails.skill[3] ? (<span>{skillDetails.skill[3]}</span>) : (null)} 
+              {skillDetails.skill[4] ? (<span>{skillDetails.skill[4]}</span>) : (null)} 
+              {skillDetails.skill[5] ? (<span>{skillDetails.skill[5]}</span>) : (null)} 
+              {skillDetails.skill[6] ? (<span>{skillDetails.skill[6]}</span>) : (null)} 
+              {skillDetails.skill[7] ? (<span>{skillDetails.skill[7]}</span>) : (null)} 
+              {skillDetails.skill[8] ? (<span>{skillDetails.skill[8]}</span>) : (null)} 
+              {skillDetails.skill[9] ? (<span>{skillDetails.skill[9]}</span>) : (null)} 
             </div>
 
             <div className={`${headingContentCss} ${linksVisibility}`}>
@@ -178,70 +178,70 @@ const Template1 = () => {
               </div>
 
               <div className="flex flex-col gap-2">
-                {experienceDetails.title1 ? (<>
+                {experienceDetails.title[0] ? (<>
                   <div>
-                  <div className="uppercase font-bold">{experienceDetails.title1 ? (experienceDetails.title1):(null)}</div>
+                  <div className="uppercase font-bold">{experienceDetails.title[0] ? (experienceDetails.title[0]):(null)}</div>
                   <div className="flex capitalize gap-x-2">
-                    <span>{experienceDetails.organization1 ? (experienceDetails.organization1):(null)}</span>
+                    <span>{experienceDetails.organization[0] ? (experienceDetails.organization[0]):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.city1 || experienceDetails.country1 ? (<>{experienceDetails.city1}, {experienceDetails.country1}</>):(null)}</span>
+                    <span>{experienceDetails.city[0] || experienceDetails.country[0] ? (<>{experienceDetails.city[0]}, {experienceDetails.country[0]}</>):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.start1 || experienceDetails.end1 ? (<>{experienceDetails.start1} to {experienceDetails.end1}</>):(null)}</span>
+                    <span>{experienceDetails.start[0] || experienceDetails.end[0] ? (<>{experienceDetails.start[0]} to {experienceDetails.end[0]}</>):(null)}</span>
                   </div>
                 </div>
 
                 <div className='[&>*]:flex [&>*]:gap-2 flex flex-col '>
-                {experienceDetails.description1.a ? (<div className="flex items-center"><BsDot/>{experienceDetails.description1.a}</div>) : (null)}
-                {experienceDetails.description1.b ? (<div className="flex items-center"><BsDot/>{experienceDetails.description1.b}</div>) : (null)}
-                {experienceDetails.description1.c ? (<div className="flex items-center"><BsDot/>{experienceDetails.description1.c}</div>) : (null)}
-                {experienceDetails.description1.d ? (<div className="flex items-center"><BsDot/>{experienceDetails.description1.d}</div>) : (null)}
-                {experienceDetails.description1.e ? (<div className="flex items-center"><BsDot/>{experienceDetails.description1.e}</div>) : (null)}
+                {experienceDetails.description[0][0] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[0][0]}</div>) : (null)}
+                {experienceDetails.description[0][1] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[0][1]}</div>) : (null)}
+                {experienceDetails.description[0][2] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[0][2]}</div>) : (null)}
+                {experienceDetails.description[0][3] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[0][3]}</div>) : (null)}
+                {experienceDetails.description[0][4] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[0][4]}</div>) : (null)}
                 </div>
                 </> ) : null}                
               </div>
 
               <div className="flex flex-col gap-2">
-              {experienceDetails.title2 ? (<>
+              {experienceDetails.title[1] ? (<>
                   <div>
-                  <div className="uppercase">{experienceDetails.title2 ? (experienceDetails.title2):(null)}</div>
+                  <div className="uppercase">{experienceDetails.title[1] ? (experienceDetails.title[1]):(null)}</div>
                   <div className="flex capitalize gap-x-2">
-                    <span>{experienceDetails.organization2 ? (experienceDetails.organization2):(null)}</span>
+                    <span>{experienceDetails.organization[1] ? (experienceDetails.organization[1]):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.city2 || experienceDetails.country2? (<>{experienceDetails.city2}, {experienceDetails.country2}</>):(null)}</span>
+                    <span>{experienceDetails.city[1] || experienceDetails.country[1]? (<>{experienceDetails.city[1]}, {experienceDetails.country[1]}</>):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.start2 || experienceDetails.end2 ? (<>{experienceDetails.start2} to {experienceDetails.end2}</>):(null)}</span>
+                    <span>{experienceDetails.start[1] || experienceDetails.end[1] ? (<>{experienceDetails.start[1]} to {experienceDetails.end[1]}</>):(null)}</span>
                   </div>
                 </div>
 
                 <div className='[&>*]:flex [&>*]:gap-2 flex flex-col '>
-                {experienceDetails.description2.a ? (<div className="flex items-center"><BsDot/>{experienceDetails.description2.a}</div>) : (null)}
-                {experienceDetails.description2.b ? (<div className="flex items-center"><BsDot/>{experienceDetails.description2.b}</div>) : (null)}
-                {experienceDetails.description2.c ? (<div className="flex items-center"><BsDot/>{experienceDetails.description2.c}</div>) : (null)}
-                {experienceDetails.description2.d ? (<div className="flex items-center"><BsDot/>{experienceDetails.description2.d}</div>) : (null)}
-                {experienceDetails.description2.e ? (<div className="flex items-center"><BsDot/>{experienceDetails.description2.e}</div>) : (null)}
+                {experienceDetails.description[1][1] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[1][1]}</div>) : (null)}
+                {experienceDetails.description[1][2] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[1][2]}</div>) : (null)}
+                {experienceDetails.description[1][3] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[1][3]}</div>) : (null)}
+                {experienceDetails.description[1][4] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[1][4]}</div>) : (null)}
+                {experienceDetails.description[1][5] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[1][5]}</div>) : (null)}
                 </div>
                 </> ) : null}
               </div>
 
               <div className="flex flex-col gap-2">
-              {experienceDetails.title3 ? (<>
+              {experienceDetails.title[2] ? (<>
                   <div>
-                  <div className="uppercase">{experienceDetails.title3 ? (experienceDetails.title3):(null)}</div>
+                  <div className="uppercase">{experienceDetails.title[2] ? (experienceDetails.title[2]):(null)}</div>
                   <div className="flex capitalize gap-x-2">
-                    <span>{experienceDetails.organization3 ? (experienceDetails.organization3):(null)}</span>
+                    <span>{experienceDetails.organization[2] ? (experienceDetails.organization[2]):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.city3 || experienceDetails.country3 ? (<>{experienceDetails.city3}, {experienceDetails.country3}</>):(null)}</span>
+                    <span>{experienceDetails.city[2] || experienceDetails.country[2] ? (<>{experienceDetails.city[2]}, {experienceDetails.country[2]}</>):(null)}</span>
                     <span>|</span>
-                    <span>{experienceDetails.start3 || experienceDetails.end3? (<>{experienceDetails.start2} to {experienceDetails.end3}</>):(null)}</span>
+                    <span>{experienceDetails.start[2] || experienceDetails.end[2]? (<>{experienceDetails.start[2]} to {experienceDetails.end[2]}</>):(null)}</span>
                   </div>
                 </div>
 
                 <div className='[&>*]:flex [&>*]:gap-2 flex flex-col '>
-                {experienceDetails.description3.a ? (<div className="flex items-center"><BsDot/>{experienceDetails.description3.a}</div>) : (null)}
-                {experienceDetails.description3.b ? (<div className="flex items-center"><BsDot/>{experienceDetails.description3.b}</div>) : (null)}
-                {experienceDetails.description3.c ? (<div className="flex items-center"><BsDot/>{experienceDetails.description3.c}</div>) : (null)}
-                {experienceDetails.description3.d ? (<div className="flex items-center"><BsDot/>{experienceDetails.description3.d}</div>) : (null)}
-                {experienceDetails.description3.e ? (<div className="flex items-center"><BsDot/>{experienceDetails.description3.e}</div>) : (null)}
+                {experienceDetails.description[2][0] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[2][0]}</div>) : (null)}
+                {experienceDetails.description[2][1] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[2][1]}</div>) : (null)}
+                {experienceDetails.description[2][2] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[2][2]}</div>) : (null)}
+                {experienceDetails.description[2][3] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[2][3]}</div>) : (null)}
+                {experienceDetails.description[2][4] ? (<div className="flex items-center"><BsDot/>{experienceDetails.description[2][4]}</div>) : (null)}
                 </div>
                 </> ) : null}
               </div>

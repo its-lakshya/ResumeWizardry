@@ -5,7 +5,7 @@ import { addStyleSection } from "../../store/FormPageHeaderSlice";
 import { setNextRoute } from "../../store/RoutesSlice";
 
 const FormSkillSection = () => {
-  const [count, setCount] = useState(1)
+  const [count, setCount] = useState(0)
 
   const [skill, setSkill] = useState([<SkillForm key={count} value={count} />]);
   const [buttonVisibility, setButtonVisibility] = useState('')
@@ -26,10 +26,10 @@ const FormSkillSection = () => {
 
   const handleClick = () => {
     
-    if(count<10){
+    if(count<9){
       setSkill((prev) => [...prev, <SkillForm key={count+1} value={count+1}/>]);
       setCount(count+1)
-      if(count===9){
+      if(count===8){
         setButtonVisibility('hidden')
       }
     }
