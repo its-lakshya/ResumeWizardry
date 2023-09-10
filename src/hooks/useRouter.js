@@ -6,25 +6,26 @@ const useRouter = (data) => {
 
   const routesInfo = useSelector((store) => store.sectionSelectionDetails);
 
+  
+  useEffect(() => {
   const web = routesInfo.website;
   const crtf = routesInfo.certifications;
   const lang = routesInfo.languages;
   const accomp = routesInfo.accomplishments;
   const addInfo = routesInfo.additionalInformation;
-
-  useEffect(() => {
     if (data[0] === "w" && web === true) {
       setRoute("/build-resume/form/finalize/add-links");
-    } else if (data[1] === "c" && crtf === true) {
+    } else if (crtf === true && data[1] === "c"  ) {
       setRoute("/build-resume/form/finalize/add-crtf");
-    } else if (data[2] === "l" && lang === true) {
+    } else if ( lang === true && data[2] === "l" ) {
       setRoute("/build-resume/form/finalize/add-lang");
-    } else if (data[3] === "ac" && accomp === true) {
+    } else if (accomp === true && data[3] === "ac" ) {
       setRoute("/build-resume/form/finalize/add-accomp");
-    } else if (data[4] === "ad" && addInfo === true) {
+    } else if ( addInfo === true && data[4] === "ad" ) {
       setRoute("/build-resume/form/finalize/add-addInfo");
     } else if (data[5] === "d") {
-      setRoute("/build-resume/form/download");
+      console.log('ok')
+      setRoute("/build-resume/download");
     }
   }, [routesInfo]);
 

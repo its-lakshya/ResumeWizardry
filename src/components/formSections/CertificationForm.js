@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
 import { CombinedSummary } from "./DifferentAddForms";
-import useRouter from "./useRouter";
+import useRouter from "../../hooks/useRouter";
 
 const CertificationForm = () => {
   const data = ["", "", "l", "ac", "ad", "d"];

@@ -2,23 +2,22 @@ import { LinksSection } from "./DifferentAddForms";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
-import useRouter from "./useRouter";
+import useRouter from "../../hooks/useRouter";
 
 const LanguagesForm = () => {
-  const data = ['', '', '', 'ac', 'ad']
+  const data = ['', '', '', 'ac', 'ad','d']
   const route = useRouter(data)
-
+  
   const [count, setCount] = useState(1);
   const [buttonVisibility, setButtonVisibility] = useState("");
   const dispatch = useDispatch();
-
+  
   const [links, setLinks] = useState([
     <LinksSection key={count} value={count} text={'language'}/>,
   ],[route]);
-
+  
   useEffect(() => {
     dispatch(setNextRoute(route));
-
   });
 
   const handleClick = () => {
@@ -33,8 +32,6 @@ const LanguagesForm = () => {
       }
     }
   };
-
-
 
   return (
     <div className="py-10 min-h-[83vh] flex items-center">

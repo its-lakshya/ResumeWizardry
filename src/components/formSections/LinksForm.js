@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
 import { LinksSection } from "./DifferentAddForms";
 import { useState, useEffect } from "react";
-import useRouter from "./useRouter";
+import useRouter from "../../hooks/useRouter";
 
 const LinkForm = () => {
   const data = ["", "c", "l", "ac", "ad","d"];

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { CombinedSummary } from "./DifferentAddForms";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
-import useRouter from "./useRouter";
+import useRouter from "../../hooks/useRouter";
 
 const AccomplishmentForm = () => {
   const data = ['', '', '', '', 'ad', "d"]

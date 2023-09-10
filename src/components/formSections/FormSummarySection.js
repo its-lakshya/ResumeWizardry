@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
 import { storeSummary } from "../../store/SummaryFormSlice";
@@ -7,6 +7,7 @@ import {setNextRoute} from "../../store/RoutesSlice"
 const FormSummarySection = () => {
 
   const dispatch = useDispatch()
+  const SummaryDetails = useSelector((store)=> store.summaryDetails)
 
   useEffect(() => {
     dispatch(addStyleSection('summary'))
@@ -39,6 +40,7 @@ const FormSummarySection = () => {
               placeholder="Write your summary here."
               className={`text-start h-56 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[4px] focus:border-b-[#003459]`}
               onChange={(Summary)=> handleChange({Summary})}
+              value={SummaryDetails.summary}
             />
           </label>
         </div>

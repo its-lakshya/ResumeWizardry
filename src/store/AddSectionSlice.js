@@ -68,7 +68,6 @@ const AddSectionSlice = createSlice({
         } else {
           state.additionalInformation = true;
           state.additionalInformationTick='visible'
-          console.log('added')
         }
       }
     },
