@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Template1 from "../assets/Resume8.jpg";
+import Template1 from "../assets/Resume9.png";
 import FormPageHeader from "../components/formSections/FormPageHeader";
 
 const ChooseTemplate = () => {
