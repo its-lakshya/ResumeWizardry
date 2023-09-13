@@ -12,8 +12,7 @@ const CertificationForm = () => {
 
   useEffect(() => {
     dispatch(setNextRoute(route));
-
-  },[route]);
+  }, [route]);
 
   return (
     <div className="py-10 min-h-[83vh] flex items-center">

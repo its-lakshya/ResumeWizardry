@@ -5,13 +5,12 @@ import { setNextRoute } from "../../store/RoutesSlice";
 import useRouter from "../../hooks/useRouter";
 
 const AccomplishmentForm = () => {
-  const data = ['', '', '', '', 'ad', "d"]
-  const route = useRouter(data)
+  const data = ["", "", "", "", "ad", "d"];
+  const route = useRouter(data);
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setNextRoute(route));
-
   }, [route]);
 
   return (
