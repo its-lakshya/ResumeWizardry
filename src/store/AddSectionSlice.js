@@ -18,7 +18,6 @@ const initialState = {
 };
 
 
-
 const AddSectionSlice = createSlice({
   name: "sectionSelectionDetails",
   initialState,

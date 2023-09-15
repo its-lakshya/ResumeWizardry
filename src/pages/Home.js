@@ -6,6 +6,7 @@ import HowItWorks from "../components/homePageSections/HowItWorks";
 import ResumeBackgroundSVG from "../components/homePageSections/ResumeBackgroundSVG";
 import YesWeAreWizards from "../components/homePageSections/YesWeAreWizards";
 import { Link } from "react-router-dom";
+import Footer from "../components/homePageSections/Footer";
 
 const Home = () => {
   return (
@@ -46,6 +47,7 @@ const Home = () => {
       <HowItWorks />
       <ResumeBackgroundSVG />
       <YesWeAreWizards />
+      <Footer/>
     </div>
   );
 };
