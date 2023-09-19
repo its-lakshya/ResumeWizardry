@@ -2,8 +2,22 @@ import FormPageHeader from "../components/formSections/FormPageHeader";
 import { Outlet } from "react-router-dom";
 import FormPageFooter from "../components/formSections/FormPageFooter";
 import Template1 from "../templates/Template1";
+import { useEffect } from "react";
 
 const FormPage = () => {
+
+  useEffect(() => {
+    const unloadCallback = (event) => {
+      event.preventDefault();
+      event.returnValue = "something";
+      return "";
+
+    };
+
+    window.addEventListener("beforeunload", unloadCallback);
+    return () => window.removeEventListener("beforeunload", unloadCallback);
+  }, []);
+
   return (
     <div className="flex flex-col h-screen justify-between overflow-hidden ">
       <div className="h-12 ">

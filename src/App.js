@@ -13,7 +13,7 @@ import FormSummarySection from "./components/formSections/FormSummarySection";
 import FormAddSection from "./components/formSections/FormAddSection";
 import { Provider } from "react-redux";
 import Store from "./store/Store";
-import LinkForm from './components/formSections/LinksForm'
+import LinkForm from './components/formSections/LinksForm';
 import CertificationForm from "./components/formSections/CertificationForm";
 import LanguagesForm from "./components/formSections/LanguagesForm";
 import AdditionalInfoForm from "./components/formSections/AdditionalInfoForm";

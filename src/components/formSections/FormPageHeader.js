@@ -7,7 +7,6 @@ import {
   PiNumberSquareSixFill,
 } from "react-icons/pi";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 
 const FormPageHeader = () => {
 
@@ -16,9 +15,9 @@ const FormPageHeader = () => {
   return (
     <div className="w-full h-12 font-bold flex justify-center bg-[#003459] bg-opacity-95 shadow-lg  ">
       <div className="w-full flex justify-center items-center">
-        <Link to="/" className="font-bold text-2xl text-white -mt-2">
+        <span className="font-bold text-2xl text-white -mt-2">
           ResumeWisardry
-        </Link>
+        </span>
         <ul className="w-3/5 h-full flex justify-center gap-x-8 font-normal text-base text-gray-400 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:gap-x-1 [&>*]:w-28 ">
           <li className={style==='contact' ? 'z-10 border-b-4 border-b-[#EA4492] bg-white bg-opacity-10 font-semibold -mb-1 text-white [&>*]:text-[#EA4492] [&>*]:text-xl ' : null}>
             <PiNumberSquareOneFill />

@@ -21,6 +21,7 @@ const Template1 = () => {
   const summaryDetails = useSelector((store) => store.summaryDetails)
   const experienceDetails = useSelector((store) => store.experienceDetails)
   const combinedSummaryDetails = useSelector((store)=> store.combinedSummaryDetails)
+  const styleDetails = useSelector((store)=> store.styleSection.Section)
 
   const x = 1;
   const [color, setColor] = useState(x === 1 ? "bg-[#232f47]" : "bg-[#000000]");
@@ -45,11 +46,6 @@ const Template1 = () => {
     if(store.additionalInformation===true || combinedSummaryDetails.additionalInfo){setAddInfoVisibility('visible')}
     if(store.additionalInformation===false){setAddInfoVisibility('hidden')}
   },[store])
-
-//scale-50 self-start h-[11.69in] w-[8.27in]
-//self-center h-[297mm] w-[210mm] flex flex-col
-//w-full flex items-center justify-center
-//w-full Name
 
   return (
     <div id='resume' >
@@ -83,7 +79,7 @@ const Template1 = () => {
       >
         <div className="w-full h-full flex justify-center itmes-center">
           <div className=" h-full w-64 flex flex-col justify-start items-center gap-y-4  overflow-hidden  ">
-            <div className={`${headingContentCss}`}>
+            {styleDetails ==='contact' || contactDetails.name || contactDetails.phone ? (<div className={`${headingContentCss}`}>
               <div className={`${headingCss}`}>
                 contact
               </div>
@@ -91,8 +87,10 @@ const Template1 = () => {
               <div className="">{contactDetails.email?(<span>{contactDetails.email}</span>) : (null)}</div>
               <div className="">{contactDetails.city || contactDetails.pincode ?(<span>{contactDetails.city}, {contactDetails.pincode}</span>) : (null)}</div>
               <div className="">{contactDetails.state ||contactDetails.country ?(<span>{contactDetails.state}, {contactDetails.country}</span>) : (null)}</div>
-            </div>
-            <div className={`${headingContentCss}`}>
+            </div>) : (null)}
+            
+
+            {styleDetails === 'education' || educationDetails.instituteName[0] ? (<div className={`${headingContentCss}`}>
               <div className={`${headingCss}`}>
                 Education
               </div>
@@ -122,8 +120,9 @@ const Template1 = () => {
               </div>
                 ):(null)
               }
-            </div>
-            <div className={`${headingContentCss}`}>
+            </div> ) : ( null)}
+            
+            {styleDetails ==='skills' || skillDetails.skill[0] ? (<div className={`${headingContentCss}`}>
               <div className={`${headingCss}`}>
                 skills
               </div>
@@ -137,7 +136,8 @@ const Template1 = () => {
               {skillDetails.skill[7] ? (<span>{skillDetails.skill[7]}</span>) : (null)} 
               {skillDetails.skill[8] ? (<span>{skillDetails.skill[8]}</span>) : (null)} 
               {skillDetails.skill[9] ? (<span>{skillDetails.skill[9]}</span>) : (null)} 
-            </div>
+            </div>) : (null)}
+            
 
             <div className={`${headingContentCss} ${linksVisibility}`}>
               <div className={`${headingCss}`}>
@@ -163,16 +163,18 @@ const Template1 = () => {
           </div>
           
           <div className="h-full w-full pl-4 pr-2 flex flex-col gap-4 text-justify border-l border-gray-400">
-            <div className={`${headingContentCss}`}>
+
+            {styleDetails==='summary' || summaryDetails.summary ? (<div className={`${headingContentCss}`}>
               <div className={`${headingCss}`}>
                 summary
               </div>
               <div>
                 {summaryDetails.summary ? (summaryDetails.summary) : null}
               </div>
-            </div>
+            </div>) : (null)}
+            
 
-            <div className={`${headingContentCss}`}>
+            {styleDetails=== 'experience' || experienceDetails.title[0] || experienceDetails.organization[0] ? (<div className={`${headingContentCss}`}>
               <div className={`${headingCss}`}>
                 professional experience
               </div>
@@ -245,7 +247,8 @@ const Template1 = () => {
                 </div>
                 </> ) : null}
               </div>
-            </div>
+            </div>) : (null)}  
+            
 
             <div className={`${headingContentCss} ${certificationsVisibility}`}>
               <div className={`${headingCss}`}>
