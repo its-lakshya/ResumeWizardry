@@ -18,7 +18,7 @@ import CertificationForm from "./components/formSections/CertificationForm";
 import LanguagesForm from "./components/formSections/LanguagesForm";
 import AdditionalInfoForm from "./components/formSections/AdditionalInfoForm";
 import AccomplishmentForm from "./components/formSections/AccomplishmentForm";
-import Template1 from "./templates/Template1";
+import Template2 from "./templates/Template2";
 import DownloadPage from "./pages/DownloadPage";
 
 const AppLayout = () => {
@@ -41,7 +41,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "template",
-        element: <Template1 />,
+        element: <Template2 />,
       },          
       {
         path: "/build-resume",
