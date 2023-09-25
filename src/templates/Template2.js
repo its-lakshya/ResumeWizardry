@@ -3,8 +3,7 @@ import { useSelector } from "react-redux";
 import { BsDot } from "react-icons/bs";
 
 const Template2 = () => {
-  const headingCss =
-    "font-bold capitalize   w-full text-base mb-[2px] ";
+  const headingCss = "font-bold capitalize   w-full text-base mb-[2px] ";
   const headingContentCss = "w-full flex flex-col gap-1 ";
 
   const [linksVisibility, setLinkVisibility] = useState("hidden");
@@ -96,9 +95,9 @@ const Template2 = () => {
                   {contactDetails.name} {contactDetails.surname}
                 </div>
               ) : (
-                <div className='flex flex-col justify-center items-center'>
+                <div className="flex flex-col justify-center items-center">
                   lakshya
-                  <div className='text-black text-3xl'> kumar verma</div>
+                  <div className="text-black text-3xl"> kumar verma</div>
                 </div>
               )}
             </div>
@@ -124,13 +123,15 @@ const Template2 = () => {
                   <div className="font-semibold text-sm flex items-center gap-x-2 justify-start">
                     <span>Address : </span>
                     {contactDetails.city ? (
-                      <span className='text-xs font-light'>{contactDetails.city}, {contactDetails.state}</span>
+                      <span className="text-xs font-light">
+                        {contactDetails.city}, {contactDetails.state}
+                      </span>
                     ) : null}
                   </div>
                   <div className="font-semibold text-sm flex items-center gap-x-2">
                     <span>Pincode : </span>
                     {contactDetails.country || contactDetails.pincode ? (
-                      <span className='text-xs font-light'>
+                      <span className="text-xs font-light">
                         {contactDetails.pincode}, {contactDetails.country}
                       </span>
                     ) : null}
@@ -138,15 +139,17 @@ const Template2 = () => {
                   <div className="font-semibold text-sm flex items-center gap-x-2">
                     <span>Email : </span>
                     {contactDetails.email ? (
-                      <span className='text-xs font-light'>{contactDetails.email}</span>
+                      <span className="text-xs font-light">
+                        {contactDetails.email}
+                      </span>
                     ) : null}
                   </div>
-                  
+
                   <div className="font-semibold text-sm flex items-center gap-x-2">
                     <span>Phone : </span>
-                    {contactDetails.phone  ? (
-                      <span className='text-xs font-light'>
-                        {contactDetails.phone} 
+                    {contactDetails.phone ? (
+                      <span className="text-xs font-light">
+                        {contactDetails.phone}
                       </span>
                     ) : null}
                   </div>
@@ -256,82 +259,488 @@ const Template2 = () => {
 
               {styleDetails === "skills" || skillDetails.skill[0] ? (
                 <div className={`${headingContentCss} text-black `}>
-                  <div className={`font-semibold uppercase text-base`}>skills</div>
+                  <div className={`font-semibold uppercase text-base`}>
+                    skills
+                  </div>
                   {skillDetails.skill[0] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[0]}</span>
-                   ) : null} 
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[0]}
+                    </span>
+                  ) : null}
                   {skillDetails.skill[1] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[1]}</span>
-                   ) : null} 
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[1]}
+                    </span>
+                  ) : null}
                   {skillDetails.skill[2] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[2]}</span>
-                   ) : null} 
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[2]}
+                    </span>
+                  ) : null}
                   {skillDetails.skill[3] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[3]}</span>
-                   ) : null} 
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[3]}
+                    </span>
+                  ) : null}
                   {skillDetails.skill[4] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[4]}</span>
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[4]}
+                    </span>
                   ) : null}
                   {skillDetails.skill[5] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[5]}</span>
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[5]}
+                    </span>
                   ) : null}
                   {skillDetails.skill[6] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[6]}</span>
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[6]}
+                    </span>
                   ) : null}
                   {skillDetails.skill[7] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[7]}</span>
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[7]}
+                    </span>
                   ) : null}
                   {skillDetails.skill[8] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[8]}</span>
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[8]}
+                    </span>
                   ) : null}
                   {skillDetails.skill[9] ? (
-                    <span className="text-sm font-light">{skillDetails.skill[9]}</span>
+                    <span className="text-sm font-light">
+                      {skillDetails.skill[9]}
+                    </span>
                   ) : null}
                 </div>
-               ) : null} 
+              ) : null}
 
-              <div className={`${headingContentCss} ${languagesVisibility} text-black`}>
-                <div className={`font-semibold uppercase text-base`}>languages</div>
+              <div
+                className={`${headingContentCss} ${languagesVisibility} text-black`}
+              >
+                <div className={`font-semibold uppercase text-base`}>
+                  languages
+                </div>
                 {linkLangDetails.lang1 ? (
-                  <span className="text-sm font-light">{linkLangDetails.lang1}</span>
+                  <span className="text-sm font-light">
+                    {linkLangDetails.lang1}
+                  </span>
                 ) : null}
                 {linkLangDetails.lang2 ? (
-                  <span className="text-sm font-light">{linkLangDetails.lang2}</span>
+                  <span className="text-sm font-light">
+                    {linkLangDetails.lang2}
+                  </span>
                 ) : null}
                 {linkLangDetails.lang3 ? (
-                  <span className="text-sm font-light">{linkLangDetails.lang3}</span>
+                  <span className="text-sm font-light">
+                    {linkLangDetails.lang3}
+                  </span>
                 ) : null}
                 {linkLangDetails.lang4 ? (
-                  <span className="text-sm font-light">{linkLangDetails.lang4}</span>
+                  <span className="text-sm font-light">
+                    {linkLangDetails.lang4}
+                  </span>
                 ) : null}
                 {linkLangDetails.lang5 ? (
-                  <span className="text-sm font-light">{linkLangDetails.lang5}</span>
+                  <span className="text-sm font-light">
+                    {linkLangDetails.lang5}
+                  </span>
                 ) : null}
               </div>
 
-              <div className={`${headingContentCss} ${linksVisibility}  text-black`}>
+              <div
+                className={`${headingContentCss} ${linksVisibility}  text-black`}
+              >
                 <div className={`font-semibold uppercase text-base`}>links</div>
-                {linkLangDetails.link1 ? ( 
-                  <span className="text-sm font-light">{linkLangDetails.link1}</span>
+                {linkLangDetails.link1 ? (
+                  <span className="text-sm font-light">
+                    {linkLangDetails.link1}
+                  </span>
                 ) : null}
                 {linkLangDetails.link2 ? (
-                  <span className="text-sm font-light">{linkLangDetails.link2}</span>
-                 ) : null} 
-                 {linkLangDetails.link3 ? (
-                  <span className="text-sm font-light">{linkLangDetails.link3}</span>
-                 ) : null}
+                  <span className="text-sm font-light">
+                    {linkLangDetails.link2}
+                  </span>
+                ) : null}
+                {linkLangDetails.link3 ? (
+                  <span className="text-sm font-light">
+                    {linkLangDetails.link3}
+                  </span>
+                ) : null}
                 {linkLangDetails.link4 ? (
-                  <span className="text-sm font-light">{linkLangDetails.link4}</span>
-                 ) : null}
+                  <span className="text-sm font-light">
+                    {linkLangDetails.link4}
+                  </span>
+                ) : null}
                 {linkLangDetails.link5 ? (
-                  <span className="text-sm font-light">{linkLangDetails.link5}</span>
-                 ) : null}
+                  <span className="text-sm font-light">
+                    {linkLangDetails.link5}
+                  </span>
+                ) : null}
               </div>
-
-              
             </div>
 
-            
+            <div className="h-full w-full py-6 px-4  flex flex-col gap-4 text-justify ">
+              {styleDetails === "summary" || summaryDetails.summary ? (
+              <div className={`${headingContentCss}`}>
+                <div className={`text-lg uppercase`}>summary</div>
+                <div className="text-black font-light">
+                  {summaryDetails.summary ? summaryDetails.summary : null}
+                </div>
+              </div>
+              ) : null}
+
+              {styleDetails === "education" ||
+              educationDetails.instituteName[0] ? (
+                <div className={`${headingContentCss} `}>
+                  <div className={`text-lg uppercase`}>Education</div>
+                  <div className="w-full flex flex-col gap-1 mb-2">
+                    <div className="text-black font-normal">
+                      {educationDetails.degree[0] ||
+                      educationDetails.fieldofStudy[0] ? (
+                        <span>
+                          {educationDetails.degree[0]} /{" "}
+                          {educationDetails.fieldofStudy[0]}
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="uppercase text-black text-[0.85rem]">
+                      {educationDetails.instituteName[0] ? (
+                        <span>{educationDetails.instituteName[0]}</span>
+                      ) : null}
+                    </div>
+                    <div className="text-black font-light">
+                      {educationDetails.instituteLocation[0] ||
+                      educationDetails.graduationStart[2] ||
+                      educationDetails.graduationEnd[2] ? (
+                        <span>
+                          {educationDetails.instituteLocation[0]}
+                          {", "}
+                          {educationDetails.graduationStart[0]} to{" "}
+                          {educationDetails.graduationEnd[0]}
+                        </span>
+                      ) : null}{" "}
+                    </div>
+                  </div>
+                  {educationDetails.instituteName[1] ? (
+                    <div className="w-full flex flex-col gap-1 mb-2">
+                      <div className="text-black font-normal">
+                        {educationDetails.degree[1] ||
+                        educationDetails.fieldofStudy[1] ? (
+                          <span>
+                            {educationDetails.degree[1]} /{" "}
+                            {educationDetails.fieldofStudy[1]}
+                          </span>
+                        ) : null}
+                      </div>
+                      <div className="uppercase text-black text-[0.85rem]">
+                        {educationDetails.instituteName[1] ? (
+                          <span>{educationDetails.instituteName[1]}</span>
+                        ) : null}
+                      </div>
+                      <div className="text-black font-light">
+                        {educationDetails.instituteLocation[1] ||
+                        educationDetails.graduationStart[2] ||
+                        educationDetails.graduationEnd[2] ? (
+                          <span>
+                            {educationDetails.instituteLocation[1]}
+                            {", "}
+                            {educationDetails.graduationStart[1]} to{" "}
+                            {educationDetails.graduationEnd[1]}
+                          </span>
+                        ) : null}{" "}
+                      </div>
+                    </div>
+                  ) : null}
+                  {educationDetails.instituteName[2] ? (
+                    <div className="w-full flex flex-col gap-1 mb-2">
+                      <div className="text-black font-normal">
+                        {educationDetails.degree[2] ||
+                        educationDetails.fieldofStudy[2] ? (
+                          <span>
+                            {educationDetails.degree[2]} /{" "}
+                            {educationDetails.fieldofStudy[2]}
+                          </span>
+                        ) : null}
+                      </div>
+                      <div className="uppercase text-black text-[0.85rem]">
+                        {educationDetails.instituteName[2] ? (
+                          <span>{educationDetails.instituteName[2]}</span>
+                        ) : null}
+                      </div>
+                      <div className="text-black font-light">
+                        {educationDetails.instituteLocation[2] ||
+                        educationDetails.graduationStart[2] ||
+                        educationDetails.graduationEnd[2] ? (
+                          <span>
+                            {educationDetails.instituteLocation[2]}
+                            {educationDetails.graduationStart[2]} to{" "}
+                            {educationDetails.graduationEnd[2]}
+                          </span>
+                        ) : null}{" "}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
+
+              {styleDetails === "experience" ||
+              experienceDetails.title[0] ||
+              experienceDetails.organization[0] ? (
+                <div className={`${headingContentCss}`}>
+                  <div className={`text-lg uppercase`}>
+                    professional experience
+                  </div>
+
+                  <div className="flex flex-col gap-1">
+                    {experienceDetails.title[0] ? (
+                      <>
+                        <div>
+                          <span className="flex  gap-x-2 uppercase text-black text-[0.85rem]">
+                            {experienceDetails.organization[0]
+                              ? experienceDetails.organization[0]
+                              : null}
+                          </span>
+                          <div className="text-black font-normal uppercase text-[0.68rem]">
+                            {experienceDetails.title[0]
+                              ? experienceDetails.title[0]
+                              : null}
+                          </div>
+                          <div className="text-black font-light text-[0.65rem]">
+                            <span>|</span>
+                            <span>
+                              {experienceDetails.city[0] ||
+                              experienceDetails.country[0] ? (
+                                <>
+                                  {experienceDetails.city[0]},{" "}
+                                  {experienceDetails.country[0]}
+                                </>
+                              ) : null}
+                            </span>
+                            <span> | </span>
+                            <span>
+                              {experienceDetails.start[0] ||
+                              experienceDetails.end[0] ? (
+                                <>
+                                  {experienceDetails.start[0]} to{" "}
+                                  {experienceDetails.end[0]}
+                                </>
+                              ) : null}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="[&>*]:flex [&>*]:gap-2 flex flex-col text-black font-light">
+                          {experienceDetails.description[0][0] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[0][0]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[0][1] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[0][1]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[0][2] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[0][2]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[0][3] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[0][3]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[0][4] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[0][4]}
+                            </div>
+                          ) : null}
+                        </div>
+                      </>
+                    ) : null}
+                  </div>
+
+                  <div className="flex flex-col gap-1">
+                    {experienceDetails.title[1] ? (
+                      <>
+                        <div>
+                          <span className="flex  gap-x-2 uppercase text-black text-[0.85rem]">
+                            {experienceDetails.organization[1]
+                              ? experienceDetails.organization[1]
+                              : null}
+                          </span>
+                          <div className="text-black font-normal uppercase text-[0.68rem]">
+                            {experienceDetails.title[1]
+                              ? experienceDetails.title[1]
+                              : null}
+                          </div>
+                          <div className="text-black font-light text-[0.65rem]">
+                            <span>
+                              {experienceDetails.city[1] ||
+                              experienceDetails.country[1] ? (
+                                <>
+                                  {experienceDetails.city[1]},{" "}
+                                  {experienceDetails.country[1]}
+                                </>
+                              ) : null}
+                            </span>
+                            <span> | </span>
+                            <span>
+                              {experienceDetails.start[1] ||
+                              experienceDetails.end[1] ? (
+                                <>
+                                  {experienceDetails.start[1]} to{" "}
+                                  {experienceDetails.end[1]}
+                                </>
+                              ) : null}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="[&>*]:flex [&>*]:gap-2 flex flex-col text-black font-light">
+                          {experienceDetails.description[1][1] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[1][1]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[1][2] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[1][2]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[1][3] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[1][3]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[1][4] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[1][4]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[1][5] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[1][5]}
+                            </div>
+                          ) : null}
+                        </div>
+                      </>
+                    ) : null}
+                  </div>
+
+                  <div className="flex flex-col gap-1">
+                    {experienceDetails.title[2] ? (
+                      <>
+                        <div>
+                          <span className="flex  gap-x-2 uppercase text-black text-[0.85rem]">
+                            {experienceDetails.organization[2]
+                              ? experienceDetails.organization[2]
+                              : null}
+                          </span>
+                          <div className="text-black font-normal uppercase text-[0.68rem]">
+                            {experienceDetails.title[2]
+                              ? experienceDetails.title[2]
+                              : null}
+                          </div>
+                          <div className="text-black font-light text-[0.65rem]">
+                            <span>
+                              {experienceDetails.city[2] ||
+                              experienceDetails.country[2] ? (
+                                <>
+                                  {experienceDetails.city[2]},{" "}
+                                  {experienceDetails.country[2]}
+                                </>
+                              ) : null}
+                            </span>
+                            <span> | </span>
+                            <span>
+                              {experienceDetails.start[2] ||
+                              experienceDetails.end[2] ? (
+                                <>
+                                  {experienceDetails.start[2]} to{" "}
+                                  {experienceDetails.end[2]}
+                                </>
+                              ) : null}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="[&>*]:flex [&>*]:gap-2 flex flex-col text-black font-light">
+                          {experienceDetails.description[2][0] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[2][0]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[2][1] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[2][1]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[2][2] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[2][2]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[2][3] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[2][3]}
+                            </div>
+                          ) : null}
+                          {experienceDetails.description[2][4] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[2][4]}
+                            </div>
+                          ) : null}
+                        </div>
+                      </>
+                    ) : null}
+                  </div>
+                </div>
+              ) : null}
+
+              <div className={`${headingContentCss} ${certificationsVisibility} `}>
+                <div className={`text-lg uppercase`}>certifications</div>
+                <div className="text-black font-thin">
+                  {combinedSummaryDetails.certifications
+                    ? combinedSummaryDetails.certifications
+                    : null}
+                </div>
+              </div>
+
+              <div className={`${headingContentCss} ${accomplishmentsVisibility}`}>
+                <div className={`text-lg uppercase`}>accomplishments</div>
+                <div className="text-black font-thin">
+                  {combinedSummaryDetails.accomplishments
+                    ? combinedSummaryDetails.accomplishments
+                    : null}
+                </div>
+              </div>
+
+              <div className={`${headingContentCss} ${addInfoVisibility} `}>
+                <div className={`text-lg uppercase`}>addtional information</div>
+                <div className="text-black font-thin">
+                  {combinedSummaryDetails.additionalInfo
+                    ? combinedSummaryDetails.additionalInfo
+                    : null}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
