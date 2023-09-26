@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
-import Template1 from "../assets/Resume9.png";
+import Template1 from "../assets/Template1.png";
+import Template2 from "../assets/Template2.jpg";
 import FormPageHeader from "../components/formSections/FormPageHeader";
+import { useDispatch } from "react-redux";
+import { setTemplate } from "../store/TemplateSlice";
 
 const ChooseTemplate = () => {
+
+  const dispatch = useDispatch()
+
+  const handleClick = (data)=> {
+    dispatch(setTemplate(data))
+  }
+
   return (
     <div className='flex flex-col '>
       <FormPageHeader/>
@@ -21,11 +31,20 @@ const ChooseTemplate = () => {
         </div>
 
         {/* <div> */}
-          <div className='w-full h-auto flex items-end justify-center'>
+          <div className='w-full h-auto flex items-end justify-evenly'>
           <Link to='/build-resume/form/contact'>
             <div 
             className="w-56 h-80 bg-no-repeat bg-center bg-contain"
             style={{ backgroundImage: `url(${Template1})` }}
+            onClick={()=>handleClick('Template1')}
+            >              
+            </div>
+            </Link>
+          <Link to='/build-resume/form/contact'>
+            <div 
+            className="w-56 h-80 bg-no-repeat bg-center bg-contain"
+            style={{ backgroundImage: `url(${Template2})` }}
+            onClick={()=>handleClick('Template2')}
             >              
             </div>
             </Link>

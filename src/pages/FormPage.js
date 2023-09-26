@@ -2,9 +2,14 @@ import FormPageHeader from "../components/formSections/FormPageHeader";
 import { Outlet } from "react-router-dom";
 import FormPageFooter from "../components/formSections/FormPageFooter";
 import Template1 from "../templates/Template1";
-import { useEffect } from "react";
+import Template2 from "../templates/Template2";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const FormPage = () => {
+  // console.log(data)
+
+  const [template, setTemplate] = useState(useSelector((store)=> store.templateSelection.template));
 
   useEffect(() => {
     const unloadCallback = (event) => {
@@ -28,7 +33,8 @@ const FormPage = () => {
           <Outlet />
         </div>
         <div className="my-6 flex justify-center overflow-y-scroll overflow-x-hidden">
-          <Template1 />
+          {template==='Template1' && <Template1/>}
+          {template==='Template2' && <Template2/>}
         </div>
       </div>
       <div className="h-20">
