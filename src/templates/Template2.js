@@ -91,8 +91,9 @@ const Template2 = () => {
           >
             <div className="font-medium text-4xl font-sans tracking-[0.2em] flex justify-center items-center">
               {contactDetails.name ? (
-                <div>
-                  {contactDetails.name} {contactDetails.surname}
+                <div className="flex flex-col justify-center items-center">
+                  {contactDetails.name} 
+                  <div className="text-black text-3xl">{contactDetails.surname}</div>
                 </div>
               ) : (
                 <div className="flex flex-col justify-center items-center">
@@ -156,106 +157,7 @@ const Template2 = () => {
                 </div>
               ) : null}
 
-              {styleDetails === "education" ||
-              educationDetails.instituteName[0] ? (
-                <div className={`${headingContentCss}`}>
-                  <div className={`${headingCss}`}>Education</div>
-                  <div className="w-full flex flex-col gap-1 mb-2">
-                    <div className="">
-                      {educationDetails.degree[0] ||
-                      educationDetails.fieldofStudy[0] ? (
-                        <span>
-                          {educationDetails.degree[0]} /{" "}
-                          {educationDetails.fieldofStudy[0]}
-                        </span>
-                      ) : null}
-                    </div>
-                    <div className="">
-                      {educationDetails.instituteName[0] ? (
-                        <span>{educationDetails.instituteName[0]}</span>
-                      ) : null}
-                    </div>
-                    <div className="">
-                      {educationDetails.instituteLocation[0] ? (
-                        <span>{educationDetails.instituteLocation[0]}</span>
-                      ) : null}{" "}
-                    </div>
-                    <div className="">
-                      {educationDetails.graduationStart[0] ||
-                      educationDetails.graduationEnd[0] ? (
-                        <span>
-                          {educationDetails.graduationStart[0]} to{" "}
-                          {educationDetails.graduationEnd[0]}
-                        </span>
-                      ) : null}{" "}
-                    </div>
-                  </div>
-                  {educationDetails.instituteName[1] ? (
-                    <div className="w-full flex flex-col gap-1 mb-2">
-                      <div className="">
-                        {educationDetails.degree[1] ||
-                        educationDetails.fieldofStudy[1] ? (
-                          <span>
-                            {educationDetails.degree[1]} /{" "}
-                            {educationDetails.fieldofStudy[1]}
-                          </span>
-                        ) : null}
-                      </div>
-                      <div className="">
-                        {educationDetails.instituteName[1] ? (
-                          <span>{educationDetails.instituteName[1]}</span>
-                        ) : null}
-                      </div>
-                      <div className="">
-                        {educationDetails.instituteLocation[1] ? (
-                          <span>{educationDetails.instituteLocation[1]}</span>
-                        ) : null}{" "}
-                      </div>
-                      <div className="">
-                        {educationDetails.graduationStart[1] ||
-                        educationDetails.graduationEnd[1] ? (
-                          <span>
-                            {educationDetails.graduationStart[1]} to{" "}
-                            {educationDetails.graduationEnd[1]}
-                          </span>
-                        ) : null}{" "}
-                      </div>
-                    </div>
-                  ) : null}
-                  {educationDetails.instituteName[2] ? (
-                    <div className="w-full flex flex-col gap-1 mb-2">
-                      <div className="">
-                        {educationDetails.degree[2] ||
-                        educationDetails.fieldofStudy[2] ? (
-                          <span>
-                            {educationDetails.degree[2]} /{" "}
-                            {educationDetails.fieldofStudy[2]}
-                          </span>
-                        ) : null}
-                      </div>
-                      <div className="">
-                        {educationDetails.instituteName[2] ? (
-                          <span>{educationDetails.instituteName[2]}</span>
-                        ) : null}
-                      </div>
-                      <div className="">
-                        {educationDetails.instituteLocation[2] ? (
-                          <span>{educationDetails.instituteLocation[2]}</span>
-                        ) : null}{" "}
-                      </div>
-                      <div className="">
-                        {educationDetails.graduationStart[2] ||
-                        educationDetails.graduationEnd[2] ? (
-                          <span>
-                            {educationDetails.graduationStart[2]} to{" "}
-                            {educationDetails.graduationEnd[2]}
-                          </span>
-                        ) : null}{" "}
-                      </div>
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
+              
 
               {styleDetails === "skills" || skillDetails.skill[0] ? (
                 <div className={`${headingContentCss} text-black `}>
@@ -415,9 +317,11 @@ const Template2 = () => {
                       educationDetails.graduationEnd[2] ? (
                         <span>
                           {educationDetails.instituteLocation[0]}
+                          {educationDetails.graduationStart[0] && (<span>
                           {", "}
-                          {educationDetails.graduationStart[0]} to{" "}
+                            {educationDetails.graduationStart[0]} to{" "}
                           {educationDetails.graduationEnd[0]}
+                          </span>)}                          
                         </span>
                       ) : null}{" "}
                     </div>
@@ -444,9 +348,11 @@ const Template2 = () => {
                         educationDetails.graduationEnd[2] ? (
                           <span>
                             {educationDetails.instituteLocation[1]}
+                            {educationDetails.graduationStart[1] && (<span>
                             {", "}
                             {educationDetails.graduationStart[1]} to{" "}
-                            {educationDetails.graduationEnd[1]}
+                          {educationDetails.graduationEnd[1]}
+                          </span>)} 
                           </span>
                         ) : null}{" "}
                       </div>
@@ -474,8 +380,11 @@ const Template2 = () => {
                         educationDetails.graduationEnd[2] ? (
                           <span>
                             {educationDetails.instituteLocation[2]}
+                            {educationDetails.graduationStart[2] && (<span>
+                              {", "}
                             {educationDetails.graduationStart[2]} to{" "}
-                            {educationDetails.graduationEnd[2]}
+                          {educationDetails.graduationEnd[2]}
+                          </span>)} 
                           </span>
                         ) : null}{" "}
                       </div>
