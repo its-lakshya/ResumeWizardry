@@ -82,7 +82,7 @@ const Template2 = () => {
 
   return (
     <div id="resume">
-      <div className="self-center h-[222.5mm] w-[180mm] bg-white flex flex-col justify-center items-center ">
+      <div className="self-center h-[222.5mm] w-[160mm] bg-white flex flex-col justify-center items-center ">
         <div
           className={`[&>*]:mx-4 h-44 w-full flex items-center justify-center  bg-[#dad8d9] `}
         >

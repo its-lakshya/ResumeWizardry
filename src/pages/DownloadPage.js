@@ -1,9 +1,13 @@
 import HomePageLandingButton from "../components/buttons/HomePageLandingButton";
 import Template1 from "../templates/Template1";
+import Template2 from "../templates/Template2";
 // import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const DownloadPage = () => {
+  const [template, setTemplate] = useState(useSelector((store)=> store.templateSelection.template));
   const createPdf = async () => {
     // const pdf = new jsPDF("portrait", "pt", "a4", true);
     // const data = await html2canvas(document.querySelector("#resume")); 
@@ -13,6 +17,8 @@ const DownloadPage = () => {
     // const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
     // pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
     // pdf.save("shipping_label.pdf");
+
+
 
     const report = new jsPDF("p", "pt", "a4");
     report.html(document.querySelector("#resume")).then(() => {
@@ -37,7 +43,8 @@ const DownloadPage = () => {
           </div>
         </div>
         <div className="flex gap-x-20 w-full ">
-          <Template1 />
+        {template==='Template1' && <Template1/>}
+          {template==='Template2' && <Template2/>}
           <div className="flex flex-col w-1/2 gap-y-10">
             <div className="cursor-pointer" onClick={() => createPdf()}>
               <HomePageLandingButton
