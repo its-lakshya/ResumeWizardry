@@ -24,7 +24,6 @@ const useRouter = (data) => {
     } else if ( addInfo === true && data[4] === "ad" ) {
       setRoute("/build-resume/form/finalize/add-addInfo");
     } else if (data[5] === "d") {
-      console.log('ok')
       setRoute("/build-resume/download");
     }
   }, [routesInfo]);

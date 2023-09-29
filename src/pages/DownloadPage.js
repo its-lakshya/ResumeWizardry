@@ -1,31 +1,43 @@
 import HomePageLandingButton from "../components/buttons/HomePageLandingButton";
-import Template1 from "../templates/Template1";
-import Template2 from "../templates/Template2";
-// import html2canvas from "html2canvas";
+import Template1 from "../templates/Template1"
+import Template2 from "../templates/Template2"
+import Template1img from "../assets/Template1.png"
+import Template2img from "../assets/Template2.jpg"
+import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { setTemplate } from "../store/TemplateSlice";
 
 const DownloadPage = () => {
-  const [template, setTemplate] = useState(useSelector((store)=> store.templateSelection.template));
+  const [templateData, setTemplateData] = useState(
+    useSelector((store) => store.templateSelection.template)
+  );
+
   const createPdf = async () => {
-    // const pdf = new jsPDF("portrait", "pt", "a4", true);
-    // const data = await html2canvas(document.querySelector("#resume")); 
-    // const img = data.toDataURL("image/png");
-    // const imgProperties = pdf.getImageProperties(img);
-    // const pdfWidth = pdf.internal.pageSize.getWidth();
-    // const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
-    // pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
-    // pdf.save("shipping_label.pdf");
+    const pdf = new jsPDF("portrait", "pt", "a4", true);
+    const data = await html2canvas(document.querySelector("#resume"));
+    const img = data.toDataURL("image/png");
+    const imgProperties = pdf.getImageProperties(img);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
+    pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
+    pdf.save("shipping_label.pdf");
 
-
-
-    const report = new jsPDF("p", "pt", "a4");
-    report.html(document.querySelector("#resume")).then(() => {
-      report.save("resume.pdf");
-    });
-    console.log("apple");
+    // const report = new jsPDF("p", "pt", "a4");
+    // report.html(document.querySelector("#resume")).then(() => {
+    //   report.save("resume.pdf");
+    // });
+    // console.log("apple");
   };
+
+  const dispatch = useDispatch()
+
+  const handleClick = (data)=> {
+    dispatch(setTemplate(data))   
+    setTemplateData(data)
+  }
 
   return (
     <div className="flex flex-col">
@@ -43,8 +55,8 @@ const DownloadPage = () => {
           </div>
         </div>
         <div className="flex gap-x-20 w-full ">
-        {template==='Template1' && <Template1/>}
-          {template==='Template2' && <Template2/>}
+          {templateData === "Template1" && <Template1 />}
+          {templateData === "Template2" && <Template2 />}
           <div className="flex flex-col w-1/2 gap-y-10">
             <div className="cursor-pointer" onClick={() => createPdf()}>
               <HomePageLandingButton
@@ -58,12 +70,21 @@ const DownloadPage = () => {
               />
             </div>
             <div>
-              <div className="uppercase font-semibold text-lg flex justify-center">
+              <div className="uppercase font-semibold text-lg flex flex-col justify-center items-center gap-y-4">
                 More Templates
+                <div className="border  h-96 w-full flex items-center justify-evenly">
+                    <div
+                      className="w-40 h-72 bg-no-repeat bg-center bg-contain"
+                      style={{ backgroundImage: `url(${Template1img})` }}
+                      onClick={() => handleClick("Template1")}
+                    ></div>
+                    <div
+                      className="w-40 h-72 bg-no-repeat bg-center bg-contain"
+                      style={{ backgroundImage: `url(${Template2img})` }}
+                      onClick={() => handleClick("Template2")}
+                    ></div>
+                </div>
               </div>
-              {/* <div className="">
-                <Template1 />
-              </div> */}
             </div>
           </div>
         </div>

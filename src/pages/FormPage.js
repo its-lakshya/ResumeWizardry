@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const FormPage = () => {
-  // console.log(data)
 
   const [template, setTemplate] = useState(useSelector((store)=> store.templateSelection.template));
 
