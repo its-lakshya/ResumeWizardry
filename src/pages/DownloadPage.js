@@ -72,7 +72,7 @@ const DownloadPage = () => {
             <div>
               <div className="uppercase font-semibold text-lg flex flex-col justify-center items-center gap-y-4">
                 More Templates
-                <div className="border  h-96 w-full flex items-center justify-evenly">
+                <div className="border h-96 w-full flex items-center justify-evenly">
                     <div
                       className="w-40 h-72 bg-no-repeat bg-center bg-contain"
                       style={{ backgroundImage: `url(${Template1img})` }}

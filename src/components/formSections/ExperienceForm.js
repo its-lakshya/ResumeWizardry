@@ -11,6 +11,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 const ExperienceForm = ({value}) => {
+  console.log(value)
 
   const ExperienceDetails =  useSelector((store) => store.experienceDetails)
   const dispatch = useDispatch()
@@ -137,27 +138,27 @@ const ExperienceForm = ({value}) => {
           Nice! Now let's describe what you did
           <input
             className={inputClassNames}
-            onChange={(description1) => handleChange({ description1 })}
+            onChange={(description0) => handleChange({ description0 })}
             value={ExperienceDetails.description[value][0]}
             />
           <input
             className={inputClassNames}
-            onChange={(description2) => handleChange({ description2 })}
+            onChange={(description1) => handleChange({ description1 })}
             value={ExperienceDetails.description[value][1]}
             />
           <input
             className={inputClassNames}
-            onChange={(description3) => handleChange({ description3 })}
+            onChange={(description2) => handleChange({ description2 })}
             value={ExperienceDetails.description[value][2]}
             />
           <input
             className={inputClassNames}
-            onChange={(description4) => handleChange({ description4 })}
+            onChange={(description3) => handleChange({ description3 })}
             value={ExperienceDetails.description[value][3]}
             />
           <input
             className={inputClassNames}
-            onChange={(description5) => handleChange({ description5 })}
+            onChange={(description4) => handleChange({ description4 })}
             value={ExperienceDetails.description[value][4]}
           />
         </label>

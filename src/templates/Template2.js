@@ -121,24 +121,24 @@ const Template2 = () => {
               contactDetails.phone ? (
                 <div className={`${headingContentCss} text-black`}>
                   <div className={`${headingCss}`}>contact</div>
-                  <div className="font-semibold text-sm flex items-center gap-x-2 justify-start">
-                    <span>Address : </span>
+                  <div className="font-semibold text-[0.75rem] flex items-center gap-x-2">
+                    <span>Address </span>
                     {contactDetails.city ? (
                       <span className="text-xs font-light">
                         {contactDetails.city}, {contactDetails.state}
                       </span>
                     ) : null}
                   </div>
-                  <div className="font-semibold text-sm flex items-center gap-x-2">
-                    <span>Pincode : </span>
+                  <div className="font-semibold text-[0.75rem] flex items-center gap-x-2">
+                    <span>Pincode </span>
                     {contactDetails.country || contactDetails.pincode ? (
                       <span className="text-xs font-light">
                         {contactDetails.pincode}, {contactDetails.country}
                       </span>
                     ) : null}
                   </div>
-                  <div className="font-semibold text-sm flex items-center gap-x-2">
-                    <span>Email : </span>
+                  <div className="font-semibold text-[0.75rem] flex items-center gap-x-2">
+                    <span>Email </span>
                     {contactDetails.email ? (
                       <span className="text-xs font-light">
                         {contactDetails.email}
@@ -146,8 +146,8 @@ const Template2 = () => {
                     ) : null}
                   </div>
 
-                  <div className="font-semibold text-sm flex items-center gap-x-2">
-                    <span>Phone : </span>
+                  <div className="font-semibold text-[0.75rem] flex items-center gap-x-2">
+                    <span>Phone </span>
                     {contactDetails.phone ? (
                       <span className="text-xs font-light">
                         {contactDetails.phone}
@@ -441,31 +441,31 @@ const Template2 = () => {
 
                         <div className="[&>*]:flex [&>*]:gap-2 flex flex-col text-black font-light">
                           {experienceDetails.description[0][0] ? (
-                            <div className="flex items-center">
+                            <div className="flex items-start">
                               <BsDot />
                               {experienceDetails.description[0][0]}
                             </div>
                           ) : null}
                           {experienceDetails.description[0][1] ? (
-                            <div className="flex items-center">
+                            <div className="flex items-start">
                               <BsDot />
                               {experienceDetails.description[0][1]}
                             </div>
                           ) : null}
                           {experienceDetails.description[0][2] ? (
-                            <div className="flex items-center">
+                            <div className="flex items-start">
                               <BsDot />
                               {experienceDetails.description[0][2]}
                             </div>
                           ) : null}
                           {experienceDetails.description[0][3] ? (
-                            <div className="flex items-center">
+                            <div className="flex items-start">
                               <BsDot />
                               {experienceDetails.description[0][3]}
                             </div>
                           ) : null}
                           {experienceDetails.description[0][4] ? (
-                            <div className="flex items-center">
+                            <div className="flex items-start">
                               <BsDot />
                               {experienceDetails.description[0][4]}
                             </div>
@@ -513,6 +513,12 @@ const Template2 = () => {
                         </div>
 
                         <div className="[&>*]:flex [&>*]:gap-2 flex flex-col text-black font-light">
+                          {experienceDetails.description[1][0] ? (
+                            <div className="flex items-center">
+                              <BsDot />
+                              {experienceDetails.description[1][0]}
+                            </div>
+                          ) : null}
                           {experienceDetails.description[1][1] ? (
                             <div className="flex items-center">
                               <BsDot />
@@ -535,12 +541,6 @@ const Template2 = () => {
                             <div className="flex items-center">
                               <BsDot />
                               {experienceDetails.description[1][4]}
-                            </div>
-                          ) : null}
-                          {experienceDetails.description[1][5] ? (
-                            <div className="flex items-center">
-                              <BsDot />
-                              {experienceDetails.description[1][5]}
                             </div>
                           ) : null}
                         </div>
