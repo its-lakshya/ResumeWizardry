@@ -45,7 +45,7 @@ const LinkForm = () => {
         <div
           className={`w-full flex flex-col items-start justify-center gap-y-12`}
         >
-          {links}
+          {links} 
           <button
             onClick={handleClick}
             className={`text-[#EA4492] ${buttonVisibility} `}

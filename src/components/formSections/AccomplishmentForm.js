@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CombinedSummary } from "./DifferentAddForms";
+import { Accomplishments } from "./DifferentAddForms";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
 import useRouter from "../../hooks/useRouter";
@@ -22,7 +22,7 @@ const AccomplishmentForm = () => {
             {/* Add anything else you want employers to know.{" "} */}
           </span>
         </div>
-        <CombinedSummary text={"accomplishments"} />
+        <Accomplishments text={"accomplishments"} />
       </div>
     </div>
   );

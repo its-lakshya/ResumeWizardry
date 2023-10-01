@@ -1,4 +1,4 @@
-import { CombinedSummary } from "./DifferentAddForms";
+import { AddInfo } from "./DifferentAddForms";
 import useRouter from "../../hooks/useRouter";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -22,7 +22,7 @@ const AdditionalInfoForm = () => {
             Add anything else you want employers to know.{" "}
           </span>
         </div>
-        <CombinedSummary text={"additional information"} />
+        <AddInfo text={"additional information"} />
       </div>
     </div>
   );

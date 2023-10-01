@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
-import { CombinedSummary } from "./DifferentAddForms";
+import { Certifications } from "./DifferentAddForms";
 import useRouter from "../../hooks/useRouter";
 
 const CertificationForm = () => {
   const data = ["", "", "l", "ac", "ad", "d"];
   const route = useRouter(data);
+
 
   const dispatch = useDispatch();
 
@@ -23,7 +24,7 @@ const CertificationForm = () => {
             {/* Your summary shows employers you’re right for their job.{" "} */}
           </span>
         </div>
-        <CombinedSummary text={"certifications"} />
+        <Certifications text={"certifications"} />
       </div>
       <div></div>
     </div>
