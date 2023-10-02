@@ -223,29 +223,29 @@ const Template2 = () => {
                 <div className={`font-semibold uppercase text-base`}>
                   languages
                 </div>
-                {linkLangDetails.lang1 ? (
+                {linkLangDetails.lang[0] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.lang1}
+                    {linkLangDetails.lang[0]}
                   </span>
                 ) : null}
-                {linkLangDetails.lang2 ? (
+                {linkLangDetails.lang[1] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.lang2}
+                    {linkLangDetails.lang[1]}
                   </span>
                 ) : null}
-                {linkLangDetails.lang3 ? (
+                {linkLangDetails.lang[2] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.lang3}
+                    {linkLangDetails.lang[2]}
                   </span>
                 ) : null}
-                {linkLangDetails.lang4 ? (
+                {linkLangDetails.lang[3] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.lang4}
+                    {linkLangDetails.lang[3]}
                   </span>
                 ) : null}
-                {linkLangDetails.lang5 ? (
+                {linkLangDetails.lang[4] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.lang5}
+                    {linkLangDetails.lang[4]}
                   </span>
                 ) : null}
               </div>
@@ -254,29 +254,29 @@ const Template2 = () => {
                 className={`${headingContentCss} ${linksVisibility}  text-black`}
               >
                 <div className={`font-semibold uppercase text-base`}>links</div>
-                {linkLangDetails.link1 ? (
+                {linkLangDetails.link[0] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.link1}
+                    {linkLangDetails.link[0]}
                   </span>
                 ) : null}
-                {linkLangDetails.link2 ? (
+                {linkLangDetails.link[1] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.link2}
+                    {linkLangDetails.link[1]}
                   </span>
                 ) : null}
-                {linkLangDetails.link3 ? (
+                {linkLangDetails.link[2] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.link3}
+                    {linkLangDetails.link[2]}
                   </span>
                 ) : null}
-                {linkLangDetails.link4 ? (
+                {linkLangDetails.link[3] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.link4}
+                    {linkLangDetails.link[3]}
                   </span>
                 ) : null}
-                {linkLangDetails.link5 ? (
+                {linkLangDetails.link[4] ? (
                   <span className="text-sm font-light">
-                    {linkLangDetails.link5}
+                    {linkLangDetails.link[4]}
                   </span>
                 ) : null}
               </div>

@@ -1,4 +1,4 @@
-import { LinksSection } from "./DifferentAddForms";
+import { LangSection } from "./DifferentAddForms";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setNextRoute } from "../../store/RoutesSlice";
@@ -13,7 +13,7 @@ const LanguagesForm = () => {
   const dispatch = useDispatch();
   
   const [links, setLinks] = useState([
-    <LinksSection key={count} value={count} text={'language'}/>,
+    <LangSection key={count} value={count} text={'language'}/>,
   ],[route]);
   
   useEffect(() => {
@@ -24,7 +24,7 @@ const LanguagesForm = () => {
     if (count < 5) {
       setLinks((prev) => [
         ...prev,
-        <LinksSection key={count + 1} value={count + 1} text={'language'} />,
+        <LangSection key={count + 1} value={count + 1} text={'language'} />,
       ]);
       setCount(count + 1);
       if (count === 4) {

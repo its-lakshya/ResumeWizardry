@@ -7,7 +7,6 @@ import {
   storeCertifications,
 } from "../../store/CombinedSummarySlice";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 
 export const LinksSection = ({ text, value }) => {
   const dispatch = useDispatch();
@@ -30,13 +29,45 @@ export const LinksSection = ({ text, value }) => {
             placeholder={`Add your ${text} here.`}
             className={inputClassNames}
             onChange={(Lang) => handleChange({ Lang })}
-            // value={linksDetails.link1}
+            value={linksDetails.link[value-1]}
           />
         </label>
       </div>
     </form>
   );
 };
+
+
+export const LangSection = ({ text, value }) => {
+  const dispatch = useDispatch();
+  const linksDetails = useSelector((store) => store.linksLangDetails);
+  console.log(value)
+
+  const handleChange = ({ Lang }) => {
+    if (text === "links/url") {
+      dispatch(storeLinks({ type: value, data: Lang.target.value }));
+    } else if (text === "language") {
+      dispatch(storeLangs({ type: value, data: Lang.target.value }));
+    }
+  };
+
+  return (
+    <form className="flex flex-col w-full  gap-y-4 ">
+      <div className="flex justify-between   ">
+        <label className={labelClassNames}>
+          {text}
+          <input
+            placeholder={`Add your ${text} here.`}
+            className={inputClassNames}
+            onChange={(Lang) => handleChange({ Lang })}
+            value={linksDetails.lang[value-1]}
+          />
+        </label>
+      </div>
+    </form>
+  );
+};
+
 
 export const Certifications = ({ text }) => {
   const dispatch = useDispatch();

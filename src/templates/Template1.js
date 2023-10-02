@@ -143,22 +143,22 @@ const Template1 = () => {
               <div className={`${headingCss}`}>
                 links
               </div>
-              {linkLangDetails.link1 ? (<span>{linkLangDetails.link1}</span>) : (null)}
-              {linkLangDetails.link2 ? (<span>{linkLangDetails.link2}</span>) : (null)}
-              {linkLangDetails.link3 ? (<span>{linkLangDetails.link3}</span>) : (null)}
-              {linkLangDetails.link4 ? (<span>{linkLangDetails.link4}</span>) : (null)}
-              {linkLangDetails.link5 ? (<span>{linkLangDetails.link5}</span>) : (null)}
+              {linkLangDetails.link[0] ? (<span>{linkLangDetails.link[0]}</span>) : (null)}
+              {linkLangDetails.link[1] ? (<span>{linkLangDetails.link[1]}</span>) : (null)}
+              {linkLangDetails.link[2] ? (<span>{linkLangDetails.link[2]}</span>) : (null)}
+              {linkLangDetails.link[3] ? (<span>{linkLangDetails.link[3]}</span>) : (null)}
+              {linkLangDetails.link[4] ? (<span>{linkLangDetails.link[4]}</span>) : (null)}
             </div>
 
             <div className={`${headingContentCss} ${languagesVisibility}`}>
               <div className={`${headingCss}`}>
                 languages
               </div>
-              {linkLangDetails.lang1 ? (<span>{linkLangDetails.lang1}</span>) : (null)}
-              {linkLangDetails.lang2 ? (<span>{linkLangDetails.lang2}</span>) : (null)}
-              {linkLangDetails.lang3 ? (<span>{linkLangDetails.lang3}</span>) : (null)}
-              {linkLangDetails.lang4 ? (<span>{linkLangDetails.lang4}</span>) : (null)}
-              {linkLangDetails.lang5 ? (<span>{linkLangDetails.lang5}</span>) : (null)}
+              {linkLangDetails.lang[0] ? (<span>{linkLangDetails.lang[0]}</span>) : (null)}
+              {linkLangDetails.lang[1] ? (<span>{linkLangDetails.lang[1]}</span>) : (null)}
+              {linkLangDetails.lang[2] ? (<span>{linkLangDetails.lang[2]}</span>) : (null)}
+              {linkLangDetails.lang[3] ? (<span>{linkLangDetails.lang[3]}</span>) : (null)}
+              {linkLangDetails.lang[4] ? (<span>{linkLangDetails.lang[4]}</span>) : (null)}
             </div>
           </div>
           
