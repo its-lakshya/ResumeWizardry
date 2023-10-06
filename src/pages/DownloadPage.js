@@ -74,12 +74,12 @@ const DownloadPage = () => {
                 More Templates
                 <div className="border h-96 w-full flex items-center justify-evenly">
                     <div
-                      className="w-40 h-72 bg-no-repeat bg-center bg-contain"
+                      className="w-40 h-56 bg-no-repeat bg-center bg-contain hover:scale-105 cursor-pointer hover:shadow-xl hover:shadow-gray-400"
                       style={{ backgroundImage: `url(${Template1img})` }}
                       onClick={() => handleClick("Template1")}
                     ></div>
                     <div
-                      className="w-40 h-72 bg-no-repeat bg-center bg-contain"
+                      className="w-40 h-56 bg-no-repeat bg-center bg-contain hover:scale-105 cursor-pointer hover:shadow-xl hover:shadow-gray-400"
                       style={{ backgroundImage: `url(${Template2img})` }}
                       onClick={() => handleClick("Template2")}
                     ></div>

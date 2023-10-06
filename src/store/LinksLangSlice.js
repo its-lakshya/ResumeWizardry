@@ -3,17 +3,6 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState= {
     link : [],
     lang : [],
-
-    link1:'',
-    link2:'',
-    link3:'',
-    link4:'',
-    link5:'',
-    lang1:'',
-    lang2:'',
-    lang3:'',
-    lang4:'',
-    lang5:'',
 }
 
 const LinksLangSlice = createSlice({
