@@ -4,7 +4,7 @@ import MakeYourResume from "../../assets/MakeYourResumeImage.png";
 import CustomizeTheDesign from "../../assets/CustomizeTheDesignImage.png";
 import DownloadResume from "../../assets/DownloadResumeImage.png";
 import HomePageLandingButton from "../buttons/HomePageLandingButton";
-import "../animations/HomePageAnimation.css";
+import "../animations/HomePageAnimation.css";  
 import { Link } from "react-router-dom";
 
 const HowItWorks = () => {
