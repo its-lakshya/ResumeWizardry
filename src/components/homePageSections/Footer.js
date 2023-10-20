@@ -5,7 +5,7 @@ import HomePageLandingButton from "../buttons/HomePageLandingButton";
 const Footer = () => {
   return (
     <footer className="text-center text-white bg-[#003459]">
-      <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 lg:justify-between">
+      <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 lg:justify-between ">
         <div className="mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
@@ -54,10 +54,10 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-evenly py-10">
+      <div className="flex items-center justify-evenly py-10 max-md:flex-col max-md:gap-y-14">
         <div className="w-1/2 ">
           <span className="flex flex-col items-center justify-center w-full gap-y-6">
-            <span className="text-lg">
+            <span className="text-lg max-md:text-base max-sm:hidden">
               " Unlocking Your Career Potential with Exceptionally Crafted
               Resumes | Precision in Resumes, Excellence in Careers | Your
               Partner in Professional Growth and Achievement "
@@ -70,16 +70,16 @@ const Footer = () => {
                 hoverBorderColor="border-[#FF9CDA]"
                 text="Let the magic happen"
                 height="h-[3.5rem]"
-                width="w-72"
+                width="w-72 max-sm:w-56"
               />
             </Link>
           </span>
         </div>
         <div>
-          <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          <h6 className="mb-4 flex justify-start font-semibold uppercase">
             Contact
           </h6>
-          <p className="mb-4 flex items-center justify-center md:justify-start">
+          <p className="mb-4 flex items-center justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -91,7 +91,7 @@ const Footer = () => {
             </svg>
             Noida, IN
           </p>
-          <p className="mb-4 flex items-center justify-center md:justify-start">
+          <p className="mb-4 flex items-center justify-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ const Footer = () => {
             </svg>
             kumarlakshya101@gmail.com
           </p>
-          <p className="mb-4 flex items-center justify-center md:justify-start">
+          <p className="mb-4 flex items-center justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
