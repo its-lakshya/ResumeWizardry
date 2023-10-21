@@ -6,16 +6,21 @@ import {
 } from "react-icons/pi";
 import HomePageLandingButton from "../components/buttons/HomePageLandingButton";
 import { Link } from "react-router-dom";
-import ResumeCollage from '../assets/ResumeCollage.png'
+import ResumeCollage from "../assets/ResumeCollage.png";
 
 const BuildResumeStartPage = () => {
   return (
-    <div className="h-screen w-full flex justify-center items-center bg-cover bg-center "
-    style={{ backgroundImage: `url(${ResumeCollage})` }}
+    <div
+      className="h-screen w-full flex justify-center items-center bg-cover bg-center "
+      style={{ backgroundImage: `url(${ResumeCollage})` }}
     >
-      <div className="bg-white h-[35rem] w-[26rem] max-lg:w-[20rem] max-lg:h-[28rem] flex flex-col 
-      justify-center items-center px-12 max-lg:px-2 gap-y-7 max-lg:gap-y-2 max-sm:gap-y-4 shadow-lg shadow-gray-400 ">
-        <div className="text-[#003459] text-3xl max-lg:text-2xl max-sm:text-xl font-bold ">ResumeWizardry</div>
+      <div
+        className="bg-white h-[35rem] w-[26rem] max-lg:w-[20rem] max-lg:h-[28rem] flex flex-col 
+      justify-center items-center px-12 max-lg:px-2 gap-y-7 max-lg:gap-y-2 max-sm:gap-y-4 shadow-lg shadow-gray-400 "
+      >
+        <div className="text-[#003459] text-3xl max-lg:text-2xl max-sm:text-xl font-bold ">
+          ResumeWizardry
+        </div>
         <div className="text-5xl max-lg:text-3xl max-sm:text-2xl text-center font-bold">
           Just four magical steps
         </div>
