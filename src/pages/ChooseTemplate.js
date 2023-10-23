@@ -22,7 +22,7 @@ const ChooseTemplate = () => {
               Choose from our magicaly handcrafted template
             </div>
             {/* <Link to='/build-resume/form/contact'>Towards form</Link> */}
-            <div className="text-lg">
+            <div className="text-lg max-sm:text-center">
               You can always change your template later.
             </div>
           </div>

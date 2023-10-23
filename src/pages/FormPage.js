@@ -23,15 +23,16 @@ const FormPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen justify-between overflow-hidden ">
+    <div className="flex flex-col h-screen justify-between max-lg:h-auto">
       <div className="h-12 ">
         <FormPageHeader />
       </div>
-      <div className="overflow-hidden flex px-10 justify-evenly ">
-        <div className="w-1/2 overflow-y-scroll ">
+      <div className="overflow-hidden h-auto flex px-4 justify-evenly max-lg:flex-col-reverse max-lg:items-center max-md:justify-start">
+        <div className="w-1/2 overflow-y-scroll max-lg:w-full max-lg:overflow-y-hidden max-md:h-full max-sm:-mt-48 ">
           <Outlet />
         </div>
-        <div className="my-6 flex justify-center overflow-y-scroll overflow-x-hidden">
+        <div className="my-6 max-md:my-2 flex justify-center overflow-y-scroll overflow-x-hidden shrink-0 max-lg:overflow-y-hidden 
+        max-md:scale-75 max-sm:scale-50 max-md:mt-0 max-sm:-mt-48">
           {template==='Template1' && <Template1/>}
           {template==='Template2' && <Template2/>}
         </div>
