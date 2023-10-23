@@ -12,12 +12,12 @@ const FormPageHeader = () => {
   const style = useSelector((store) => store?.styleSection?.Section);
 
   return (
-    <div className="w-full h-12 font-bold flex justify-center  bg-[#003459] bg-opacity-95 shadow-lg  ">
+    <div className="w-full h-12 font-bold flex justify-center  bg-[#003459] bg-opacity-95 shadow-lg ">
       <div className="w-full flex justify-center items-center max-lg:justify-evenly max-lg:mx-10">
         <span className="font-bold text-2xl text-white -mt-2">
           ResumeWisardry
         </span>
-        <ul className="w-3/5 h-full flex justify-center gap-x-8 max-lg:gap-x-4 max-md:hidden font-normal text-base text-gray-400 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:gap-x-1 [&>*]:w-28 ">
+        <ul className="w-3/5 h-full flex justify-center gap-x-8 max-lg:gap-x-4 max-md:hidden font-normal text-base max-lg:text-sm text-gray-400 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:gap-x-1 [&>*]:w-28 ">
           <li
             className={
               style === "contact"
