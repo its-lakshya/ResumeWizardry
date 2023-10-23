@@ -33,7 +33,7 @@ const FormExperienceSection = () => {
   return (
     <div className=" py-10 min-h-[83vh] w-full flex items-center">
       <div className="min-h-4/5 w-[95%] flex flex-col justify-center items-start gap-y-12">
-        <div className="font-bold text-4xl text-black flex flex-col gap-y-3">
+        <div className="font-bold text-4xl text-black flex flex-col gap-y-3 max-md:text-center">
           Tell us about your experience{" "}
           <span className="text-lg font-normal">
             Start with your most recent experience and work backward.

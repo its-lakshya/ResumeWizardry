@@ -36,7 +36,7 @@ const FormAddSection = () => {
   return (
     <div className="my-0 min-h-[83vh] flex  items-center ">
       <div className="min-h-4/5 w-[95%] flex flex-col justify-start items-start gap-y-12">
-        <div className="font-bold text-3xl text-black flex flex-col gap-y-3">
+        <div className="font-bold text-3xl text-black flex flex-col gap-y-3 max-md:text-center">
           Do you have anything else to add?{" "}
           <span className="text-lg font-normal">
             These sections are optional.

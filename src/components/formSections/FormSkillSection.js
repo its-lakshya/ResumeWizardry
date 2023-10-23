@@ -39,7 +39,7 @@ const FormSkillSection = () => {
   return (
     <div className="py-10 min-h-[83vh] flex items-center">
       <div className="min-h-4/5 w-[95%] flex flex-col justify-center items-start gap-y-12">
-        <div className="font-bold text-4xl text-black flex flex-col gap-y-3">
+        <div className="font-bold text-4xl text-black flex flex-col gap-y-3 max-md:text-center">
           What skills would you like to highlight?{" "}
           <span className="text-lg font-normal">
             Employers scan skills for relevant keywords. Add relevant professional key skills and proficiencies.
