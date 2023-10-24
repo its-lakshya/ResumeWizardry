@@ -41,23 +41,25 @@ const DownloadPage = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="bg-[#003459] w-full h-12 bg-opacity-95 font-bold text-2xl text-white flex items-center px-48">
+      <div className="bg-[#003459] w-full h-12 bg-opacity-95 font-bold text-2xl text-white flex items-center px-48 max-lg:px-10">
         ResumeWisardry
       </div>
-      <div className="px-48  flex flex-col gap-y-14 py-6">
+      <div className="px-48 flex flex-col gap-y-14 py-6 max-lg:px-10 max-lg:items-center">
         <div className="flex flex-col gap-y-3 ">
-          <div className="text-[#003459] font-bold text-4xl ">
+          <div className="text-[#003459] font-bold text-4xl max-lg:text-3xl max-lg:text-center max-sm:text-2xl">
             Awesome! your resume is magical{" "}
           </div>
-          <div className="text-lg">
+          <div className="text-lg max-lg:text-base max-lg:text-center">
             Review and make final changes to your resume. Then download and
             apply for jobs!
           </div>
         </div>
-        <div className="flex gap-x-20 w-full ">
+        <div className="flex gap-x-20 w-full max-lg:flex-col max-lg:items-center max-lg:gap-y-12">
+          <div className="max-md:scale-75 max-md:-mt-28 max-sm:scale-50 max-sm:-mt-[14rem]">
           {templateData === "Template1" && <Template1 />}
           {templateData === "Template2" && <Template2 />}
-          <div className="flex flex-col w-1/2 gap-y-10">
+          </div>
+          <div className="flex flex-col w-1/2 gap-y-10 max-lg:w-full max-lg:items-center max-md:-mt-28 max-sm:-mt-[14rem]">
             <div className="cursor-pointer" onClick={() => createPdf()}>
               <HomePageLandingButton
                 bgColor="bg-[#EA4492]"
@@ -65,14 +67,14 @@ const DownloadPage = () => {
                 hoverColor="bg-[#FF9CDA]"
                 hoverBorderColor="border-[#FF9CDA]"
                 text="Download ↓"
-                height="h-[3.5rem]"
-                width="w-full"
+                height="h-[3.5rem] max-sm:h-[3.2rem]"
+                width="w-full max-lg:w-80 max-sm:w-56"
               />
             </div>
-            <div>
-              <div className="uppercase font-semibold text-lg flex flex-col justify-center items-center gap-y-4">
+            {/* <div className="max-"> */}
+              <div className="uppercase font-semibold text-lg flex flex-col justify-center items-center gap-y-4 max-lg:w-full">
                 More Templates
-                <div className="border h-96 w-full flex items-center justify-evenly">
+                <div className="border h-96 max-sm:h-auto w-full flex items-center justify-evenly max-sm:flex-col max-sm:gap-y-8 max-sm:py-4 ">
                     <div
                       className="w-40 h-56 bg-no-repeat bg-center bg-contain hover:scale-105 cursor-pointer hover:shadow-xl hover:shadow-gray-400"
                       style={{ backgroundImage: `url(${Template1img})` }}
@@ -84,7 +86,7 @@ const DownloadPage = () => {
                       onClick={() => handleClick("Template2")}
                     ></div>
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
