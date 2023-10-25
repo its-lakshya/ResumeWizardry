@@ -1,8 +1,8 @@
 import HomePageLandingButton from "../components/buttons/HomePageLandingButton";
-import Template1 from "../templates/Template1"
-import Template2 from "../templates/Template2"
-import Template1img from "../assets/Template1.png"
-import Template2img from "../assets/Template2.jpg"
+import Template1 from "../templates/Template1";
+import Template2 from "../templates/Template2";
+import Template1img from "../assets/Template1.png";
+import Template2img from "../assets/Template2.jpg";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useState } from "react";
@@ -32,12 +32,12 @@ const DownloadPage = () => {
     // console.log("apple");
   };
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const handleClick = (data)=> {
-    dispatch(setTemplate(data))   
-    setTemplateData(data)
-  }
+  const handleClick = (data) => {
+    dispatch(setTemplate(data));
+    setTemplateData(data);
+  };
 
   return (
     <div className="flex flex-col">
@@ -56,8 +56,8 @@ const DownloadPage = () => {
         </div>
         <div className="flex gap-x-20 w-full max-lg:flex-col max-lg:items-center max-lg:gap-y-12">
           <div className="max-md:scale-75 max-md:-mt-28 max-sm:scale-50 max-sm:-mt-[14rem]">
-          {templateData === "Template1" && <Template1 />}
-          {templateData === "Template2" && <Template2 />}
+            {templateData === "Template1" && <Template1 />}
+            {templateData === "Template2" && <Template2 />}
           </div>
           <div className="flex flex-col w-1/2 gap-y-10 max-lg:w-full max-lg:items-center max-md:-mt-28 max-sm:-mt-[14rem]">
             <div className="cursor-pointer" onClick={() => createPdf()}>
@@ -72,20 +72,20 @@ const DownloadPage = () => {
               />
             </div>
             {/* <div className="max-"> */}
-              <div className="uppercase font-semibold text-lg flex flex-col justify-center items-center gap-y-4 max-lg:w-full">
-                More Templates
-                <div className="border h-96 max-sm:h-auto w-full flex items-center justify-evenly max-sm:flex-col max-sm:gap-y-8 max-sm:py-4 ">
-                    <div
-                      className="w-40 h-56 bg-no-repeat bg-center bg-contain hover:scale-105 cursor-pointer hover:shadow-xl hover:shadow-gray-400"
-                      style={{ backgroundImage: `url(${Template1img})` }}
-                      onClick={() => handleClick("Template1")}
-                    ></div>
-                    <div
-                      className="w-40 h-56 bg-no-repeat bg-center bg-contain hover:scale-105 cursor-pointer hover:shadow-xl hover:shadow-gray-400"
-                      style={{ backgroundImage: `url(${Template2img})` }}
-                      onClick={() => handleClick("Template2")}
-                    ></div>
-                </div>
+            <div className="uppercase font-semibold text-lg flex flex-col justify-center items-center gap-y-4 max-lg:w-full">
+              More Templates
+              <div className="border h-96 max-sm:h-auto w-full flex items-center justify-evenly max-sm:flex-col max-sm:gap-y-8 max-sm:py-4 ">
+                <div
+                  className="w-40 h-56 bg-no-repeat bg-center bg-contain hover:scale-105 cursor-pointer hover:shadow-xl hover:shadow-gray-400"
+                  style={{ backgroundImage: `url(${Template1img})` }}
+                  onClick={() => handleClick("Template1")}
+                ></div>
+                <div
+                  className="w-40 h-56 bg-no-repeat bg-center bg-contain hover:scale-105 cursor-pointer hover:shadow-xl hover:shadow-gray-400"
+                  style={{ backgroundImage: `url(${Template2img})` }}
+                  onClick={() => handleClick("Template2")}
+                ></div>
+              </div>
               {/* </div> */}
             </div>
           </div>

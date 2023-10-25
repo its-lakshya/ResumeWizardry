@@ -1,15 +1,14 @@
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HomePageLandingButton from "../buttons/HomePageLandingButton";
 import { useSelector } from "react-redux";
 
-
 const FormPageFooter = () => {
-  const navigate = useNavigate()
-  const nextPage = useSelector((store) => store.routesDetails.nextRoute)
+  const navigate = useNavigate();
+  const nextPage = useSelector((store) => store.routesDetails.nextRoute);
 
   const handleClick = () => {
-    navigate(-1)
-}
+    navigate(-1);
+  };
 
   return (
     <div className="bg-gray-200 h-20 shadow-inner">

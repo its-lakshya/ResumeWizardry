@@ -7,15 +7,15 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const FormPage = () => {
-
-  const [template, setTemplate] = useState(useSelector((store)=> store.templateSelection.template));
+  const [template, setTemplate] = useState(
+    useSelector((store) => store.templateSelection.template)
+  );
 
   useEffect(() => {
     const unloadCallback = (event) => {
       event.preventDefault();
       event.returnValue = "something";
       return "";
-
     };
 
     window.addEventListener("beforeunload", unloadCallback);
@@ -31,10 +31,12 @@ const FormPage = () => {
         <div className="w-1/2 overflow-y-scroll max-lg:w-full max-lg:overflow-y-hidden max-md:h-full max-sm:-mt-48 ">
           <Outlet />
         </div>
-        <div className="my-6 max-md:my-2 flex justify-center overflow-y-scroll overflow-x-hidden shrink-0 max-lg:overflow-y-hidden 
-        max-md:scale-75 max-sm:scale-50 max-md:mt-0 max-sm:-mt-48">
-          {template==='Template1' && <Template1/>}
-          {template==='Template2' && <Template2/>}
+        <div
+          className="my-6 max-md:my-2 flex justify-center overflow-y-scroll overflow-x-hidden shrink-0 max-lg:overflow-y-hidden 
+        max-md:scale-75 max-sm:scale-50 max-md:mt-0 max-sm:-mt-48"
+        >
+          {template === "Template1" && <Template1 />}
+          {template === "Template2" && <Template2 />}
         </div>
       </div>
       <div className="h-20">
