@@ -13,7 +13,7 @@ import FormSummarySection from "./components/formSections/FormSummarySection";
 import FormAddSection from "./components/formSections/FormAddSection";
 import { Provider } from "react-redux";
 import Store from "./store/Store";
-import LinkForm from './components/formSections/LinksForm';
+import LinkForm from "./components/formSections/LinksForm";
 import CertificationForm from "./components/formSections/CertificationForm";
 import LanguagesForm from "./components/formSections/LanguagesForm";
 import AdditionalInfoForm from "./components/formSections/AdditionalInfoForm";
@@ -28,9 +28,8 @@ const AppLayout = () => {
     </div>
   );
 };
- 
-const appRouter = createBrowserRouter([
 
+const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
@@ -42,7 +41,7 @@ const appRouter = createBrowserRouter([
       {
         path: "template",
         element: <Template2 />,
-      },          
+      },
       {
         path: "/build-resume",
         element: <BuildResume />,
@@ -82,39 +81,39 @@ const appRouter = createBrowserRouter([
               {
                 path: "finalize",
                 // element: <FormAddSection />,
-                children:[
+                children: [
                   {
-                    path:"",
-                    element:<FormAddSection/> 
+                    path: "",
+                    element: <FormAddSection />,
                   },
                   {
-                    path:"add-links",
-                    element:<LinkForm/> 
+                    path: "add-links",
+                    element: <LinkForm />,
                   },
                   {
-                    path:"add-crtf",
-                    element:<CertificationForm/> 
+                    path: "add-crtf",
+                    element: <CertificationForm />,
                   },
                   {
-                    path:"add-lang",
-                    element:<LanguagesForm/> 
+                    path: "add-lang",
+                    element: <LanguagesForm />,
                   },
                   {
-                    path:"add-accomp",
-                    element:<AccomplishmentForm/> 
+                    path: "add-accomp",
+                    element: <AccomplishmentForm />,
                   },
                   {
-                    path:"add-addInfo",
-                    element:<AdditionalInfoForm/> 
+                    path: "add-addInfo",
+                    element: <AdditionalInfoForm />,
                   },
-                ]
+                ],
               },
             ],
           },
           {
-            path:'download',
-            element:<DownloadPage/>
-          }
+            path: "download",
+            element: <DownloadPage />,
+          },
         ],
       },
     ],
