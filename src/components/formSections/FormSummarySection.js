@@ -2,26 +2,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addStyleSection } from "../../store/FormPageHeaderSlice";
 import { storeSummary } from "../../store/SummaryFormSlice";
-import {setNextRoute} from "../../store/RoutesSlice"
+import { setNextRoute } from "../../store/RoutesSlice";
 
 const FormSummarySection = () => {
-
-  const dispatch = useDispatch()
-  const SummaryDetails = useSelector((store)=> store.summaryDetails)
+  const dispatch = useDispatch();
+  const SummaryDetails = useSelector((store) => store.summaryDetails);
 
   useEffect(() => {
-    dispatch(addStyleSection('summary'))
-    dispatch(setNextRoute('/build-resume/form/finalize'))
-    
-    return () => {
-      dispatch(addStyleSection())
-    }
-    
-  }, [])
+    dispatch(addStyleSection("summary"));
+    dispatch(setNextRoute("/build-resume/form/finalize"));
 
-  const handleChange = ({Summary}) => {
-    dispatch(storeSummary(Summary.target.value))
-  }
+    return () => {
+      dispatch(addStyleSection());
+    };
+  }, []);
+
+  const handleChange = ({ Summary }) => {
+    dispatch(storeSummary(Summary.target.value));
+  };
 
   return (
     <div className="py-10 min-h-[83vh] flex items-center">
@@ -33,18 +31,20 @@ const FormSummarySection = () => {
           </span>
         </div>
         <form className="flex flex-col w-full  gap-y-4 ">
-        <div className="flex justify-between   ">
-          <label className={`flex flex-col w-full text-[0.63rem] uppercase font-bold gap-y-2`}>
-            Summary
-            <textarea
-              placeholder="Write your summary here."
-              className={`text-start h-56 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[4px] focus:border-b-[#003459]`}
-              onChange={(Summary)=> handleChange({Summary})}
-              value={SummaryDetails.summary}
-            />
-          </label>
-        </div>
-      </form>
+          <div className="flex justify-between   ">
+            <label
+              className={`flex flex-col w-full text-[0.63rem] uppercase font-bold gap-y-2`}
+            >
+              Summary
+              <textarea
+                placeholder="Write your summary here."
+                className={`text-start h-56 border border-gray-400 text-base p-2 font-normal outline outline-0 focus:border-b-[4px] focus:border-b-[#003459]`}
+                onChange={(Summary) => handleChange({ Summary })}
+                value={SummaryDetails.summary}
+              />
+            </label>
+          </div>
+        </form>
       </div>
     </div>
   );

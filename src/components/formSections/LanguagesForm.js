@@ -5,17 +5,18 @@ import { setNextRoute } from "../../store/RoutesSlice";
 import useRouter from "../../hooks/useRouter";
 
 const LanguagesForm = () => {
-  const data = ['', '', '', 'ac', 'ad','d']
-  const route = useRouter(data)
-  
+  const data = ["", "", "", "ac", "ad", "d"];
+  const route = useRouter(data);
+
   const [count, setCount] = useState(1);
   const [buttonVisibility, setButtonVisibility] = useState("");
   const dispatch = useDispatch();
-  
-  const [links, setLinks] = useState([
-    <LangSection key={count} value={count} text={'language'}/>,
-  ],[route]);
-  
+
+  const [links, setLinks] = useState(
+    [<LangSection key={count} value={count} text={"language"} />],
+    [route]
+  );
+
   useEffect(() => {
     dispatch(setNextRoute(route));
   });
@@ -24,7 +25,7 @@ const LanguagesForm = () => {
     if (count < 5) {
       setLinks((prev) => [
         ...prev,
-        <LangSection key={count + 1} value={count + 1} text={'language'} />,
+        <LangSection key={count + 1} value={count + 1} text={"language"} />,
       ]);
       setCount(count + 1);
       if (count === 4) {
@@ -39,7 +40,7 @@ const LanguagesForm = () => {
         <div className="font-bold text-4xl text-black flex flex-col gap-y-3">
           Add languages you know{" "}
           <span className="text-lg font-normal">
-          Include your native language and additional languages you speak.
+            Include your native language and additional languages you speak.
           </span>
         </div>
         <div

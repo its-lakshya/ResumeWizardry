@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import useRouter from "../../hooks/useRouter";
 
 const LinkForm = () => {
-  const data = ["", "c", "l", "ac", "ad","d"];
+  const data = ["", "c", "l", "ac", "ad", "d"];
   const route = useRouter(data);
   const [count, setCount] = useState(1);
   const [buttonVisibility, setButtonVisibility] = useState("");
@@ -17,7 +17,7 @@ const LinkForm = () => {
 
   useEffect(() => {
     dispatch(setNextRoute(route));
-  },[route]);
+  }, [route]);
 
   const handleClick = () => {
     if (count < 5) {
@@ -45,7 +45,7 @@ const LinkForm = () => {
         <div
           className={`w-full flex flex-col items-start justify-center gap-y-12`}
         >
-          {links} 
+          {links}
           <button
             onClick={handleClick}
             className={`text-[#EA4492] ${buttonVisibility} `}
