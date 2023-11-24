@@ -14,8 +14,9 @@ const DownloadPage = () => {
   const [templateData, setTemplateData] = useState(
     useSelector((store) => store.templateSelection.template)
   );
+  
+  const createImage = async () => {
 
-  const createPdf = async () => {
     const pdf = new jsPDF("portrait", "pt", "a4", true);
     const data = await html2canvas(document.querySelector("#resume"));
     const img = data.toDataURL("image/png");
@@ -23,13 +24,14 @@ const DownloadPage = () => {
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
     pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
-    pdf.save("shipping_label.pdf");
+    pdf.save("magicalResume.pdf");
 
-    // const report = new jsPDF("p", "pt", "a4");
-    // report.html(document.querySelector("#resume")).then(() => {
-    //   report.save("resume.pdf");
-    // });
-    // console.log("apple");
+  }
+  const createPdf = async () => {
+    const report = new jsPDF("p", "pt", "a4");
+    report.html(document.querySelector("#resume")).then(() => {
+      report.save("magicalResume.pdf");
+    });
   };
 
   const dispatch = useDispatch();
@@ -60,7 +62,11 @@ const DownloadPage = () => {
             {templateData === "Template2" && <Template2 />}
           </div>
           <div className="flex flex-col w-1/2 gap-y-10 max-lg:w-full max-lg:items-center max-md:-mt-28 max-sm:-mt-[14rem]">
-            <div className="cursor-pointer" onClick={() => createPdf()}>
+            <div className="cursor-pointer flex flex-col gap-y-4 items-center">
+              <div className='text-[#EA4492] font-semibold text-lg'>PDF</div>
+              <div className='w-full'
+              onClick={() => createPdf()}
+              >
               <HomePageLandingButton
                 bgColor="bg-[#EA4492]"
                 textColor="text-white"
@@ -69,9 +75,23 @@ const DownloadPage = () => {
                 text="Download ↓"
                 height="h-[3.5rem] max-sm:h-[3.2rem]"
                 width="w-full max-lg:w-80 max-sm:w-56"
+                
               />
+              </div>
+              <div className='text-[#003459] font-semibold text-lg'>Image</div>
+              <div className='w-full' 
+              onClick={() => createImage()}>
+              <HomePageLandingButton
+                bgColor="bg-[#003459]"
+                textColor="text-white"
+                hoverColor="bg-[#428CD4]"
+                hoverBorderColor="border-[#428CD4]"
+                text="Download ↓"
+                height="h-[3.5rem] max-sm:h-[3.2rem]"
+                width="w-full max-lg:w-80 max-sm:w-56"
+              />
+              </div>
             </div>
-            {/* <div className="max-"> */}
             <div className="uppercase font-semibold text-lg flex flex-col justify-center items-center gap-y-4 max-lg:w-full">
               More Templates
               <div className="border h-96 max-sm:h-auto w-full flex items-center justify-evenly max-sm:flex-col max-sm:gap-y-8 max-sm:py-4 ">
