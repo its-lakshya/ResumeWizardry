@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { setTemplate } from "../store/TemplateSlice";
+import { Link } from "react-router-dom";
 
 const DownloadPage = () => {
   const [templateData, setTemplateData] = useState(
@@ -43,9 +44,9 @@ const DownloadPage = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="bg-[#003459] w-full h-12 bg-opacity-95 font-bold text-2xl text-white flex items-center px-48 max-lg:px-10">
+      <Link to="/" className="bg-[#003459] w-full h-12 bg-opacity-95 font-bold text-2xl text-white flex items-center px-48 max-lg:px-10">
         ResumeWisardry
-      </div>
+      </Link>
       <div className="px-48 flex flex-col gap-y-14 py-6 max-lg:px-10 max-lg:items-center">
         <div className="flex flex-col gap-y-3 ">
           <div className="text-[#003459] font-bold text-4xl max-lg:text-3xl max-lg:text-center max-sm:text-2xl">

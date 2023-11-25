@@ -12,7 +12,7 @@ const YesWeAreWizards = () => {
         </div>
         <div className="flex w-full items-center max-lg:flex-col-reverse max-lg:gap-y-12">
           <div className=" w-1/2 h-2/3 flex flex-col gap-y-8 text-left max-lg:w-full max-lg:items-end max-lg:pl-16 max-sm:pl-6">
-            <div className="tracking-wide font-semibold text-xl text-[#041B2D] ">
+            <div className="tracking-wide font-semibold text-xl text-[#041B2D]">
               <span className="flex items-center gap-x-4 ">
                 <span className="text-4xl text-[#004E9A]">
                   <BsCheck2Circle />
