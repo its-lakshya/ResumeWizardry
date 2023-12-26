@@ -12,7 +12,7 @@ const HowItWorks = () => {
 
   if (scroll >= 0)
     return (
-      <div className="bg-white h-screen w-full flex justify-center items-start px-10 max-md:h-auto max-md:pb-16 ">
+      <div className="bg-white h-screen w-full flex justify-center items-center px-10 max-md:h-auto max-md:pb-16 ">
         {scroll > 100 && (
           <div className="HowItWorks h-[26rem] max-lg:h-auto text-4xl max-lg:text-3xl max-lg:text-center text-[#041B2D] font-medium 
           opacity-0 flex flex-col items-center justify-between gap-y-12 ">
