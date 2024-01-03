@@ -28,12 +28,12 @@ const DownloadPage = () => {
     pdf.save("magicalResume.pdf");
 
   }
-  const createPdf = async () => {
-    const report = new jsPDF("p", "pt", "a4");
-    report.html(document.querySelector("#resume")).then(() => {
-      report.save("magicalResume.pdf");
-    });
-  };
+  // const createPdf = async () => {
+  //   const report = new jsPDF("p", "pt", "a4");
+  //   report.html(document.querySelector("#resume")).then(() => {
+  //     report.save("magicalResume.pdf");
+  //   });
+  // };
 
   const dispatch = useDispatch();
 
@@ -64,7 +64,7 @@ const DownloadPage = () => {
           </div>
           <div className="flex flex-col w-1/2 gap-y-10 max-lg:w-full max-lg:items-center max-md:-mt-28 max-sm:-mt-[14rem]">
             <div className="cursor-pointer flex flex-col gap-y-4 items-center">
-              <div className='text-[#EA4492] font-semibold text-lg'>PDF</div>
+              {/* <div className='text-[#EA4492] font-semibold text-lg'>PDF</div>
               <div className='w-full'
               onClick={() => createPdf()}
               >
@@ -78,8 +78,8 @@ const DownloadPage = () => {
                 width="w-full max-lg:w-80 max-sm:w-56"
                 
               />
-              </div>
-              <div className='text-[#003459] font-semibold text-lg'>Image</div>
+              </div> */}
+              {/* <div className='text-[#003459] font-semibold text-lg'>Image</div> */}
               <div className='w-full' 
               onClick={() => createImage()}>
               <HomePageLandingButton
@@ -87,7 +87,7 @@ const DownloadPage = () => {
                 textColor="text-white"
                 hoverColor="bg-[#428CD4]"
                 hoverBorderColor="border-[#428CD4]"
-                text="Download ↓"
+                text="Download Resume ↓"
                 height="h-[3.5rem] max-sm:h-[3.2rem]"
                 width="w-full max-lg:w-80 max-sm:w-56"
               />

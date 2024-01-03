@@ -7,6 +7,7 @@ import {
   storeEmail,
   storeState,
   storePinCode,
+  storeTitle,
 } from "../../store/ContactFormSlice";
 import { labelClassNames, inputClassNames } from "./ConstantClassNames";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,30 +26,34 @@ const ContactForm = () => {
     Email,
     State,
     Pincode,
+    title,
   }) => {
     if (Name) {
       dispatch(storeName(Name.target.value));
     }
-    if (Surname) {
+    else if (Surname) {
       dispatch(storeSurname(Surname.target.value));
     }
-    if (City) {
+    else if (City) {
       dispatch(storeCity(City.target.value));
     }
-    if (Country) {
+    else if (Country) {
       dispatch(storeCountry(Country.target.value));
     }
-    if (Phone) {
+    else if (Phone) {
       dispatch(storePhone(Phone.target.value));
     }
-    if (Email) {
+    else if (Email) {
       dispatch(storeEmail(Email.target.value));
     }
-    if (State) {
+    else if (State) {
       dispatch(storeState(State.target.value));
     }
-    if (Pincode) {
+    else if (Pincode) {
       dispatch(storePinCode(Pincode.target.value));
+    }
+    else if (title) {
+      dispatch(storeTitle(title.target.value));
     }
   };
 
@@ -135,6 +140,18 @@ const ContactForm = () => {
             onChange={(Pincode) => handleChange({ Pincode })}
             value={contactDetails.pincode}
           />
+        </label>
+      </div>
+
+      <div className="flex justify-between  ">
+        <label className={labelClassNames}>
+          Professional Title
+          <input
+            placeholder="Web Developer"
+            className={inputClassNames}
+            onChange={(title) => handleChange({ title })}
+            value={contactDetails.title}
+            />
         </label>
       </div>
     </form>

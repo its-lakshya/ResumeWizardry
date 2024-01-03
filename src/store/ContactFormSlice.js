@@ -9,6 +9,7 @@ const initialState = {
     email:'',
     state:'',
     pincode:'',
+    title:'',
   }
   
 const ContactFormSlice = createSlice({
@@ -40,9 +41,12 @@ const ContactFormSlice = createSlice({
     storePinCode:(state, action) => {
         state.pincode=action.payload
     },
+    storeTitle:(state, action) => {
+        state.title=action.payload
+    },
   }
 });
 
-export const {storeName, storeSurname, storeCity, storeCountry, storePhone, storeEmail, storeState, storePinCode} = ContactFormSlice.actions
+export const {storeName, storeSurname, storeCity, storeCountry, storePhone, storeEmail, storeState, storePinCode, storeTitle} = ContactFormSlice.actions
 export default ContactFormSlice.reducer;
 
