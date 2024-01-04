@@ -15,8 +15,8 @@ import { useDispatch, useSelector } from "react-redux";
 const ContactForm = () => {
   const dispatch = useDispatch();
 
-  const contactDetails = useSelector((store) => store.contactDetails)
-  
+  const contactDetails = useSelector((store) => store.contactDetails);
+
   const handleChange = ({
     Name,
     Surname,
@@ -30,29 +30,21 @@ const ContactForm = () => {
   }) => {
     if (Name) {
       dispatch(storeName(Name.target.value));
-    }
-    else if (Surname) {
+    } else if (Surname) {
       dispatch(storeSurname(Surname.target.value));
-    }
-    else if (City) {
+    } else if (City) {
       dispatch(storeCity(City.target.value));
-    }
-    else if (Country) {
+    } else if (Country) {
       dispatch(storeCountry(Country.target.value));
-    }
-    else if (Phone) {
+    } else if (Phone) {
       dispatch(storePhone(Phone.target.value));
-    }
-    else if (Email) {
+    } else if (Email) {
       dispatch(storeEmail(Email.target.value));
-    }
-    else if (State) {
+    } else if (State) {
       dispatch(storeState(State.target.value));
-    }
-    else if (Pincode) {
+    } else if (Pincode) {
       dispatch(storePinCode(Pincode.target.value));
-    }
-    else if (title) {
+    } else if (title) {
       dispatch(storeTitle(title.target.value));
     }
   };
@@ -67,7 +59,7 @@ const ContactForm = () => {
             className={inputClassNames}
             onChange={(Name) => handleChange({ Name })}
             value={contactDetails.name}
-            />
+          />
         </label>
         <label className={labelClassNames}>
           surname
@@ -76,7 +68,7 @@ const ContactForm = () => {
             className={inputClassNames}
             onChange={(Surname) => handleChange({ Surname })}
             value={contactDetails.surname}
-            />
+          />
         </label>
       </div>
 
@@ -88,7 +80,7 @@ const ContactForm = () => {
             className={inputClassNames}
             onChange={(City) => handleChange({ City })}
             value={contactDetails.city}
-            />
+          />
         </label>
         <label className={labelClassNames}>
           country
@@ -97,7 +89,7 @@ const ContactForm = () => {
             className={inputClassNames}
             onChange={(Country) => handleChange({ Country })}
             value={contactDetails.country}
-            />
+          />
         </label>
       </div>
 
@@ -109,7 +101,7 @@ const ContactForm = () => {
             className={inputClassNames}
             onChange={(Phone) => handleChange({ Phone })}
             value={contactDetails.phone}
-            />
+          />
         </label>
         <label className={labelClassNames}>
           Email
@@ -118,7 +110,7 @@ const ContactForm = () => {
             className={inputClassNames}
             onChange={(Email) => handleChange({ Email })}
             value={contactDetails.email}
-            />
+          />
         </label>
       </div>
 
@@ -130,7 +122,7 @@ const ContactForm = () => {
             className={inputClassNames}
             onChange={(State) => handleChange({ State })}
             value={contactDetails.state}
-            />
+          />
         </label>
         <label className={labelClassNames}>
           Pin Code
@@ -151,7 +143,7 @@ const ContactForm = () => {
             className={inputClassNames}
             onChange={(title) => handleChange({ title })}
             value={contactDetails.title}
-            />
+          />
         </label>
       </div>
     </form>
